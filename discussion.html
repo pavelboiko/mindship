@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+          $(".start-toggle").click(function(){
+                $("li.submenu ul").slideToggle();
+				$("li.submenu1 ul").slideUp();
+				$(".pointer-active-bg1").slideToggle(10);
+				$(".pointer-active-bg").slideUp(10);
+				$(".dark-shroud1").slideToggle();
+				$(".dark-shroud").slideUp();
+
+            });
+			 $(".start-toggle1").click(function(){
+                $("li.submenu1 ul").slideToggle();
+				$("li.submenu ul").slideUp();
+				$(".pointer-active-bg").slideToggle(10);
+				$(".pointer-active-bg1").slideUp(10);
+				$(".dark-shroud").slideToggle();
+				$(".dark-shroud1").slideUp();
+            });
+			
+        });
+		
+    </script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){ 
+    $("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion").hide();
+	
+	$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
+									$('*').find("#pop-up-select, #pop-up-corner").show(); }, 
+					  function(){ 	$('*').find("#pop-up-select, #pop-up-corner").hide(); }
+					  )
+	$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
+									$('*').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
+					  function(){ 	$('*').find("#pop-up-select1,  #pop-up-corner1").hide(); }
+					  );
+	$("#page_settings2, #pop-up-project,  #pop-up-corner2").hover( function(){  
+									$('*').find("#pop-up-project,  #pop-up-corner2").show(); }, 
+					  function(){ 	$('*').find("#pop-up-project,  #pop-up-corner2").hide(); }
+					  );
+	$(".start-toggle").hover( function(){  
+									$('*').find(".pointer").css('color', '#0db2ea'); }, 
+					  function(){ 	$('*').find(".pointer").css('color', 'white'); }
+					  );
+					  	$(".start-toggle1").hover( function(){  
+									$('*').find(".pointer1").css('color', '#0db2ea'); }, 
+					  function(){ 	$('*').find(".pointer1").css('color', 'white'); }
+					  );
+					  	$(".trash-show").hover( function(){  
+									$('*').find(".trash").show(); }, 
+					  function(){ 	$('*').find(".trash").hide(); }
+					  );
+					 
+					  
+		$(".add_todo").click(function () {
+			$(".add_todo_list_left").slideToggle(10);
+		});
+		$(".add_todo1").click(function () {
+			$(".add_todo_list_left1").slideToggle(10);
+		});
+
+		
+		$("#page_settings").click(function () {
+			$(" #pop-up-corner, #pop-up-select").show();
+		});
+		$("#page-settings1").click(function () {
+			$(" #pop-up-corner1, #pop-up-select1").show();
+		});
+		$("#page_settings2").click(function () {
+			$(" #pop-up-corner2, #pop-up-project").show();
+		});
+		$("#grey-shroud").click(function () {
+			$("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion, .are-you-sure ").hide();
+		});
+		$("#grey-shroud ").click(function () {
+			$("#discussion ").hide().animate({top: '-=202px'}, 200);			
+			$("#grey-shroud").hide();
+		});
+		$("#grey-shroud1, .yes-button, .no-button").click(function () {
+			$("#delete-persone ").hide().animate({top: '-=275px'}, 200);
+			$("#grey-shroud1").hide();
+		});
+		
+		$("#grey-shroud2, .yes-button, .no-button").click(function () {
+			$(".are-you-sure ").hide().animate({top: '-=275px'}, 200);
+			$("#grey-shroud2").hide();
+		});
+		$("#pop-up-select").click(function () {
+			$("#grey-shroud, #pop-up-corner, #pop-up-select ").hide();
+
+		});
+		$("#pop-up-select1").click(function () {
+			$("#grey-shroud, #pop-up-corner1, #pop-up-select1 ").hide();
+		});
+		$("#pop-up-project").click(function () {
+			$("#grey-shroud, #pop-up-project, #pop-up-corner2 ").hide();
+		});
+		
+		$(".trash").click(function () {
+			$("#grey-shroud2").fadeIn();
+			$(" .are-you-sure ").show().animate({top: '+=275px'}, 200);;
+		});
+		
+		$("#msg_post").click(function () {
+			$("#grey-shroud").fadeIn();
+			$(" #discussion ").show().animate({top: '+=202px'}, 200);;
+		});
+		$("#shut-down").click(function () {
+			$("#grey-shroud").hide();
+			$(" #discussion ").hide().animate({top: '-=202px'}, 200);
+		});
+		$('div.check-boxes-discussion input[type=checkbox]').click(function(){
+			if(this.checked) {
+				$(this).parent().css('background','#dddddd');
+			} else {
+				$(this).parent().css('background','');
+			}
+		});
+	
+    });
+	</script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+		<div class="logo">Mindship</div>
+        <ul class="breadcrumbs">
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">My Team</a></li>
+            <li><a href="#">Clients</a></li>
+      
+        </ul>
+		
+        <div class="profile">
+            <div class="profile_img_container"><a href="#" class="profile-photo"></a></div>
+            <a href="#" class="profile_arrow"></a>
+        </div>
+		<div class="projects-counter">2 projects remaining <a href="#" class="up-status">[upgrate]</a></div>
+	</div><!-- #header-->
+
+	<div id="middle">
+		<div id="container">
+		
+		<!-- pop-ups-->
+		
+		<div id="grey-shroud"></div>
+				<div id="grey-shroud1"></div>
+		<div id="grey-shroud2"></div>
+        <div id="pop-up-select">            
+			<ul class="pop-list">
+				<li><a href="#" class="">Mark as complete</a></li>
+				<li><a href="#" class="">Transfer for the Showroom</a></li>
+				<li><a href="#" class="">Save as PDF</a></li>
+				<li><a href="#" class="">Delete conversation</a></li>			  
+			</ul>
+		</div>
+		<div id="pop-up-corner"></div>
+		<div id="pop-up-select1">            
+			<ul class="pop-list">
+				<li><a href="#" class="">Mark as complete</a></li>
+				<li><a href="#" class="">Transfer for the Showroom</a></li>
+				<li><a href="#" class="">Save as PDF</a></li>
+				<li><a href="#" class="">Delete conversation</a></li>			  
+			</ul>
+		</div>
+		<div id="pop-up-corner1"></div>
+		<div id="pop-up-project">            
+			<ul class="pop-list">
+				<li><a href="#" class="">Invite more people</a></li>
+				<li><a href="#" class="">Archive project</a></li>
+				<li><a href="#" class="">Close project</a></li>					  
+			</ul>
+		</div>
+		<div id="pop-up-corner2"></div>
+		<div id="discussion" class="discussion-container">
+			<h1 class="discussion-title">Great! You're about to start a new discussion.</h1>
+			<div class="shut_down"> 
+				<div id="shut-down"></div>
+			</div>
+			<textarea class="diss"  onfocus="if (this.value == 'Fancy topic goes here'){this.value = '';}" 
+					onblur="if (this.value == ''){ this.value='Fancy topic goes here'; }">Fancy topic goes here</textarea>
+					
+			<ul class="edit-text-panel-pop">
+				<li><a href="#" class="bold-pop">&nbsp;</a></li>
+				<li><a href="#" class="italic-pop">&nbsp;</a></li>
+				<li><a href="#" class="underlined-pop">&nbsp;</a></li>
+				<li><a href="#" class="crossed-pop">&nbsp;</a></li>
+				<li><a href="#" class="list-num-pop">&nbsp;</a></li>
+				<li><a href="#" class="list-sign-pop">&nbsp;</a></li>
+			</ul>
+            <div class="bottom-disc">
+				<textarea class="diss1"  onfocus="if (this.value == 'Once upon a time...'){this.value = '';}" 
+					onblur="if (this.value == ''){ this.value='Once upon a time...'; }">Once upon a time...</textarea>
+					
+			</div>
+            <p class="add_msg-pop">
+				<a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here<div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
+			</p>
+			<div class="discussion-line"></div>
+			<div class="send-choosing-msg">Your message will be sent to the following people:</div>
+			<div class="clear"></div>
+			<div class="check-boxes-discussion">
+    			<div class="conv-on">
+				
+                    <input type="checkbox"  id="conv_on1"/>
+                    <label class="custom_input" for="conv_on1">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo" src="img/stefan_g.png" alt="" />
+                    <label for="conv_on1" class="check-label">Stefan G</label>
+                </div>
+    			<div class="conv-on1">
+                    <input type="checkbox" id="conv_on4" />
+                    <label class="custom_input" for="conv_on4">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo" src="img/eduard_v.png" alt="" />
+                    <label for="conv_on4" class="check-label">Eduard V</label>
+                </div>
+    			<div class="conv-on2">
+                    <input type="checkbox" id="conv_on2" />
+                    <label class="custom_input" for="conv_on2">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo" src="img/alexandr_v.png" alt="" />
+                    <label for="conv_on2" class="dsblsl">Alexandr V</label>
+                </div>
+                <div class="conv-on3">
+                    <input type="checkbox" id="conv_on3" />
+                    <label class="custom_input" for="conv_on3">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo" src="img/deelopers.png" alt="" />
+                    <label for="conv_on3" class="check-label">Deelopers</label>
+                </div>
+			</div>
+		</div>
+		<div class="are-you-sure">
+			<div class="question">Are you sure you want to delete this file</div>
+			<div class="yes-button"><a href="#">Yes</a></div>
+			<div class="no-button"><a href="#">No</a></div>
+		</div>
+		
+<!-- pop-ups-end-->
+
+		<div class="tab_container">
+			<div class="showroom-button"><a href="#">Project Showroom</a></div>
+                <div id="tab3" class="tab_content" style="display: block;">
+					<div class="page_title_container"><h1 class="title">Website development for Microsoft, <br/> from scratch<a href="#" id="page_settings2"></a></h1></div>
+					<div class="break-bounder"></div>
+					<ul class="breadcrumbs1">
+						<li><a href="#">Project home</a></li>
+						<li><a href="#">Backend development</a></li>
+						<li><a href="#"></a></li>
+						<li>Landing page<a href="#" id="page-settings1"></a></li>
+					</ul>
+					<ul class="tabs">
+						<li><a href="#">Overview</a></li>
+						<li><a href="#">Tasks<span class="updates">4</span></a></li>
+						<li><a href="#" class="active">Discussions<span class="updates">12</span></a></li>
+						<li><a href="#">Files</a></li>
+						<li><a href="#">Team</a></li>
+					</ul><!-- .tabs -->
+   
+                    <div class="clear"></div>
+                    
+					<div class="content">
+						<div class="page_buttons_container">
+							<a href="#" class="all-discussions">All discussions</a>
+							<a href="#" class="my-discussions">My discussions</a>
+						<div id="msg_post"><a href="#" class="post_msg"><span class="plus"></span>Post message</a></div></div>
+                        <ul class="messages">
+                            <li>
+                                <img class="usr_photo" src="img/usr-photo.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="usr_photo" src="img/usr-photo.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                            <li class="inactive_msg">
+                                <img class="usr_photo" src="img/usr-photo-faded.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="usr_photo" src="img/usr-photo.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+							                       <li>
+                                <img class="usr_photo" src="img/usr-photo.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="usr_photo" src="img/usr-photo.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                            <li class="inactive_msg">
+                                <img class="usr_photo" src="img/usr-photo-faded.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img class="usr_photo" src="img/usr-photo.jpg" alt="" />
+                                <div class="msg_container">
+                                    <div class="msg_title"><a href="#" class="msg_link">What shell we do with the 150 000 issues that we have?</a><span class="msg_time">Just now</span></div>
+                                    <p class="msg_text">Государственная служба качества образования (ГСКО) проверила Рижскую 10-ю среднюю школу в связи с использованием изданного в России учебника "Введение в политологию".</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!-- content -->
+                </div><!-- #tab3 -->
+                <div id="tab4" class="tab_content">
+				    <h1 class="title">Landing page <a href="#" class="page_settings"></a></h1>
+                </div><!-- #tab4 -->
+                <div id="tab5" class="tab_content">
+				    <h1 class="title">Landing page <a href="#" class="page_settings"></a></h1>
+                </div><!-- #tab5 -->
+			</div><!-- .tab_container-->
+		</div><!-- #container-->
+<!-- .sidebar -->
+		<div class="sidebar" id="sideLeft">
+            <p class="project_menu_title">Your tasks</p>
+            <ul class="project_menu">
+				<div class="dark-shroud"></div>
+				
+				<li class="submenu1"><div class="pointer-active-bg"></div><span class="menu_arrow1"></span><div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div>
+			
+                    <ul id="hidden">
+                        <li onclick=""><a href="#">Landing page<span class="num">7</span></a></li>
+                        <li><a href="#">Cart and checkout<span class="num">14</span></a></li>
+                        <li><a href="#">Payments<span class="num">36</span></a></li>
+                        <li><a href="#">Contact page<span class="num">52</span></a></li>
+                    </ul>
+                 </li>
+                
+				<div class="dark-shroud1"></div>
+                <li class="submenu"><div class="pointer-active-bg1"></div><span class="menu_arrow"></span><div class="start-toggle"><a href="#" class="pointer">Backend development</a></div>
+                   
+				   <ul id="hidden1">
+                        <li><a href="#">Landing page<span class="num">7</span></a></li>
+                        <li><a href="#">Cart and checkout<span class="num">14</span></a></li>
+                        <li><a href="#">Payments<span class="num">36</span></a></li>
+                        <li><a href="#">Contact page<span class="num">52</span></a></li>
+                    </ul>
+                 </li>
+				 
+				 <p class="project_menu_title">You can also add</p>
+                 <li class="addons"><a href="#">Design<span class="cross"></span></a></li>
+                 <li class="addons"><a href="#">Marketing<span class="cross"></span></a></li>
+				 <div class="trash-show"><li class="addons"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></li></div>
+                 <li class="addons"><a href="#">Create your own<span class="cross"></span></a></li>
+			</ul>
+		</div><!-- .sidebar#sideLeft -->
+
+
+        <div id="footer">
+            <div class="footer">
+                <ul class="footer_links">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">User Agreement</a></li>
+                </ul>
+            </div>
+        </div><!-- #footer -->
+
+	</div><!-- #middle-->
+
+</div><!-- #wrapper -->
+
+</body>
+</html>
