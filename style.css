@@ -62,8 +62,9 @@ input[type="checkbox"] + label.custom_input1 span{
     height:18px;
     /*margin:-1px 4px 0 0;*/
     vertical-align:middle;
-    background:url("img/checkbox-users.png");
+    
     cursor:pointer;
+	
 }
 input[type="checkbox"]:checked + label.custom_input1 span{
     background:url("img/checkbox-users-checked.png");
