@@ -7,14 +7,12 @@
 	<meta name="description" content="" />
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
 	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-	<link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css" />
-
-
-	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-	<!--<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>-->
-	<!--<script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>-->
-	<!--<script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>-->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>
+<script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>
 
      <script type="text/javascript">
 
@@ -46,9 +44,9 @@
     $("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion").hide();
 	
 	$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
-		$('*').find("#pop-up-select, #pop-up-corner").show(); },
-		function(){ 	$('*').find("#pop-up-select, #pop-up-corner").hide(); }
-	);
+									$('*').find("#pop-up-select, #pop-up-corner").show(); }, 
+					  function(){ 	$('*').find("#pop-up-select, #pop-up-corner").hide(); }
+					  )
 	$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
 									$('*').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
 					  function(){ 	$('*').find("#pop-up-select1,  #pop-up-corner1").hide(); }
@@ -174,16 +172,17 @@
 	
     });
 	</script>
-<script type="text/javascript">
-//$(document).ready(function() {
-//	$.piroBox_ext({
-//		piro_speed :700,
-//		bg_alpha : 0.5,
-//		piro_scroll : true,
-//		piro_drag :false,
-//		piro_nav_pos: 'bottom'
-//	});
-//});
+		<script type="text/javascript">
+
+$(document).ready(function() {
+	$.piroBox_ext({
+	piro_speed :700,
+	bg_alpha : 0.5,
+	piro_scroll : true,
+	piro_drag :false,
+	piro_nav_pos: 'bottom'
+});
+});
 </script>
 </head>
 
@@ -208,64 +207,67 @@
 	</div><!-- #header-->
 
 	<div id="middle">
+
 		<div id="container">
-			<!-- pop-ups-->
-			<div id="grey-shroud"></div>
-			<div id="grey-shroud1"></div>
-			<div id="grey-shroud2"></div>
-	        <div id="pop-up-select">
-				<ul class="pop-list">
-					<li><a href="#" class="">Mark as complete</a></li>
-					<li><a href="#" class="">Transfer for the Showroom</a></li>
-					<li><a href="#" class="">Save as PDF</a></li>
-					<li><a href="#" class="">Delete conversation</a></li>
-				</ul>
+		
+		<!-- pop-ups-->
+		
+		<div id="grey-shroud"></div>
+				<div id="grey-shroud1"></div>
+		<div id="grey-shroud2"></div>
+        <div id="pop-up-select">            
+			<ul class="pop-list">
+				<li><a href="#" class="">Mark as complete</a></li>
+				<li><a href="#" class="">Transfer for the Showroom</a></li>
+				<li><a href="#" class="">Save as PDF</a></li>
+				<li><a href="#" class="">Delete conversation</a></li>			  
+			</ul>
+		</div>
+		<div id="pop-up-corner"></div>
+		<div id="pop-up-select1">            
+			<ul class="pop-list">
+				<li><a href="#" class="">Mark as complete</a></li>
+				<li><a href="#" class="">Transfer for the Showroom</a></li>
+				<li><a href="#" class="">Save as PDF</a></li>
+				<li><a href="#" class="">Delete conversation</a></li>			  
+			</ul>
+		</div>
+		<div id="pop-up-corner1"></div>
+		<div id="pop-up-project">            
+			<ul class="pop-list">
+				<li><a href="#" class="">Invite more people</a></li>
+				<li><a href="#" class="">Archive project</a></li>
+				<li><a href="#" class="">Close project</a></li>					  
+			</ul>
+		</div>
+		<div id="pop-up-corner2"></div>
+		<div id="discussion" class="discussion-container">
+			<h1 class="discussion-title">Great! You're about to start a new discussion.</h1>
+			<div class="shut_down"> 
+				<div id="shut-down"></div>
 			</div>
-			<div id="pop-up-corner"></div>
-			<div id="pop-up-select1">
-				<ul class="pop-list">
-					<li><a href="#" class="">Mark as complete</a></li>
-					<li><a href="#" class="">Transfer for the Showroom</a></li>
-					<li><a href="#" class="">Save as PDF</a></li>
-					<li><a href="#" class="">Delete conversation</a></li>
-				</ul>
+			<textarea class="diss" onfocus="if (this.value=='Once upon a time...') this.value='';"
+					onblur="if (this.value==''){this.value='Once upon a time...'}"></textarea>
+			<ul class="edit-text-panel-pop">
+				<li><a href="#" class="bold-pop">&nbsp;</a></li>
+				<li><a href="#" class="italic-pop">&nbsp;</a></li>
+				<li><a href="#" class="underlined-pop">&nbsp;</a></li>
+				<li><a href="#" class="crossed-pop">&nbsp;</a></li>
+				<li><a href="#" class="list-num-pop">&nbsp;</a></li>
+				<li><a href="#" class="list-sign-pop">&nbsp;</a></li>
+			</ul>
+            <div class="bottom-disc">
+				<textarea class="diss1" onfocus="if (this.value=='Once upon a time...') this.value='';"
+					onblur="if (this.value==''){this.value='Once upon a time...'}"></textarea>
 			</div>
-			<div id="pop-up-corner1"></div>
-			<div id="pop-up-project">
-				<ul class="pop-list">
-					<li><a href="#" class="">Invite more people</a></li>
-					<li><a href="#" class="">Archive project</a></li>
-					<li><a href="#" class="">Close project</a></li>
-				</ul>
-			</div>
-			<div id="pop-up-corner2"></div>
-
-			<div id="discussion" class="discussion-container">
-				<h1 class="discussion-title">Great! You're about to start a new discussion.</h1>
-				<div class="shut_down">
-					<div id="shut-down"></div>
-				</div>
-				<textarea class="diss" onfocus="if (this.value=='Once upon a time...') this.value='';" onblur="if (this.value==''){this.value='Once upon a time...'}"></textarea>
-				<ul class="edit-text-panel-pop">
-					<li><a href="#" class="bold-pop">&nbsp;</a></li>
-					<li><a href="#" class="italic-pop">&nbsp;</a></li>
-					<li><a href="#" class="underlined-pop">&nbsp;</a></li>
-					<li><a href="#" class="crossed-pop">&nbsp;</a></li>
-					<li><a href="#" class="list-num-pop">&nbsp;</a></li>
-					<li><a href="#" class="list-sign-pop">&nbsp;</a></li>
-				</ul>
-	            <div class="bottom-disc">
-					<textarea class="diss1" onfocus="if (this.value=='Once upon a time...') this.value='';" onblur="if (this.value==''){this.value='Once upon a time...'}"></textarea>
-				</div>
-	            <p class="add_msg-pop">
-					<a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here<div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
-				</p>
-				<div class="discussion-line"></div>
-				<div class="send-choosing-msg">Your message will be sent to the following people:</div>
-				<div class="clear"></div>
-
-				<div class="check-boxes-discussion">
-    			    <div class="conv-on">
+            <p class="add_msg-pop">
+				<a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here<div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
+			</p>
+			<div class="discussion-line"></div>
+			<div class="send-choosing-msg">Your message will be sent to the following people:</div>
+			<div class="clear"></div>
+			<div class="check-boxes-discussion">
+    			<div class="conv-on">
 				
                     <input type="checkbox"  id="conv_on1"/>
                     <label class="custom_input" for="conv_on1">
@@ -560,7 +562,7 @@
                                 <div class="file_holder">
                                     <img src="img/al.png" alt="" />
 									 <div class="shroud-activator5"> <div class="file-shroud-container5">
-									<div class="preview"><a target="_blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2F01.pdf"><img src="img/preview-inactive.png"  onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2F01.pdf"><img src="img/preview-inactive.png"  onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
 								   <div class="delete"><a href="#"><img src="img/delete-inactive.png"  onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png'"/></a></div>

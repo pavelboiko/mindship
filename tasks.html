@@ -130,7 +130,13 @@
 				$(this).parent().css('background','');
 			}
 		});
-	
+			$('div.check-boxes-discussion input[type=checkbox]').click(function(){
+			if(this.checked) {
+				$(this).parent().css('border','1px solid #0db2ea');
+			} else {
+				$(this).parent().css('border','');
+			}
+		});
     });
 	</script>
 </head>
