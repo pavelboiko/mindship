@@ -2617,10 +2617,255 @@ div.users-buttons {
 	height: 105px;
 	background: none;
 }
+#footer_landing_page{
+	margin: -44px auto 0;
+	width: 750px;
+	float: left;
+	overflow: hidden;
+	height: 72px;
+	margin-left: 425px;
+	
+}
+
 .landing_logo {
 	background: url("img/landing_page/logo_landing.png") no-repeat;
+	position: relative;
     float: left;
     height: 42px;
     margin-left: 680px;
+	margin-top: 60px;
     width: 240px;
-	}
+}
+.landing_log_in_button_container {
+	position: relative;
+	float: right;
+	margin-top: 25px;
+	margin-right: 25px;
+}
+.landing_log_in_button {
+	background: url("img/landing_page/login-bg.png") repeat;
+	position: relative;
+	color: #e5e4e4;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+	text-decoration: none;
+	padding: 10px 35px 10px 35px;
+	
+}
+.landing_slogan {
+	position: relative;
+	width: 745px;
+	margin-left: 430px;
+	margin-top: 40px;
+	text-align: center;
+
+}
+.landing_slogan span {
+	color: #ededed;
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+	line-height: 50px;
+	 text-shadow: 0px 1px 2px black
+	
+}
+.get_access_container{
+	position: relative;
+	float: left;
+	height: 415px;
+	width: 750px;
+	margin-left: 430px;
+	margin-top: 60px;
+	margin-bottom: 410px;
+	background: url("img/landing_page/login-bg.png") repeat;
+}
+.get_access_text {
+	position: relative;
+	width: 419px;
+	margin-left: 165px;
+	margin-top: 40px;
+	text-align: center;
+
+}
+.get_access_text span {
+	color: #f9f9f9;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+	line-height: 24px;
+	 text-shadow: 0px 1px 2px black
+}
+.get_access_input {
+	position: relative;
+	height: 50px;
+	width: 365px;
+	margin-top: 30px;
+	margin-left: 165px;
+	background: #fff;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
+   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
+	 padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+div.get_access_input input {
+    background: none;
+    border: none;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #a8a8a1;
+    line-height: 31px;
+    width: 365px;
+}
+.get_access_free_button_container {
+	margin-left: 190px;
+	margin-top: 50px;
+	position: relative;
+}
+.get_access_free_button {
+	position: relative;
+	background: #ff9518;
+	color: #f9f9f9;
+	padding: 15px 90px 15px 90px;
+	text-decoration: none;
+	font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+	line-height: 24px;
+	 text-shadow: 0px 1px 2px black;
+		-webkit-border-radius: 20px;
+	border-radius: 4px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
+   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
+}
+.get_access_breakline_left {
+	background: #9e8674 repeat;
+	position: relative;
+	height: 1px;
+	width: 163px;
+	margin-top: 42px;
+	margin-left: 193px;
+	float: left;
+}
+.or {
+	position: relative;
+	float: left;
+	color: #f9f9f9;
+	text-shadow: 0px 1px 2px black;
+	font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+	line-height: 16px;
+	font-style: italic;
+	margin-top: 32px;
+	margin-left: 9px;
+
+}
+.get_access_breakline_right {
+	background: #9e8674 repeat;
+	position: relative;
+	height: 1px;
+	width: 163px;
+	margin-top: 42px;
+	margin-right: 193px;
+	float: right;
+}
+.get_access_facebook_log_in_button_container {
+	margin-top: 18px;
+	margin-left: 190px;
+	position: relative;
+	float: left;
+}
+
+.get_access_facebook_log_in_button {
+	float: left;
+	position: relative;
+	background: #45619d;
+	color: #f9f9f9;
+	padding: 15px 55px 10px 55px;
+	text-decoration: none;
+	font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+	line-height: 24px;
+	 text-shadow: 0px 1px 2px black;
+		-webkit-border-radius: 20px;
+	border-radius: 4px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
+   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
+}
+
+span.facebook_letter {
+	float: left;
+	position: relative;
+	color: #f9f9f9;
+	font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+	line-height: 24px;
+	 text-shadow: 0px 1px 2px black;
+	 margin-right: 23px;
+}
+span.facebook_vertical_breakline {
+	float: left;
+	background: url("img/landing_page/vertical-breakline.png") repeat-y;
+	width: 2px;
+	height: 40px;
+	position:relative;
+	margin-right: 20px;
+	margin-top: -8px;
+}
+
+.footer_breakline {
+	position: relative;
+	width: 747px;
+	height: 2px;
+	background: url("img/landing_page/footer-breakline.png") repeat-x;
+}
+
+.copyright {
+	position: relative;
+	float: left;
+	font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+	line-height: 12px;
+	margin-top: 17px;
+	color: #dbd5d2;
+
+}
+.footer_landing_page {
+	position: relative;
+	float: right;
+	margin-top: 16px;
+	
+}
+
+
+.footer_landing_page ul.footer_landing_page_links li {
+	list-style: none outside none;
+    float: left;
+	margin-right: 10px;
+}
+.footer_landing_page ul.footer_landing_page_links li:last-child {
+	margin-right: 0px;
+}
+.footer_landing_page ul.footer_landing_page_links li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #dbd5d2;
+    font-size: 12px;
+    text-decoration: none;
+
+	line-height: 12px;
+}
+
