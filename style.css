@@ -300,6 +300,7 @@ div#tab1, div#tab2, div#tab3, div#tab4, div#tab5 {
 div.content {
     width: 733px;
 }
+
 div.tab_content {
     padding-top: 30px;
 }
@@ -1110,7 +1111,7 @@ div.calendar_container {
     margin-bottom: 35px;
 }
 div.users-checkboxes-container {
-    margin: 15px 29px 0 0;
+    margin-top: 15px;
     height: 294px;
     overflow: hidden;
     position: relative;
@@ -2049,7 +2050,7 @@ a.profile-photo  {
     height: 50px;
     line-height: 50px;
 	background: #fff;
-	padding: 10px 80px 10px 10px;
+	padding: 10px 50px 10px 10px;
 	border: 1px solid #f6e3ec;
 
 }
@@ -2062,7 +2063,7 @@ a.profile-photo  {
     height: 50px;
     line-height: 50px;
 	background: #fff;
-	padding: 10px 80px 10px 10px;
+	padding: 10px 50px 10px 10px;
 	border: 1px solid #f6e3ec;
 
 }
@@ -2075,26 +2076,26 @@ a.profile-photo  {
     height: 50px;
     line-height: 50px;
 	background: #fff;
-	padding: 10px 80px 10px 10px;
+	padding: 10px 50px 10px 10px;
 	border: 1px solid #f6e3ec;
 
 }
 .checkbox-description {
-
+	margin-top: 30px;
     line-height: normal;
     position: relative;			
 	font-size: 12px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 	color: #414141;
-	margin-top: 30px;
+
 }
 .description-label-container{
 	position: relative;
 	float: right;
 	
 }	
-div.check-boxes-users label.check-label{
+div.check-boxes-users div.check-label{
 	float: left;
 	line-height: normal;
 	margin-top: 5px;
@@ -2103,7 +2104,7 @@ div.check-boxes-users label.custom_input1{
 
 	line-height: normal;
 	margin-top: -12px;
-	margin-right: -80px;
+	margin-right: -50px;
 	
 }
 
@@ -2111,7 +2112,7 @@ div.check-boxes-users label{
 	float: right;
 }
 img.checkbox_photo {
-
+	float: left;      
 	margin-right: 5px;
 	vertical-align: middle;
 }
@@ -2601,5 +2602,25 @@ div.users-buttons {
 	position: relative;
 	float: left;
 	margin-top: 35px;
-
 }
+/*---Landing Page---*/
+#wrapper_landing_page {
+	width: 100%;
+	min-width: 1100px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+    overflow: hidden;
+	background: url("img/landing_page/bg.png") repeat;
+}
+#header_landing_page {
+	height: 105px;
+	background: none;
+}
+.landing_logo {
+	background: url("img/landing_page/logo_landing.png") no-repeat;
+    float: left;
+    height: 42px;
+    margin-left: 680px;
+    width: 240px;
+	}
