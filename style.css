@@ -56,6 +56,18 @@ input[type="checkbox"] + label.custom_input span{
 input[type="checkbox"]:checked + label.custom_input span{
     background:url("img/checkbox-checked.png");
 }
+input[type="checkbox"] + label.custom_input1 span{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    /*margin:-1px 4px 0 0;*/
+    vertical-align:middle;
+    background:url("img/checkbox-users.png");
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label.custom_input1 span{
+    background:url("img/checkbox-users-checked.png");
+}
 
 /* Header
 -----------------------------------------------------------------------------*/
@@ -1096,6 +1108,14 @@ div.calendar_container {
     overflow: hidden;
     margin-bottom: 35px;
 }
+div.users-checkboxes-container {
+    margin: 15px 29px 0 0;
+    height: 294px;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 35px;
+}
 div.calendar {
     width: 5000px;
     padding: 14px 0;
@@ -1709,7 +1729,7 @@ div.discussion-container textarea.diss {
 	font-size: 14px;
 	line-height: 10px;
 }
-div.send-msg-container textarea.diss1 {
+div.send-msg-container div.send-msg-top-input {
 	float: left;
     margin-left: 25px;
 	margin-top: 25px;
@@ -1717,15 +1737,61 @@ div.send-msg-container textarea.diss1 {
     background: #ffffff;
 	color: #b5b5b5;
     border: 1px solid #e8e5df;
-    height: 20px;
+    height: 35px;
     padding-left: 10px;
-	padding-top: 12.5px;
+	padding-top: 5px;
     width: 610px;
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;
 	font-size: 12px;
 	line-height: 10px;
 }
+.input-names {
+		font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+}
+.first-input-name {
+	position: relative;
+	float: left;
+	background: #e8e5dd;
+	border-radius: 5px;
+	padding: 10px 13px;
+	line-height: 10px;
+	margin-right: 5px;
+	color: #666665;
+}
+.second-input-name {
+	position: relative;
+	float: left;
+	background: #e8e5dd;
+	border-radius: 5px;
+	padding: 10px 13px 10px 13px;
+	line-height: 10px;
+	color: #666665;
+}
+.send-msg-input {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: none;
+    color: #B5B5B5;
+    float: left;
+    font-family: 'Noto Sans',sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+	height: 29px;
+	margin-left: 15px;
+	color: #666665;
+}
+
+span.close { 
+	background: url("img/close.png") no-repeat scroll 0 center transparent;
+	position: relative;
+    float: right;
+    height: 9px;
+    margin-left: 14px;
+    margin-top: 1px;
+    width: 9px;}
+	
 div.bottom-disc textarea.diss1 {
     float: left;
     margin-left: 25px;
@@ -1851,6 +1917,24 @@ p.add_msg-pop1 a.click_here {
     color: #13b6ec;
     text-decoration: none;
 }
+.lol {
+	position: relative;
+	padding-bottom: 1000px;
+}
+p.add_msg-pop2 {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+	margin-left: -270px;
+    margin-top: 50px;
+}
+p.add_msg-pop2 a.click_here {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #13b6ec;
+    text-decoration: none;
+}
 .discussion-line { 
 	position:relative;
 	background: url("img/disc-line.png") repeat-x;
@@ -1937,8 +2021,96 @@ a.profile-photo  {
     width: 37px;
 	float: left;
 }
+.send-choosing-msg {    
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+	margin-left: 25px;
+}
+.check-boxes-users {
+	position: relative;
+	float: left;
+	margin-top: 20px;
+	display: inline-block;
+	color: #0db2ea;
+	font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+	cursor: pointer;
+}
+.checkbox-user {
+	padding: 10px 50px 10px 10px;
+    float: left;
+    position: relative;
+    padding: 0 10px;
+    margin-right: 15px;
+    height: 50px;
+    line-height: 50px;
+	background: #fff;
+	padding: 10px 80px 10px 10px;
+	border: 1px solid #f6e3ec;
+
+}
+.checkbox-user1 {
+	padding: 10px 50px 10px 10px;
+    float: left;
+    position: relative;
+    padding: 0 10px;
+    margin-right: 15px;
+    height: 50px;
+    line-height: 50px;
+	background: #fff;
+	padding: 10px 80px 10px 10px;
+	border: 1px solid #f6e3ec;
+
+}
+.checkbox-user2 {
+	padding: 10px 50px 10px 10px;
+    float: left;
+    position: relative;
+    padding: 0 10px;
+    margin-right: 15px;
+    height: 50px;
+    line-height: 50px;
+	background: #fff;
+	padding: 10px 80px 10px 10px;
+	border: 1px solid #f6e3ec;
+
+}
+.checkbox-description {
+
+    line-height: normal;
+    position: relative;			
+	font-size: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+	color: #414141;
+	margin-top: 30px;
+}
+.description-label-container{
+	position: relative;
+	float: right;
+	
+}	
+div.check-boxes-users label.check-label{
+	float: left;
+	line-height: normal;
+	margin-top: 5px;
+}
+div.check-boxes-users label.custom_input1{
+
+	line-height: normal;
+	margin-top: -12px;
+	margin-right: -80px;
+	
+}
+
+div.check-boxes-users label{
+	float: right;
+}
 img.checkbox_photo {
-	margin-left: 10px;
+
 	margin-right: 5px;
 	vertical-align: middle;
 }
@@ -2014,6 +2186,22 @@ img.checkbox_photo {
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */	
 }
+.input-dropbox-list  {
+	display: none;
+	list-style: none;
+	background: #f6f3ec;
+	position: absolute;
+	top: 245px;
+	left: 737px;
+	z-index: 11;
+	padding: 10px 10px 10px 10px;
+	line-height: 30px;
+	border: 1px solid #c5c5c5;
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */
+	z-index: 13;
+}
 ul.pop-list {
 	list-style: none;
 }
@@ -2022,6 +2210,31 @@ ul.pop-list   li a {
 	color: #51504c;
 }
 .pop-list a:hover {
+	color: #0db2ea;	
+}
+ul.dropbox-list {
+	list-style: none;
+}
+ul.dropbox-list   li a {
+	text-decoration: none;
+	color: #51504c;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+	
+}
+ul.dropbox-list   li img {
+	margin-right: 10px;
+	vertical-align: -5px;
+}
+ul.dropbox-list   li  {
+	margin-bottom: 5px;
+	padding-right: 30px;
+}
+ul.dropbox-list   li:last-child {
+	margin-bottom: 0;
+}
+.dropbox-list  a:hover {
 	color: #0db2ea;	
 }
 /*---END--- Small pop-ups*/
