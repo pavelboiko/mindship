@@ -2670,12 +2670,25 @@ div.users-buttons {
     overflow: hidden;
 	background: url("img/landing_page/bg-pattern.jpg") repeat;
 }
-#bg-shadow {
-	width: 100%;
-	height: auto !important;
-	height: 100%;
+#bg-shadow-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 1200px;
+	width: 50%;
+
     overflow: hidden;
-	background: url("img/landing_page/bg-shadow.png") repeat;
+	background: url("img/landing_page/bg-shadow-left.png") no-repeat;
+
+}
+#bg-shadow-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 1200px;
+	width: 50%;
+    overflow: hidden;
+	background: url("img/landing_page/bg-shadow-right.png") repeat;
 
 }
 #header_landing_page {
