@@ -2042,7 +2042,7 @@ a.profile-photo  {
 	cursor: pointer;
 }
 .checkbox-user {
-	padding: 10px 50px 10px 10px;
+	width: 20px;
     float: left;
     position: relative;
     padding: 0 10px;
@@ -2055,7 +2055,7 @@ a.profile-photo  {
 
 }
 .checkbox-user1 {
-	padding: 10px 50px 10px 10px;
+		width: 190px;
     float: left;
     position: relative;
     padding: 0 10px;
@@ -2068,7 +2068,7 @@ a.profile-photo  {
 
 }
 .checkbox-user2 {
-	padding: 10px 50px 10px 10px;
+		width: 190px;
     float: left;
     position: relative;
     padding: 0 10px;
