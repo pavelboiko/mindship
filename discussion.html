@@ -14,8 +14,8 @@
 
         $(document).ready(function() {
           $(".start-toggle").click(function(){
-                $("ul.submenu ul").slideToggle();
-				$("ul.submenu1 ul").slideUp();
+                $("li.submenu ul").slideToggle();
+				$("li.submenu1 ul").slideUp();
 				$(".pointer-active-bg1").slideToggle(10);
 				$(".pointer-active-bg").slideUp(10);
 				$(".dark-shroud1").slideToggle();
@@ -23,8 +23,8 @@
 
             });
 			 $(".start-toggle1").click(function(){
-                $("ul.submenu1 ul").slideToggle();
-				$("ul.submenu ul").slideUp();
+                $("li.submenu1 ul").slideToggle();
+				$("li.submenu ul").slideUp();
 				$(".pointer-active-bg").slideToggle(10);
 				$(".pointer-active-bg1").slideUp(10);
 				$(".dark-shroud").slideToggle();
@@ -358,7 +358,7 @@
             <ul class="project_menu">
 				<li><div class="dark-shroud"></div></li>
 				
-				<ul class="submenu1"><li><div class="pointer-active-bg"></div><span class="menu_arrow1"></span><div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div></li>
+				<li class="submenu1"><div class="pointer-active-bg"></div><span class="menu_arrow1"></span><div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div>
 			
                     <ul id="hidden">
                         <li onclick=""><a href="#">Landing page<span class="num">7</span></a></li>
@@ -366,10 +366,10 @@
                         <li><a href="#">Payments<span class="num">36</span></a></li>
                         <li><a href="#">Contact page<span class="num">52</span></a></li>
                     </ul>
-               
-                </ul>
+                 </li>
+                
 				<li><div class="dark-shroud1"></div></li>
-                <ul class="submenu"><li><div class="pointer-active-bg1"></div><span class="menu_arrow"></span><div class="start-toggle"><a href="#" class="pointer">Backend development</a></div></li>
+                <li class="submenu"><div class="pointer-active-bg1"></div><span class="menu_arrow"></span><div class="start-toggle"><a href="#" class="pointer">Backend development</a></div>
                    
 				   <ul id="hidden1">
                         <li><a href="#">Landing page<span class="num">7</span></a></li>
@@ -378,7 +378,7 @@
                         <li><a href="#">Contact page<span class="num">52</span></a></li>
                     </ul>
                 
-				</ul>
+				 </li>
 				 <li><p class="project_menu_title">You can also add</p></li>
                  <li class="addons"><a href="#">Design<span class="cross"></span></a></li>
                  <li class="addons"><a href="#">Marketing<span class="cross"></span></a></li>

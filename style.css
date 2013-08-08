@@ -1848,6 +1848,25 @@ div.bottom-disc1 textarea.diss1 {
 		float: right;
 		margin-left: 370px;
 }
+.create-new1 a {
+	position: relative;
+
+	background: #0098ca;
+	line-height: 28px;
+	padding: 10px 27.5px 10px 27.5px;
+
+	font-size: 14px;
+	text-decoration: none;
+	color: #c4ddea;
+	font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+.create-new1 {
+		position: relative;
+		float: right;
+		margin-left: 465px;
+		margin-top: -15px;
+}
 
 ul.edit-text-panel-pop {
     float: left;
@@ -1916,7 +1935,7 @@ div.add_msg-pop a.click_here {
 }
 div.add_msg-pop1 {
     float: left;
-    margin-top: 25px;
+    margin-top: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 11px;
@@ -1928,19 +1947,16 @@ div.add_msg-pop1 a.click_here {
     color: #13b6ec;
     text-decoration: none;
 }
-.lol {
-	position: relative;
-	padding-bottom: 1000px;
-}
-p.add_msg-pop2 {
+
+div.add_msg-pop2 {
     float: left;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 11px;
-	margin-left: -270px;
-    margin-top: 50px;
+	margin-left: 25px;
+    margin-top: -10px;
 }
-p.add_msg-pop2 a.click_here {
+div.add_msg-pop2 a.click_here {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #13b6ec;
@@ -2123,6 +2139,12 @@ img.checkbox_photo {
 	margin-right: 5px;
 	vertical-align: middle;
 	margin-top: 10px;
+}
+img.checkbox_photo1 {
+	float: left;      
+	margin-right: 5px;
+	vertical-align: middle;
+
 }
 /*---END--- Create Discussion pop-up*/
 

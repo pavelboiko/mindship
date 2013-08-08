@@ -104,13 +104,13 @@
 					  )							  
 					  
 	$('.checkbox-user').click( function(){
-		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
-		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
-		}
-		return false;
-	});		
+						if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
+									$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
+						} else {
+									$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
+								}
+						return false;
+				});		
 	$('.checkbox-user1').click( function(){
 		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
 			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
@@ -266,15 +266,15 @@ $(document).ready(function() {
 
             <div class="bottom-disc1">
 				<textarea class="diss1" onfocus="if (this.value=='Once upon a time...') this.value='';"
-					onblur="if (this.value==''){this.value='Once upon a time...'}" value="Once upon a time"></textarea>
+					onblur="if (this.value==''){this.value='Once upon a time...'}" ></textarea>
 			</div>
-            <p class="add_msg-pop1">
-				<a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here<div class="create-new"><a href="#">SEND MESSAGE</a></div>
-			</p>
-			<p class="add_msg-pop2">
+            <div class="add_msg-pop1">
+				<div class="click-here-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here</div><div class="create-new1"><a href="#">SEND MESSAGE</a></div>
+			</div>
+			<div class="add_msg-pop2">
 				Or you can <a href="#" class="click_here">choose files from list</a> 
-			</p>
-			
+			</div>
+
 			<div class="clear"></div>
 			
 		</div>
@@ -290,17 +290,17 @@ $(document).ready(function() {
 		</div>
 		<div class="input-dropbox-list">			
 			<ul class="dropbox-list">
-				<li><a href="#" class=""><img src="img/db-img.png"/>Andrey Grigorjev</a></li>
-				<li><a href="#" class=""><img src="img/db-img1.png"/>Andy Warhole</a></li>
-				<li><a href="#" class=""><img src="img/db-img2.png"/>Andrew Catcher</a></li>					  
+				<li><a href="#" class=""><img src="img/db-img.png" alt=""/>Andrey Grigorjev</a></li>
+				<li><a href="#" class=""><img src="img/db-img1.png"  alt=""/>Andy Warhole</a></li>
+				<li><a href="#" class=""><img src="img/db-img2.png"  alt=""/>Andrew Catcher</a></li>					  
 			</ul></div>
 		
 <!-- pop-ups-end-->
 
-			 <div class="tab_container">
+		 <div class="tab_container">
 			<div class="showroom-button"><a href="#">Project Showroom</a></div>
             <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
-				<div class="page_title_container"><h1 class="title">Website development for Microsoft, <br/> from scratch
+				<div class="page_title_container"><div class="title">Website development for Microsoft, <br/> from scratch
 				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
 					<div id="pop-up-project">            
 						<ul class="pop-list">
@@ -309,7 +309,7 @@ $(document).ready(function() {
 							<li><a href="#" class="">Close project</a></li>					  
 						</ul>
 					</div>
-		<div id="pop-up-corner2"></div></div></h1></div>
+		<div id="pop-up-corner2"></div></div></div></div>
 				
 				<div class="break-bounder"></div>
 				<ul class="breadcrumbs1">
@@ -355,11 +355,11 @@ $(document).ready(function() {
 			<div class="check-boxes-users">
     			<div class="checkbox-user">
 				
-                    <input type="checkbox"  id="conv_on1"/>
+                    <input type="checkbox"  class="conv_on1"/>
                     <label class="custom_input1" for="conv_on1">
                         <span></span>
                     </label>
-                    <img class="checkbox_photo" src="img/users-checkbox-img.png" alt="" />
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
 			
 					
                     <div class="check-label">Eduard V. </div>
@@ -369,11 +369,11 @@ $(document).ready(function() {
                 </div>
     			<div class="checkbox-user1">
 				
-                    <input type="checkbox"  id="conv_on1"/>
+                    <input type="checkbox"  class="conv_on1"/>
                     <label class="custom_input1" for="conv_on1">
                         <span></span>
                     </label>
-                    <img class="checkbox_photo" src="img/users-checkbox-img.png" alt="" />
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
 					<div class="description-label-container">
 					
                     <div class="check-label">Eduard V. </div>
@@ -383,11 +383,11 @@ $(document).ready(function() {
                 </div>
     			<div class="checkbox-user2">
 				
-                    <input type="checkbox"  id="conv_on1"/>
+                    <input type="checkbox"  class="conv_on1"/>
                     <label class="custom_input1" for="conv_on1">
                         <span></span>
                     </label>
-                    <img class="checkbox_photo" src="img/users-checkbox-img.png" alt="" />
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
 					<div class="description-label-container">
 					
                    <div class="check-label">Eduard V. </div>
@@ -403,11 +403,11 @@ $(document).ready(function() {
 			<div class="check-boxes-users">
     			<div class="checkbox-user">
 				
-                    <input type="checkbox"  id="conv_on1"/>
+                    <input type="checkbox"  class="conv_on1"/>
                     <label class="custom_input1" for="conv_on1">
                         <span></span>
                     </label>
-                    <img class="checkbox_photo" src="img/users-checkbox-img.png" alt="" />
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
 					<div class="description-label-container">
 					
                     <div class="check-label">Eduard V. </div>
@@ -417,11 +417,11 @@ $(document).ready(function() {
                 </div>
     			<div class="checkbox-user1">
 				
-                    <input type="checkbox"  id="conv_on1"/>
+                    <input type="checkbox"  class="conv_on1"/>
                     <label class="custom_input1" for="conv_on1">
                         <span></span>
                     </label>
-                    <img class="checkbox_photo" src="img/users-checkbox-img.png" alt="" />
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
 					<div class="description-label-container">
 					
                     <div class="check-label">Eduard V. </div>
@@ -431,11 +431,11 @@ $(document).ready(function() {
                 </div>
     			<div class="checkbox-user2">
 				
-                    <input type="checkbox"  id="conv_on1"/>
+                    <input type="checkbox"  class="conv_on1"/>
                     <label class="custom_input1" for="conv_on1">
                         <span></span>
                     </label>
-                    <img class="checkbox_photo" src="img/users-checkbox-img.png" alt="" />
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
 					<div class="description-label-container">
 					
                     <div class="check-label">Eduard V. </div>
@@ -456,13 +456,13 @@ $(document).ready(function() {
 				    <h1 class="title">Landing page<a href="#" class="page_settings"></a></h1>
                 </div><!-- #tab5 -->
 			</div><!-- .tab_container-->
-		</div><!-- #container-->
+		
 
- 	<!-- .sidebar -->
+<!-- .sidebar -->
 		<div class="sidebar" id="sideLeft">
             <p class="project_menu_title">Your tasks</p>
             <ul class="project_menu">
-				<div class="dark-shroud"></div>
+				<li><div class="dark-shroud"></div></li>
 				
 				<li class="submenu1"><div class="pointer-active-bg"></div><span class="menu_arrow1"></span><div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div>
 			
@@ -474,7 +474,7 @@ $(document).ready(function() {
                     </ul>
                  </li>
                 
-				<div class="dark-shroud1"></div>
+				<li><div class="dark-shroud1"></div></li>
                 <li class="submenu"><div class="pointer-active-bg1"></div><span class="menu_arrow"></span><div class="start-toggle"><a href="#" class="pointer">Backend development</a></div>
                    
 				   <ul id="hidden1">
@@ -483,12 +483,12 @@ $(document).ready(function() {
                         <li><a href="#">Payments<span class="num">36</span></a></li>
                         <li><a href="#">Contact page<span class="num">52</span></a></li>
                     </ul>
-                 </li>
-				 
-				 <p class="project_menu_title">You can also add</p>
+                
+				 </li>
+				 <li><p class="project_menu_title">You can also add</p></li>
                  <li class="addons"><a href="#">Design<span class="cross"></span></a></li>
                  <li class="addons"><a href="#">Marketing<span class="cross"></span></a></li>
-				 <div class="trash-show"><li class="addons"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></li></div>
+				 <li class="addons"><div class="trash-show"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></div></li>
                  <li class="addons"><a href="#">Create your own<span class="cross"></span></a></li>
 			</ul>
 		</div><!-- .sidebar#sideLeft -->

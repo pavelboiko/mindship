@@ -165,16 +165,15 @@
 		<div id="grey-shroud"></div>
 				<div id="grey-shroud1"></div>
 		<div id="grey-shroud2"></div>
-
-
-
+        
 		<div id="discussion" class="discussion-container">
 			<h1 class="discussion-title">Great! You're about to start a new discussion.</h1>
 			<div class="shut_down"> 
 				<div id="shut-down"></div>
 			</div>
-			<textarea class="diss" onfocus="if (this.value=='Once upon a time...') this.value='';"
-					onblur="if (this.value==''){this.value='Once upon a time...'}"></textarea>
+			<textarea class="diss"  onfocus="if (this.value == 'Fancy topic goes here'){this.value = '';}" 
+					onblur="if (this.value == ''){ this.value='Fancy topic goes here'; }">Fancy topic goes here</textarea>
+					
 			<ul class="edit-text-panel-pop">
 				<li><a href="#" class="bold-pop">&nbsp;</a></li>
 				<li><a href="#" class="italic-pop">&nbsp;</a></li>
@@ -184,12 +183,13 @@
 				<li><a href="#" class="list-sign-pop">&nbsp;</a></li>
 			</ul>
             <div class="bottom-disc">
-				<textarea class="diss1" onfocus="if (this.value=='Once upon a time...') this.value='';"
-					onblur="if (this.value==''){this.value='Once upon a time...'}"></textarea>
+				<textarea class="diss1"  onfocus="if (this.value == 'Once upon a time...'){this.value = '';}" 
+					onblur="if (this.value == ''){ this.value='Once upon a time...'; }">Once upon a time...</textarea>
+					
 			</div>
-            <p class="add_msg-pop">
-				<a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here<div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
-			</p>
+            <div class="add_msg-pop">
+				<div class="a-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here</div><div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
+			</div>
 			<div class="discussion-line"></div>
 			<div class="send-choosing-msg">Your message will be sent to the following people:</div>
 			<div class="clear"></div>
@@ -237,11 +237,10 @@
 		
 <!-- pop-ups-end-->
 
-			
 		 <div class="tab_container">
 			<div class="showroom-button"><a href="#">Project Showroom</a></div>
             <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
-				<div class="page_title_container"><h1 class="title">Website development for Microsoft, <br/> from scratch
+				<div class="page_title_container"><div class="title">Website development for Microsoft, <br/> from scratch
 				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
 					<div id="pop-up-project">            
 						<ul class="pop-list">
@@ -250,7 +249,7 @@
 							<li><a href="#" class="">Close project</a></li>					  
 						</ul>
 					</div>
-		<div id="pop-up-corner2"></div></div></h1></div>
+		<div id="pop-up-corner2"></div></div></div></div>
 				
 				<div class="break-bounder"></div>
 				<ul class="breadcrumbs1">
@@ -378,11 +377,11 @@
                 </div><!-- #tab5 -->
 			</div><!-- .tab_container-->
 		</div><!-- #container-->
- 	<!-- .sidebar -->
+<!-- .sidebar -->
 		<div class="sidebar" id="sideLeft">
             <p class="project_menu_title">Your tasks</p>
             <ul class="project_menu">
-				<div class="dark-shroud"></div>
+				<li><div class="dark-shroud"></div></li>
 				
 				<li class="submenu1"><div class="pointer-active-bg"></div><span class="menu_arrow1"></span><div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div>
 			
@@ -394,7 +393,7 @@
                     </ul>
                  </li>
                 
-				<div class="dark-shroud1"></div>
+				<li><div class="dark-shroud1"></div></li>
                 <li class="submenu"><div class="pointer-active-bg1"></div><span class="menu_arrow"></span><div class="start-toggle"><a href="#" class="pointer">Backend development</a></div>
                    
 				   <ul id="hidden1">
@@ -403,12 +402,12 @@
                         <li><a href="#">Payments<span class="num">36</span></a></li>
                         <li><a href="#">Contact page<span class="num">52</span></a></li>
                     </ul>
-                 </li>
-				 
-				 <p class="project_menu_title">You can also add</p>
+                
+				 </li>
+				 <li><p class="project_menu_title">You can also add</p></li>
                  <li class="addons"><a href="#">Design<span class="cross"></span></a></li>
                  <li class="addons"><a href="#">Marketing<span class="cross"></span></a></li>
-				 <div class="trash-show"><li class="addons"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></li></div>
+				 <li class="addons"><div class="trash-show"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></div></li>
                  <li class="addons"><a href="#">Create your own<span class="cross"></span></a></li>
 			</ul>
 		</div><!-- .sidebar#sideLeft -->
