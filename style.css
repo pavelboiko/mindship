@@ -2696,7 +2696,7 @@ div.users-buttons {
 	height: 1200px;
 	width: 50%;
     overflow: hidden;
-	background: url("img/landing_page/bg-shadow-right.png") repeat;
+	background: url("img/landing_page/bg-shadow-right.png") no-repeat;
 
 }
 #header_landing_page {
@@ -2720,10 +2720,10 @@ div.users-buttons {
     width: 240px;
 }
 .landing_log_in_button_container {
-	position: relative;
-	float: right;
-	margin-top: -45px;
-	margin-right: 25px;
+	position: absolute;
+
+	top: 15px;
+	right: 25px;
 }
 .landing_log_in_button {
 	background: url("img/landing_page/login-bg.png") repeat;
