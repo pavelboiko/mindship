@@ -47,7 +47,7 @@
 				<div class="clear"></div>
 				<h1 class="title">Landing page<a href="#" class="page_settings"></a></h1>
 
-				<div class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>
+				<div id="CalendarSwitcher" class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>
 				<div class="slider_container">
 					<div class="slider">
 						<div class="deadline_slider">
@@ -58,78 +58,6 @@
 				<div class="clear"></div>
 				<div id="CalendarLine" class="calendar_container">
 					<div class="calendar">
-						<!--<div class="month_container">-->
-							<!--<p class="month">April, 2013</p>-->
-							<!--<ul class="days">-->
-								<!--<li class="day_container"><span class="date">12</span>-->
-
-									<!--<div class="task_timeline_container">-->
-										<!--<div class="task_timeline timeline1 active">-->
-											<!--<div class="left_time"></div>-->
-											<!--<p class="task_on_timeline">Landing page functionality</p></div>-->
-										<!--<div class="task_timeline timeline2 done">-->
-											<!--<div class="left_time"></div>-->
-											<!--<p class="task_on_timeline">Finished to-do</p></div>-->
-									<!--</div>-->
-								<!--</li>-->
-								<!--<li class="day_container"><span class="date">13</span></li>-->
-								<!--<li class="day_container"><span class="date">14</span></li>-->
-								<!--<li class="day_container"><span class="date">15</span></li>-->
-								<!--<li class="day_container"><span class="date">16</span></li>-->
-								<!--<li class="day_container"><span class="date">17</span></li>-->
-								<!--<li class="day_container"><span class="date">18</span></li>-->
-								<!--<li class="day_container"><span class="date">19</span></li>-->
-								<!--<li class="day_container"><span class="date">20</span></li>-->
-								<!--<li class="day_container today"><span class="date">21</span><span class="today_txt">today</span>-->
-								<!--</li>-->
-								<!--<li class="day_container"><span class="date">22</span></li>-->
-								<!--<li class="day_container"><span class="date">23</span></li>-->
-								<!--<li class="day_container"><span class="date">24</span></li>-->
-								<!--<li class="day_container"><span class="date">25</span></li>-->
-								<!--<li class="day_container"><span class="date">26</span></li>-->
-								<!--<li class="day_container"><span class="date">27</span></li>-->
-								<!--<li class="day_container"><span class="date">28</span></li>-->
-								<!--<li class="day_container"><span class="date">29</span></li>-->
-								<!--<li class="day_container"><span class="date">30</span></li>-->
-							<!--</ul>-->
-						<!--</div>-->
-						<!--&lt;!&ndash; month_container &ndash;&gt;-->
-						<!--<div class="month_container">-->
-							<!--<p class="month">May, 2013</p>-->
-							<!--<ul class="days">-->
-								<!--<li class="day_container"><span class="date">1</span></li>-->
-								<!--<li class="day_container"><span class="date">2</span></li>-->
-								<!--<li class="day_container"><span class="date">3</span></li>-->
-								<!--<li class="day_container"><span class="date">4</span></li>-->
-								<!--<li class="day_container"><span class="date">5</span></li>-->
-								<!--<li class="day_container"><span class="date">6</span></li>-->
-								<!--<li class="day_container"><span class="date">7</span></li>-->
-								<!--<li class="day_container"><span class="date">8</span></li>-->
-								<!--<li class="day_container"><span class="date">9</span></li>-->
-								<!--<li class="day_container"><span class="date">10</span></li>-->
-								<!--<li class="day_container"><span class="date">11</span></li>-->
-								<!--<li class="day_container"><span class="date">12</span></li>-->
-								<!--<li class="day_container"><span class="date">13</span></li>-->
-								<!--<li class="day_container"><span class="date">14</span></li>-->
-								<!--<li class="day_container"><span class="date">15</span></li>-->
-								<!--<li class="day_container"><span class="date">16</span></li>-->
-								<!--<li class="day_container"><span class="date">17</span></li>-->
-								<!--<li class="day_container"><span class="date">18</span></li>-->
-								<!--<li class="day_container"><span class="date">19</span></li>-->
-								<!--<li class="day_container"><span class="date">20</span></li>-->
-								<!--<li class="day_container"><span class="date">21</span></li>-->
-								<!--<li class="day_container"><span class="date">22</span></li>-->
-								<!--<li class="day_container"><span class="date">23</span></li>-->
-								<!--<li class="day_container"><span class="date">24</span></li>-->
-								<!--<li class="day_container"><span class="date">25</span></li>-->
-								<!--<li class="day_container"><span class="date">26</span></li>-->
-								<!--<li class="day_container"><span class="date">27</span></li>-->
-								<!--<li class="day_container"><span class="date">28</span></li>-->
-								<!--<li class="day_container"><span class="date">29</span></li>-->
-								<!--<li class="day_container"><span class="date">30</span></li>-->
-							<!--</ul>-->
-
-						<!--</div>-->
 						<ul class="d">
 							<li class="m">May, 2013</li>
 							<li>1</li>
@@ -163,11 +91,13 @@
 				</div>
 				<style type="text/css">
 					#CalendarLine{}
-					#CalendarLine .calendar{}
-					#CalendarLine .calendar ul.d{ float: left; width: 530px; list-style: none; }
-					#CalendarLine .calendar ul.d .m{ text-align: left; float: none; width: 100%; color: #D2CFCF; font: normal 14px 'Roboto',sans-serif; padding-bottom: 10px; padding-left: 7px; text-transform: uppercase; height: 20px; }
-					#CalendarLine .calendar ul.d li { float: left; height: 237px; position: relative; width: 52px; border-left: 1px dotted #D8D6D6; }
-					#CalendarLine .calendar ul.d li { color: #D2CFCF; font: bold 14px 'Roboto',sans-serif; padding-top: 10px; text-align: center; }
+					#CalendarLine .calendar{ position: absolute; top: 0; left: 0; }
+					#CalendarLine .calendar ul{ float: left; list-style: none; }
+					#CalendarLine .calendar ul li { float: left; height: 227px; position: relative; width: 52px; border-left: 1px dotted #D8D6D6; }
+					#CalendarLine .calendar ul li { color: #D2CFCF; font: bold 14px 'Roboto',sans-serif; padding-top: 10px; text-align: center; }
+					#CalendarLine .calendar ul li.month_line{ text-align: left; float: none; width: 100%; color: #D2CFCF; font: normal 14px 'Roboto',sans-serif; padding-bottom: 10px; padding-left: 7px; text-transform: uppercase; height: 20px; }
+					#CalendarLine .calendar ul li.today{ background: #F7F5F5; }
+					#CalendarLine .calendar ul li.today span{ bottom: 8px; color: #D2CFCF; display: block; position: absolute; text-align: center; text-transform: uppercase; width: 52px; }
 				</style>
 				<!-- calendar_container -->
 				<div class="content">
