@@ -1667,6 +1667,7 @@ table.todo_list td:last-child {
 }
 
 .discussion-container {
+	display: none;
 	position: absolute;
 	top: -72px;
 	left: 360px;
