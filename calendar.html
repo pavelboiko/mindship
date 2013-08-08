@@ -11,6 +11,13 @@
 	<!--[if lte IE 6]>
 	<link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
 	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/prevent-selection.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+
+		};
+
+	</script>
 	<script type="text/javascript" src="js/calendar.js"></script>
 </head>
 <body>
@@ -57,36 +64,7 @@
 				</div>
 				<div class="clear"></div>
 				<div id="CalendarLine" class="calendar_container">
-					<div class="calendar">
-						<ul class="d">
-							<li class="m">May, 2013</li>
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-							<li>6</li>
-							<li class="c">7</li>
-							<li>8</li>
-							<li>9</li>
-							<li>10</li>
-						</ul>
-
-						<ul class="d">
-							<li class="m">May, 2013</li>
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>4</li>
-							<li>5</li>
-							<li>6</li>
-							<li>7</li>
-							<li>8</li>
-							<li>9</li>
-							<li>10</li>
-						</ul>
-						<!-- month_container -->
-					</div>
+					<div class="calendar"></div>
 					<!-- calendar -->
 				</div>
 				<style type="text/css">
@@ -95,7 +73,7 @@
 					#CalendarLine .calendar ul{ float: left; list-style: none; }
 					#CalendarLine .calendar ul li { float: left; height: 227px; position: relative; width: 52px; border-left: 1px dotted #D8D6D6; }
 					#CalendarLine .calendar ul li { color: #D2CFCF; font: bold 14px 'Roboto',sans-serif; padding-top: 10px; text-align: center; }
-					#CalendarLine .calendar ul li.month_line{ text-align: left; float: none; width: 100%; color: #D2CFCF; font: normal 14px 'Roboto',sans-serif; padding-bottom: 10px; padding-left: 7px; text-transform: uppercase; height: 20px; }
+					#CalendarLine .calendar ul li.month_line{ cursor: pointer; text-align: left; float: none; width: 100%; color: #D2CFCF; font: normal 14px 'Roboto',sans-serif; padding-bottom: 10px; padding-left: 7px; text-transform: uppercase; height: 20px; }
 					#CalendarLine .calendar ul li.today{ background: #F7F5F5; }
 					#CalendarLine .calendar ul li.today span{ bottom: 8px; color: #D2CFCF; display: block; position: absolute; text-align: center; text-transform: uppercase; width: 52px; }
 				</style>
