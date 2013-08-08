@@ -268,6 +268,7 @@ ul.breadcrumbs1 li a#page-settings1 {
     background: url("img/settings-icon2.png") no-repeat;
     margin-left: 13px;
 	vertical-align: -3px;
+	z-index: 100;
 }
 .break-bounder {
 	position: relative;
@@ -2209,15 +2210,11 @@ img.checkbox_photo {
 	display: inline-block;
 	width: 240px;
 	height: 400px;
+	top: 0px;
+	left: 400px;
 
 }
-.pop-up-container1 {
-	position: absolute;
-	display: inline-block;
-	width: 240px;
-	height: 400px;
 
-}
 .input-dropbox-list  {
 	display: none;
 	list-style: none;
