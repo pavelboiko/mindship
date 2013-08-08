@@ -1633,6 +1633,7 @@ table.todo_list td:last-child {
 
 /*Create Discussion pop-up*/
 #grey-shroud {
+	display: none;
 	position: absolute; 
 	top: -110px; 
 	left: 0px; 
@@ -2617,28 +2618,25 @@ div.users-buttons {
 	background: none;
 }
 #footer_landing_page{
-	margin: -44px auto 0;
+	margin: 0 auto;
 	width: 750px;
-	float: left;
 	overflow: hidden;
-	height: 72px;
-	margin-left: 425px;
+	padding-bottom: 30px;
 	
 }
 
 .landing_logo {
 	background: url("img/landing_page/logo_landing.png") no-repeat;
 	position: relative;
-    float: left;
     height: 42px;
-    margin-left: 680px;
+    margin: 0 auto;
 	margin-top: 60px;
     width: 240px;
 }
 .landing_log_in_button_container {
 	position: relative;
 	float: right;
-	margin-top: 25px;
+	margin-top: -45px;
 	margin-right: 25px;
 }
 .landing_log_in_button {
@@ -2655,7 +2653,7 @@ div.users-buttons {
 .landing_slogan {
 	position: relative;
 	width: 745px;
-	margin-left: 430px;
+	margin: 0 auto;
 	margin-top: 40px;
 	text-align: center;
 
@@ -2671,12 +2669,11 @@ div.users-buttons {
 }
 .get_access_container{
 	position: relative;
-	float: left;
 	height: 415px;
 	width: 750px;
-	margin-left: 430px;
+	margin: 0 auto;
 	margin-top: 60px;
-	margin-bottom: 410px;
+	margin-bottom: 350px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
 .get_access_text {
@@ -2864,7 +2861,9 @@ span.facebook_vertical_breakline {
     color: #dbd5d2;
     font-size: 12px;
     text-decoration: none;
-
 	line-height: 12px;
 }
-
+.get_access_content {
+	position: relative;
+	float: left;
+}
