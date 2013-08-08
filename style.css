@@ -2696,7 +2696,7 @@ div.users-buttons {
 	height: 1200px;
 	width: 50%;
     overflow: hidden;
-	background: url("img/landing_page/bg-shadow-right.png") no-repeat;
+	background: url("img/landing_page/bg-shadow-right.png") top right no-repeat;
 
 }
 #header_landing_page {
