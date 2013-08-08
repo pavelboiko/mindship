@@ -189,7 +189,7 @@ ul.tabs {
     font-size: 14px;
 	position: relative;
 	float: left;
-	margin-left: -521px;
+	margin-left: -471px;
 	margin-top: 70px;
 	margin-bottom: 30px;
 }
@@ -1677,6 +1677,7 @@ table.todo_list td:last-child {
 	z-index: 12;
 }
 .send-msg-container {
+	display: none;
 	position: absolute;
 	top: -72px;
 	left: 465px;
@@ -2121,6 +2122,7 @@ img.checkbox_photo {
 
 /*small pop-ups*/
 #pop-up-corner {
+	display: none;
 	position: absolute;
 	top: 347px; 
 	left: 975px; 
@@ -2130,24 +2132,27 @@ img.checkbox_photo {
 	z-index: 12;
 }
 #pop-up-corner1 {
+	display: none;
 	position: absolute;
-	top: 160px; 
-	left: 682px; 
+	top: 28px; 
+	left: 32px; 
 	width: 9px; 
 	height: 17px; 
 	background: url(img/corner-pop-up2.png) no-repeat; 
 	z-index: 12;
 }
 #pop-up-corner2 {
+	display: none;
 	position: absolute;
-	top: 82px; 
-	left: 427px; 
+	top: 12px; 
+	left: 36px; 
 	width: 9px; 
 	height: 17px; 
 	background: url(img/corner-pop-up2.png) no-repeat; 
 	z-index: 12;
 }
 #pop-up-select   {
+	display: none;
 	list-style: none;
 	background: #f6f3ec;
 	position: absolute;
@@ -2162,11 +2167,28 @@ img.checkbox_photo {
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */
 }
 #pop-up-select1   {
+	display: none;
 	list-style: none;
 	background: #f6f3ec;
 	position: absolute;
-	top: 140px;
-	left: 690px;
+	top: 10px;
+	left: 40px;
+	z-index: 11;
+	padding: 10px 10px 10px 20px;
+	line-height: 30px;
+	border: 1px solid #c5c5c5;
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */	
+}
+#pop-up-project   {
+	display: none;
+	font-size: 12px;
+	list-style: none;
+	background: #f6f3ec;
+	position: absolute;
+	top: -5px;
+	left: 44px;
 	z-index: 11;
 	padding: 10px 20px 10px 20px;
 	line-height: 30px;
@@ -2175,19 +2197,26 @@ img.checkbox_photo {
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */	
 }
-#pop-up-project   {
-	list-style: none;
-	background: #f6f3ec;
+.pop-up-container {
 	position: absolute;
-	top: 65px;
-	left: 434px;
-	z-index: 11;
-	padding: 10px 20px 10px 20px;
-	line-height: 30px;
-	border: 1px solid #c5c5c5;
-	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Firefox */
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
-    box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */	
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+
+}
+.pop-up-container1 {
+	position: absolute;
+	display: inline-block;
+	width: 240px;
+	height: 400px;
+
+}
+.pop-up-container1 {
+	position: absolute;
+	display: inline-block;
+	width: 240px;
+	height: 400px;
+
 }
 .input-dropbox-list  {
 	display: none;
@@ -2208,9 +2237,14 @@ img.checkbox_photo {
 ul.pop-list {
 	list-style: none;
 }
+ul.pop-list li{
+	background: none;
+	padding-left: 0;
+}
 ul.pop-list   li a {
 	text-decoration: none;
 	color: #51504c;
+	font-size: 12px;
 }
 .pop-list a:hover {
 	color: #0db2ea;	

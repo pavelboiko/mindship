@@ -41,20 +41,22 @@
 
 	<script type="text/javascript">
 	$(document).ready(function(){ 
-    $("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion").hide();
-	
-	$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
-									$('*').find("#pop-up-select, #pop-up-corner").show(); }, 
-					  function(){ 	$('*').find("#pop-up-select, #pop-up-corner").hide(); }
+		$("#page_settings2, #pop-up-project,  #pop-up-corner2").hover( function(){  
+									$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").show(); }, 
+					  function(){ 	$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").hide(); }
+					  );
+					  
+		$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
+									$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
+					  function(){ 	$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").hide(); }
+					  );
+					  
+		$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
+									$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").show(); }, 
+					  function(){ 	$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").hide(); }
 					  )
-	$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
-									$('*').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
-					  function(){ 	$('*').find("#pop-up-select1,  #pop-up-corner1").hide(); }
-					  );
-	$("#page_settings2, #pop-up-project,  #pop-up-corner2").hover( function(){  
-									$('*').find("#pop-up-project,  #pop-up-corner2").show(); }, 
-					  function(){ 	$('*').find("#pop-up-project,  #pop-up-corner2").hide(); }
-					  );
+
+
 	$(".start-toggle").hover( function(){  
 									$('*').find(".pointer").css('color', '#0db2ea'); }, 
 					  function(){ 	$('*').find(".pointer").css('color', 'white'); }
@@ -213,34 +215,9 @@ $(document).ready(function() {
 		<!-- pop-ups-->
 		
 		<div id="grey-shroud"></div>
-				<div id="grey-shroud1"></div>
+		<div id="grey-shroud1"></div>
 		<div id="grey-shroud2"></div>
-        <div id="pop-up-select">            
-			<ul class="pop-list">
-				<li><a href="#" class="">Mark as complete</a></li>
-				<li><a href="#" class="">Transfer for the Showroom</a></li>
-				<li><a href="#" class="">Save as PDF</a></li>
-				<li><a href="#" class="">Delete conversation</a></li>			  
-			</ul>
-		</div>
-		<div id="pop-up-corner"></div>
-		<div id="pop-up-select1">            
-			<ul class="pop-list">
-				<li><a href="#" class="">Mark as complete</a></li>
-				<li><a href="#" class="">Transfer for the Showroom</a></li>
-				<li><a href="#" class="">Save as PDF</a></li>
-				<li><a href="#" class="">Delete conversation</a></li>			  
-			</ul>
-		</div>
-		<div id="pop-up-corner1"></div>
-		<div id="pop-up-project">            
-			<ul class="pop-list">
-				<li><a href="#" class="">Invite more people</a></li>
-				<li><a href="#" class="">Archive project</a></li>
-				<li><a href="#" class="">Close project</a></li>					  
-			</ul>
-		</div>
-		<div id="pop-up-corner2"></div>
+
 		<div id="discussion" class="discussion-container">
 			<h1 class="discussion-title">Great! You're about to start a new discussion.</h1>
 			<div class="shut_down"> 
@@ -310,19 +287,38 @@ $(document).ready(function() {
 		
 <!-- pop-ups-end-->
 
-			<div class="tab_container">
+			 <div class="tab_container">
 			<div class="showroom-button"><a href="#">Project Showroom</a></div>
-                <div id="tab3" class="tab_content">
-				    <div class="page_title_container"><h1 class="title">Landing page<a href="#" class="page_settings"></a></h1><a href="#" class="post_msg"><span class="plus"></span>Post message</a></div>
-                </div><!-- #tab3 -->
-                <div id="tab3" class="tab_content" style="display: block;">
-				    <div class="page_title_container"><h1 class="title">Website development for Microsoft, <br/> from scratch<a href="#" id="page_settings2"></a></h1></div>
-					<div class="break-bounder"></div>
+            <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
+				<div class="page_title_container"><h1 class="title">Website development for Microsoft, <br/> from scratch
+				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
+					<div id="pop-up-project">            
+						<ul class="pop-list">
+							<li><a href="#" class="">Invite more people</a></li>
+							<li><a href="#" class="">Archive project</a></li>
+							<li><a href="#" class="">Close project</a></li>					  
+						</ul>
+					</div>
+		<div id="pop-up-corner2"></div></div></h1></div>
+				
+				<div class="break-bounder"></div>
 				<ul class="breadcrumbs1">
 					<li><a href="#">Project home</a></li>
 					<li><a href="#">Backend development</a></li>
 					<li><a href="#"></a></li>
-					<li>Landing page<a href="#" id="page-settings1"></a></li>
+					<li>Landing page
+						<div class="pop-up-container1"><a href="#" id="page-settings1"></a>
+							<div id="pop-up-select1">            
+								<ul class="pop-list">
+									<li><a href="#" class="">Mark as complete</a></li>
+									<li><a href="#" class="">Transfer for the Showroom</a></li>
+									<li><a href="#" class="">Save as PDF</a></li>
+									<li><a href="#" class="">Delete conversation</a></li>			  
+								</ul>
+							</div>
+							<div id="pop-up-corner1"></div>
+						</div>
+					</li>
 				</ul>
 				<ul class="tabs">
 					<li><a href="#">Overview</a></li>
