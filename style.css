@@ -1117,6 +1117,7 @@ div.users-checkboxes-container {
     position: relative;
     overflow: hidden;
     margin-bottom: 35px;
+	padding-bottom: 50px;
 }
 div.calendar {
     width: 5000px;
@@ -2042,7 +2043,7 @@ a.profile-photo  {
 	cursor: pointer;
 }
 .checkbox-user {
-	width: 208px;
+	width: 213px;
     float: left;
     position: relative;
     padding: 0 10px;
@@ -2054,7 +2055,7 @@ a.profile-photo  {
 
 }
 .checkbox-user1 {
-		width: 208px;
+		width: 213px;
     float: left;
     position: relative;
     padding: 0 10px;
@@ -2067,11 +2068,10 @@ a.profile-photo  {
 
 }
 .checkbox-user2 {
-		width: 208px;
+		width: 213px;
     float: left;
     position: relative;
     padding: 0 10px;
-    margin-right: 14px;
     height: 50px;
     line-height: 50px;
 	background: #fff;
@@ -2103,7 +2103,7 @@ div.check-boxes-users label.custom_input1{
 
 	line-height: normal;
 	margin-top: -13px;
-	margin-right: -50px;
+	margin-right: -10px;
 	
 }
 
