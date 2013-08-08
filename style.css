@@ -325,7 +325,7 @@ div.page_buttons_container1{
     float: left;
     margin-bottom: 15px;
 }
-div.tab_content h1.title {
+div.tab_content div.title {
     float: left;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -334,7 +334,7 @@ div.tab_content h1.title {
     padding-right: 120px;
 	line-height: 40px;
 }
-div.tab_content h1.title a#page_settings2 {
+div.tab_content div.title a#page_settings2 {
     display: inline-block;
     margin-left: 12px;
     background: url("img/settings-icon1.png") no-repeat;
@@ -1832,17 +1832,21 @@ div.bottom-disc1 textarea.diss1 {
 }
 .create-new a {
 	position: relative;
-	float: right;
+
 	background: #0098ca;
 	line-height: 28px;
 	padding: 10px 27.5px 10px 27.5px;
-	margin-top: 15px;
-	margin-right: 25px;
+
 	font-size: 14px;
 	text-decoration: none;
 	color: #c4ddea;
 	font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
+}
+.create-new  {
+		position: relative;
+		float: right;
+		margin-left: 370px;
 }
 
 ul.edit-text-panel-pop {
@@ -1896,7 +1900,7 @@ ul.edit-text-panel-pop a {
 	background: url("img/list-sign.png") center  no-repeat;
 	display: inline-block;
 }
-p.add_msg-pop {
+div.add_msg-pop {
     float: left;
     margin-top: 30px;
     font-family: 'Roboto', sans-serif;
@@ -1904,13 +1908,13 @@ p.add_msg-pop {
     font-size: 11px;
 	margin-left: 25px;
 }
-p.add_msg-pop a.click_here {
+div.add_msg-pop a.click_here {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #13b6ec;
     text-decoration: none;
 }
-p.add_msg-pop1 {
+div.add_msg-pop1 {
     float: left;
     margin-top: 25px;
     font-family: 'Roboto', sans-serif;
@@ -1918,7 +1922,7 @@ p.add_msg-pop1 {
     font-size: 11px;
 	margin-left: 25px;
 }
-p.add_msg-pop1 a.click_here {
+div.add_msg-pop1 a.click_here {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #13b6ec;
@@ -2118,6 +2122,7 @@ img.checkbox_photo {
 	float: left;      
 	margin-right: 5px;
 	vertical-align: middle;
+	margin-top: 10px;
 }
 /*---END--- Create Discussion pop-up*/
 
