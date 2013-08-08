@@ -14,178 +14,7 @@
 <script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>
 <script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>
 
-     <script type="text/javascript">
-
-        $(document).ready(function() {
-          $(".start-toggle").click(function(){
-                $("li.submenu ul").slideToggle();
-				$("li.submenu1 ul").slideUp();
-				$(".pointer-active-bg1").slideToggle(10);
-				$(".pointer-active-bg").slideUp(10);
-				$(".dark-shroud1").slideToggle();
-				$(".dark-shroud").slideUp();
-
-            });
-			 $(".start-toggle1").click(function(){
-                $("li.submenu1 ul").slideToggle();
-				$("li.submenu ul").slideUp();
-				$(".pointer-active-bg").slideToggle(10);
-				$(".pointer-active-bg1").slideUp(10);
-				$(".dark-shroud").slideToggle();
-				$(".dark-shroud1").slideUp();
-            });
-			
-        });
-		
-    </script>
-
-	<script type="text/javascript">
-	$(document).ready(function(){ 
-		$("#page_settings2, #pop-up-project,  #pop-up-corner2").hover( function(){  
-									$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").show(); }, 
-					  function(){ 	$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").hide(); }
-					  );
-					  
-		$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
-									$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
-					  function(){ 	$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").hide(); }
-					  );
-					  
-		$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
-									$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").show(); }, 
-					  function(){ 	$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").hide(); }
-					  )
-
-
-	$(".start-toggle").hover( function(){  
-									$('*').find(".pointer").css('color', '#0db2ea'); }, 
-					  function(){ 	$('*').find(".pointer").css('color', 'white'); }
-					  );
-					  	$(".start-toggle1").hover( function(){  
-									$('*').find(".pointer1").css('color', '#0db2ea'); }, 
-					  function(){ 	$('*').find(".pointer1").css('color', 'white'); }
-					  );
-					  	$(".trash-show").hover( function(){  
-									$('*').find(".trash").show(); }, 
-					  function(){ 	$('*').find(".trash").hide(); }
-					  );
-
-	$(".shroud-activator").hover( function(){  
-									$('*').find(".file-shroud-container").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container").hide(); }
-					  )		
-	$(".shroud-activator1").hover( function(){  
-									$('*').find(".file-shroud-container1").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container1").hide(); }
-					  )	
-	$(" .shroud-activator2").hover( function(){  
-									$('*').find(".file-shroud-container2").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container2").hide(); }
-					  )	
-	$(" .shroud-activator3").hover( function(){  
-									$('*').find(".file-shroud-container3").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container3").hide(); }
-					  )		
-	$(" .shroud-activator4").hover( function(){  
-									$('*').find(".file-shroud-container4").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container4").hide(); }
-					  )		
-	$(" .shroud-activator5").hover( function(){  
-									$('*').find(".file-shroud-container5").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container5").hide(); }
-					  )		
-	$(" .shroud-activator6").hover( function(){  
-									$('*').find(".file-shroud-container6").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container6").hide(); }
-					  )		
-	$(" .shroud-activator7").hover( function(){  
-									$('*').find(".file-shroud-container7").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container7").hide(); }
-					  )							  
-					  
-		$(".add_todo").click(function () {
-			$(".add_todo_list_left").slideToggle(10);
-		});
-		$(".add_todo1").click(function () {
-			$(".add_todo_list_left1").slideToggle(10);
-		});
-
-		
-		$("#page_settings").click(function () {
-			$(" #pop-up-corner, #pop-up-select").show();
-		});
-		$("#page-settings1").click(function () {
-			$(" #pop-up-corner1, #pop-up-select1").show();
-		});
-		$("#page_settings2").click(function () {
-			$(" #pop-up-corner2, #pop-up-project").show();
-		});
-		$("#grey-shroud").click(function () {
-			$("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion, .are-you-sure ").hide();
-		});
-		$("#grey-shroud ").click(function () {
-			$("#discussion ").hide().animate({top: '-=202px'}, 200);			
-			$("#grey-shroud").hide();
-		});
-		$("#grey-shroud1, .yes-button, .no-button").click(function () {
-			$("#delete-persone ").hide().animate({top: '-=275px'}, 200);
-			$("#grey-shroud1").hide();
-		});
-		
-		$("#grey-shroud2, .yes-button, .no-button").click(function () {
-			$(".are-you-sure ").hide().animate({top: '-=275px'}, 200);
-			$("#grey-shroud2").hide();
-		});
-		$("#pop-up-select").click(function () {
-			$("#grey-shroud, #pop-up-corner, #pop-up-select ").hide();
-
-		});
-		$("#pop-up-select1").click(function () {
-			$("#grey-shroud, #pop-up-corner1, #pop-up-select1 ").hide();
-		});
-		$("#pop-up-project").click(function () {
-			$("#grey-shroud, #pop-up-project, #pop-up-corner2 ").hide();
-		});
-		
-		$(".trash").click(function () {
-			$("#grey-shroud2").fadeIn();
-			$(" .are-you-sure ").show().animate({top: '+=275px'}, 200);;
-		});
-		$(".delete").click(function () {
-			$("#grey-shroud").fadeIn();
-			$(" .are-you-sure ").show().animate({top: '+=275px'}, 200);;
-		});
-		
-		$("#msg_post").click(function () {
-			$("#grey-shroud").fadeIn();
-			$(" #discussion ").show().animate({top: '+=202px'}, 200);;
-		});
-		$("#shut-down").click(function () {
-			$("#grey-shroud").hide();
-			$(" #discussion ").hide().animate({top: '-=202px'}, 200);
-		});
-		$('div.check-boxes-discussion input[type=checkbox]').click(function(){
-			if(this.checked) {
-				$(this).parent().css('background','#dddddd');
-			} else {
-				$(this).parent().css('background','');
-			}
-		});
-	
-    });
-	</script>
-		<script type="text/javascript">
-
-$(document).ready(function() {
-	$.piroBox_ext({
-	piro_speed :700,
-	bg_alpha : 0.5,
-	piro_scroll : true,
-	piro_drag :false,
-	piro_nav_pos: 'bottom'
-});
-});
-</script>
+<script type="text/javascript" src="js/mindship.js"></script>
 </head>
 
 <body>
@@ -294,6 +123,7 @@ $(document).ready(function() {
             <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
 				<div class="page_title_container"><div class="title">Website development for Microsoft, <br/> from scratch
 				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
+					<div class="pop-up-activator2">
 					<div id="pop-up-project">            
 						<ul class="pop-list">
 							<li><a href="#" class="">Invite more people</a></li>
@@ -301,7 +131,7 @@ $(document).ready(function() {
 							<li><a href="#" class="">Close project</a></li>					  
 						</ul>
 					</div>
-		<div id="pop-up-corner2"></div></div></div></div>
+		<div id="pop-up-corner2"></div></div></div></div></div>
 				
 				<div class="break-bounder"></div>
 				<ul class="breadcrumbs1">
@@ -310,6 +140,7 @@ $(document).ready(function() {
 					<li><a href="#"></a></li>
 					<li>Landing page
 						<div class="pop-up-container1"><a href="#" id="page-settings1"></a>
+						<div class="pop-up-activator1">
 							<div id="pop-up-select1">            
 								<ul class="pop-list">
 									<li><a href="#" class="">Mark as complete</a></li>
@@ -346,7 +177,7 @@ $(document).ready(function() {
                                 <input type="text" value="" style="display: none;" />
                             </div>
                         </div>
-					               <div class="search"><input type="text"  onfocus="if (this.value == 'Search for files'){this.value = '';}" onblur="if (this.value == ''){ this.value='Search for files'; }" value="Search for files" /></div>
+					               <div class="search"><input type="text"  value="Search for files" /></div>
 								 
                     </div>
                 </div>
@@ -477,7 +308,7 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                    <img src="img/file-img.png" alt="" />
 								    <div class="shroud-activator"><div class="file-shroud-container">
-									<div class="preview"><a href="img/01.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"><img src="img/preview-inactive.png" alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a href="img/01.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
 								   <div class="delete-inactive"><a href="#"><img src="img/delete-inactive.png" alt=""/></a></div>
@@ -495,7 +326,7 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                      <img src="img/file-img.png" alt="" />
 									  <div class="shroud-activator1"> <div class="file-shroud-container1">
-									<div class="preview"><a href="img/02.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"><img src="img/preview-inactive.png" alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a href="img/02.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
 								   <div class="delete-inactive"><a href="#"><img src="img/delete-inactive.png" alt=""/></a></div>
@@ -510,10 +341,10 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                      <img src="img/file-img.png" alt="" />
                                  <div class="shroud-activator2"><div class="file-shroud-container2">
-									<div class="preview"><a href="img/03.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"><img src="img/preview-inactive.png" alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a href="img/03.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
-								   <div class="delete"><a href="#"><img src="img/delete-inactive.png"  onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png'" alt=""/></a></div>
+								   <div class="delete"><a  class="active-delete" href="#"></a></div>
 								   </div></div>
 							   </div>
                                 <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
@@ -524,10 +355,10 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                     <img src="img/file-img.png" alt="" />
 									 <div class="shroud-activator3"> <div class="file-shroud-container3">
-									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"><img src="img/preview-inactive.png" alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
-								   <div class="delete"><a href="#"><img src="img/delete-inactive.png"  onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png'" alt=""/></a></div>
+								   <div class="delete"><a class="active-delete" href="#"></a></div>
 								   </div></div>
                                 </div>
                                 <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
@@ -546,10 +377,10 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                     <img src="img/psd.png" alt="" />
 									 <div class="shroud-activator4"> <div class="file-shroud-container4">
-									<div class="preview"><a target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd"><img src="img/preview-inactive.png" alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a class="not-img" target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
-								   <div class="delete"><a href="#"><img src="img/delete-inactive.png" alt="" onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png'"/></a></div>
+								   <div class="delete"><a class="active-delete" href="#"></a></div>
 								   </div></div>
                                 </div>
                                 <a target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd" class="download_file">...ag-landing_page-v1.jpg</a>
@@ -560,10 +391,10 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                     <img src="img/al.png" alt="" />
 									 <div class="shroud-activator5"> <div class="file-shroud-container5">
-									<div class="preview"><a target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2F01.pdf"><img src="img/preview-inactive.png" alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a class="not-img" target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2F01.pdf"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
-								   <div class="delete"><a href="#"><img src="img/delete-inactive.png"  onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png' "alt=""/></a></div>
+								   <div class="delete"><a class="active-delete" href="#"></a></div>
 								   </div></div>
                                 </div>
                                 <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
@@ -574,10 +405,10 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                     <img src="img/file-img.png" alt="" />
 									 <div class="shroud-activator6"> <div class="file-shroud-container6">
-									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"><img src="img/preview-inactive.png"  alt="" onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
-								   <div class="delete"><a href="#"><img src="img/delete-inactive.png"  alt="" onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png'"/></a></div>
+								   <div class="delete"><a class="active-delete" href="#"></a></div>
 								   </div></div>
                                 </div>
                                 <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
@@ -588,10 +419,10 @@ $(document).ready(function() {
                                 <div class="file_holder">
                                     <img src="img/file-img.png" alt="" />
 									 <div class="shroud-activator7"> <div class="file-shroud-container7">
-									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"><img src="img/preview-inactive.png" alt=""  onmouseover="this.src='img/preview.png'" onmouseout="this.src='img/preview-inactive.png'"/></a></div>
+									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
 								   <div class="file-shroud"></div>
 								   <div class="file-break-line"></div>
-								   <div class="delete"><a href="#"><img src="img/delete-inactive.png" alt="" onmouseover="this.src='img/delete.png'" onmouseout="this.src='img/delete-inactive.png'"/></a></div>
+								   <div class="delete"><a class="active-delete" href="#"></a></div>
 								   </div></div>
                                 </div>
                                 <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>

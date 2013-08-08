@@ -9,131 +9,10 @@
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>
+<script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>
+	<script type="text/javascript" src="js/mindship.js"></script>
 
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-          $(".start-toggle").click(function(){
-                $("li.submenu ul").slideToggle();
-				$("li.submenu1 ul").slideUp();
-				$(".pointer-active-bg1").slideToggle(10);
-				$(".pointer-active-bg").slideUp(10);
-				$(".dark-shroud1").slideToggle();
-				$(".dark-shroud").slideUp();
-
-            });
-			 $(".start-toggle1").click(function(){
-                $("li.submenu1 ul").slideToggle();
-				$("li.submenu ul").slideUp();
-				$(".pointer-active-bg").slideToggle(10);
-				$(".pointer-active-bg1").slideUp(10);
-				$(".dark-shroud").slideToggle();
-				$(".dark-shroud1").slideUp();
-            });
-			
-        });
-		
-    </script>
-
-	<script type="text/javascript">
-	$(document).ready(function(){ 
-		$("#page_settings2, #pop-up-project,  #pop-up-corner2").hover( function(){  
-									$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").show(); }, 
-					  function(){ 	$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").hide(); }
-					  );
-					  
-		$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
-									$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
-					  function(){ 	$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").hide(); }
-					  );
-					  
-		$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
-									$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").show(); }, 
-					  function(){ 	$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").hide(); }
-					  )
-
-
-	$(".start-toggle").hover( function(){  
-									$('*').find(".pointer").css('color', '#0db2ea'); }, 
-					  function(){ 	$('*').find(".pointer").css('color', 'white'); }
-					  );
-					  	$(".start-toggle1").hover( function(){  
-									$('*').find(".pointer1").css('color', '#0db2ea'); }, 
-					  function(){ 	$('*').find(".pointer1").css('color', 'white'); }
-					  );
-					  	$(".trash-show").hover( function(){  
-									$('*').find(".trash").show(); }, 
-					  function(){ 	$('*').find(".trash").hide(); }
-					  );
-					 
-					  
-		$(".add_todo").click(function () {
-			$(".add_todo_list_left").slideToggle(10);
-		});
-		$(".add_todo1").click(function () {
-			$(".add_todo_list_left1").slideToggle(10);
-		});
-
-		
-		$("#page_settings").click(function () {
-			$(" #pop-up-corner, #pop-up-select").show();
-		});
-		$("#page-settings1").click(function () {
-			$(" #pop-up-corner1, #pop-up-select1").show();
-		});
-		$("#page_settings2").click(function () {
-			$(" #pop-up-corner2, #pop-up-project").show();
-		});
-		$("#grey-shroud").click(function () {
-			$("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion, .are-you-sure ").hide();
-		});
-		$("#grey-shroud ").click(function () {
-			$("#discussion ").hide().animate({top: '-=202px'}, 200);			
-			$("#grey-shroud").hide();
-		});
-		$("#grey-shroud1, .yes-button, .no-button").click(function () {
-			$("#delete-persone ").hide().animate({top: '-=275px'}, 200);
-			$("#grey-shroud1").hide();
-		});
-		
-		$("#grey-shroud2, .yes-button, .no-button").click(function () {
-			$(".are-you-sure ").hide().animate({top: '-=275px'}, 200);
-			$("#grey-shroud2").hide();
-		});
-		$("#pop-up-select").click(function () {
-			$("#grey-shroud, #pop-up-corner, #pop-up-select ").hide();
-
-		});
-		$("#pop-up-select1").click(function () {
-			$("#grey-shroud, #pop-up-corner1, #pop-up-select1 ").hide();
-		});
-		$("#pop-up-project").click(function () {
-			$("#grey-shroud, #pop-up-project, #pop-up-corner2 ").hide();
-		});
-		
-		$(".trash").click(function () {
-			$("#grey-shroud2").fadeIn();
-			$(" .are-you-sure ").show().animate({top: '+=275px'}, 200);;
-		});
-		
-		$("#msg_post").click(function () {
-			$("#grey-shroud").fadeIn();
-			$(" #discussion ").show().animate({top: '+=202px'}, 200);;
-		});
-		$("#shut-down").click(function () {
-			$("#grey-shroud").hide();
-			$(" #discussion ").hide().animate({top: '-=202px'}, 200);
-		});
-		$('div.check-boxes-discussion input[type=checkbox]').click(function(){
-			if(this.checked) {
-				$(this).parent().css('background','#dddddd');
-			} else {
-				$(this).parent().css('background','');
-			}
-		});
-	
-    });
-	</script>
 </head>
 
 <body>
@@ -170,8 +49,7 @@
 			<div class="shut_down"> 
 				<div id="shut-down"></div>
 			</div>
-			<textarea class="diss"  onfocus="if (this.value == 'Fancy topic goes here'){this.value = '';}" 
-					onblur="if (this.value == ''){ this.value='Fancy topic goes here'; }">Fancy topic goes here</textarea>
+			<textarea class="diss" >Fancy topic goes here</textarea>
 					
 			<ul class="edit-text-panel-pop">
 				<li><a href="#" class="bold-pop">&nbsp;</a></li>
@@ -182,8 +60,7 @@
 				<li><a href="#" class="list-sign-pop">&nbsp;</a></li>
 			</ul>
             <div class="bottom-disc">
-				<textarea class="diss1"  onfocus="if (this.value == 'Once upon a time...'){this.value = '';}" 
-					onblur="if (this.value == ''){ this.value='Once upon a time...'; }">Once upon a time...</textarea>
+				<textarea class="diss1" >Once upon a time...</textarea>
 					
 			</div>
             <div class="add_msg-pop">
@@ -241,6 +118,7 @@
             <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
 				<div class="page_title_container"><div class="title">Website development for Microsoft, <br/> from scratch
 				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
+					<div class="pop-up-activator2">
 					<div id="pop-up-project">            
 						<ul class="pop-list">
 							<li><a href="#" class="">Invite more people</a></li>
@@ -248,7 +126,7 @@
 							<li><a href="#" class="">Close project</a></li>					  
 						</ul>
 					</div>
-		<div id="pop-up-corner2"></div></div></div></div>
+		<div id="pop-up-corner2"></div></div></div></div></div>
 				
 				<div class="break-bounder"></div>
 				<ul class="breadcrumbs1">
@@ -257,6 +135,7 @@
 					<li><a href="#"></a></li>
 					<li>Landing page
 						<div class="pop-up-container1"><a href="#" id="page-settings1"></a>
+						<div class="pop-up-activator1">
 							<div id="pop-up-select1">            
 								<ul class="pop-list">
 									<li><a href="#" class="">Mark as complete</a></li>
@@ -344,9 +223,7 @@
                         </ul>
                     </div><!-- content -->
                 </div><!-- #tab3 -->
-                <div id="tab4" class="tab_content">
-				    <h1 class="title">Landing page <a href="#" class="page_settings"></a></h1>
-                </div><!-- #tab4 -->
+
 
 			</div><!-- .tab_container-->
 		</div><!-- #container-->

@@ -13,212 +13,8 @@
 <link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>
 <script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>
+<script type="text/javascript" src="js/mindship.js"></script>
 
-     <script type="text/javascript">
-
-        $(document).ready(function() {
-          $(".start-toggle").click(function(){
-                $("li.submenu ul").slideToggle();
-				$("li.submenu1 ul").slideUp();
-				$(".pointer-active-bg1").slideToggle(10);
-				$(".pointer-active-bg").slideUp(10);
-				$(".dark-shroud1").slideToggle();
-				$(".dark-shroud").slideUp();
-
-            });
-			 $(".start-toggle1").click(function(){
-                $("li.submenu1 ul").slideToggle();
-				$("li.submenu ul").slideUp();
-				$(".pointer-active-bg").slideToggle(10);
-				$(".pointer-active-bg1").slideUp(10);
-				$(".dark-shroud").slideToggle();
-				$(".dark-shroud1").slideUp();
-            });
-			
-        });
-		
-    </script>
-
-	<script type="text/javascript">
-	$(document).ready(function(){ 
-
-		$("#page_settings2, #pop-up-project,  #pop-up-corner2").hover( function(){  
-									$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").show(); }, 
-					  function(){ 	$('.pop-up-container').find("#pop-up-project,  #pop-up-corner2").hide(); }
-					  );
-					  
-		$("#page-settings1, #pop-up-select1, #pop-up-corner1").hover( function(){  
-									$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").show(); }, 
-					  function(){ 	$('.pop-up-container1').find("#pop-up-select1,  #pop-up-corner1").hide(); }
-					  );
-					  
-		$(".gear, #pop-up-select, #pop-up-corner").hover( function(){  
-									$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").show(); }, 
-					  function(){ 	$('.pop-up-container2').find("#pop-up-select, #pop-up-corner").hide(); }
-					  )
-
-
-	$(".start-toggle").hover( function(){  
-									$('*').find(".pointer").css('color', '#0db2ea'); }, 
-					  function(){ 	$('*').find(".pointer").css('color', 'white'); }
-					  );
-					  	$(".start-toggle1").hover( function(){  
-									$('*').find(".pointer1").css('color', '#0db2ea'); }, 
-					  function(){ 	$('*').find(".pointer1").css('color', 'white'); }
-					  );
-					  	$(".trash-show").hover( function(){  
-									$('*').find(".trash").show(); }, 
-					  function(){ 	$('*').find(".trash").hide(); }
-					  );
-	$(".shroud-activator").hover( function(){  
-									$('*').find(".file-shroud-container").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container").hide(); }
-					  )		
-	$(".shroud-activator1").hover( function(){  
-									$('*').find(".file-shroud-container1").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container1").hide(); }
-					  )	
-	$(" .shroud-activator2").hover( function(){  
-									$('*').find(".file-shroud-container2").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container2").hide(); }
-					  )	
-	$(" .shroud-activator3").hover( function(){  
-									$('*').find(".file-shroud-container3").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container3").hide(); }
-					  )		
-	$(" .shroud-activator4").hover( function(){  
-									$('*').find(".file-shroud-container4").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container4").hide(); }
-					  )		
-	$(" .shroud-activator5").hover( function(){  
-									$('*').find(".file-shroud-container5").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container5").hide(); }
-					  )		
-	$(" .shroud-activator6").hover( function(){  
-									$('*').find(".file-shroud-container6").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container6").hide(); }
-					  )		
-	$(" .shroud-activator7").hover( function(){  
-									$('*').find(".file-shroud-container7").show(); }, 
-					  function(){ 	$('*').find(" .file-shroud-container7").hide(); }
-					  )							  
-					  
-	$('.checkbox-user').click( function(){
-						if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-									$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
-						} else {
-									$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
-								}
-						return false;
-				});		
-	$('.checkbox-user1').click( function(){
-		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
-		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
-		}
-		return false;
-	});			
-	$('.checkbox-user2').click( function(){
-		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
-		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
-		}
-		return false;
-	});			
-
-
-
-		$(".add_todo").click(function () {
-			$(".add_todo_list_left").slideToggle(10);
-		});
-		$(".add_todo1").click(function () {
-			$(".add_todo_list_left1").slideToggle(10);
-		});
-
-		$(".send-msg-input").click(function () {
-			$(".input-dropbox-list").slideToggle(10);
-		});
-
-		$("#page_settings").click(function () {
-			$(" #pop-up-corner, #pop-up-select").show();
-		});
-		$("#page-settings1").click(function () {
-			$(" #pop-up-corner1, #pop-up-select1").show();
-		});
-		$("#page_settings2").click(function () {
-			$(" #pop-up-corner2, #pop-up-project").show();
-		});
-		$("#grey-shroud").click(function () {
-			$("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion, .are-you-sure ").hide();
-		});
-		$("#grey-shroud ").click(function () {
-			$("#discussion ").hide().animate({top: '-=202px'}, 200);			
-			$("#grey-shroud").hide();
-			$(".input-dropbox-list").hide();
-		});
-		$("#grey-shroud1, .yes-button, .no-button").click(function () {
-			$("#delete-persone ").hide().animate({top: '-=275px'}, 200);
-			$("#grey-shroud1").hide();
-		});
-		
-		$("#grey-shroud2, .yes-button, .no-button").click(function () {
-			$(".are-you-sure ").hide().animate({top: '-=275px'}, 200);
-			$("#grey-shroud2").hide();
-		});
-		
-		$("#pop-up-select").click(function () {
-			$("#grey-shroud, #pop-up-corner, #pop-up-select ").hide();
-
-		});
-		$("#pop-up-select1").click(function () {
-			$("#grey-shroud, #pop-up-corner1, #pop-up-select1 ").hide();
-		});
-		$("#pop-up-project").click(function () {
-			$("#grey-shroud, #pop-up-project, #pop-up-corner2 ").hide();
-		});
-		
-		$(".trash").click(function () {
-			$("#grey-shroud2").fadeIn();
-			$(" .are-you-sure ").show().animate({top: '+=275px'}, 200);;
-		});
-		$(".delete").click(function () {
-			$("#grey-shroud2").fadeIn();
-			$(" .are-you-sure ").show().animate({top: '+=275px'}, 200);;
-		});
-		$("#remove-ppl").click(function () {
-			$("#grey-shroud1").fadeIn();
-			$(" #delete-persone").show().animate({top: '+=275px'}, 200);;
-		});
-		$("#send-msg").click(function () {
-			$("#grey-shroud").fadeIn();
-			$(" #discussion ").show().animate({top: '+=202px'}, 200);;
-		});
-		$("#shut-down").click(function () {
-			$("#grey-shroud").hide();
-			$(" #discussion ").hide().animate({top: '-=202px'}, 200);
-		});
-		$("#shut-down1").click(function () {
-			$("#grey-shroud").hide();
-			$(" #discussion ").hide().animate({top: '-=202px'}, 200);
-		});
-
-
-    });
-	</script>
-		<script type="text/javascript">
-
-$(document).ready(function() {
-	$.piroBox_ext({
-	piro_speed :700,
-	bg_alpha : 0.5,
-	piro_scroll : true,
-	piro_drag :false,
-	piro_nav_pos: 'bottom'
-});
-});
-</script>
 </head>
 
 <body>
@@ -265,8 +61,7 @@ $(document).ready(function() {
 			</div>
 
             <div class="bottom-disc1">
-				<textarea class="diss1" onfocus="if (this.value=='Once upon a time...') this.value='';"
-					onblur="if (this.value==''){this.value='Once upon a time...'}" ></textarea>
+				<textarea class="diss1" ></textarea>
 			</div>
             <div class="add_msg-pop1">
 				<div class="click-here-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here</div><div class="create-new1"><a href="#">SEND MESSAGE</a></div>
@@ -297,11 +92,12 @@ $(document).ready(function() {
 		
 <!-- pop-ups-end-->
 
-		 <div class="tab_container">
+ <div class="tab_container">
 			<div class="showroom-button"><a href="#">Project Showroom</a></div>
             <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
 				<div class="page_title_container"><div class="title">Website development for Microsoft, <br/> from scratch
 				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
+					<div class="pop-up-activator2">
 					<div id="pop-up-project">            
 						<ul class="pop-list">
 							<li><a href="#" class="">Invite more people</a></li>
@@ -309,7 +105,7 @@ $(document).ready(function() {
 							<li><a href="#" class="">Close project</a></li>					  
 						</ul>
 					</div>
-		<div id="pop-up-corner2"></div></div></div></div>
+		<div id="pop-up-corner2"></div></div></div></div></div>
 				
 				<div class="break-bounder"></div>
 				<ul class="breadcrumbs1">
@@ -318,6 +114,7 @@ $(document).ready(function() {
 					<li><a href="#"></a></li>
 					<li>Landing page
 						<div class="pop-up-container1"><a href="#" id="page-settings1"></a>
+						<div class="pop-up-activator1">
 							<div id="pop-up-select1">            
 								<ul class="pop-list">
 									<li><a href="#" class="">Mark as complete</a></li>

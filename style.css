@@ -1218,6 +1218,7 @@ div.search {
 	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
+	z-index: 2;
 }
 div.search input {
     background: none;
@@ -2148,7 +2149,7 @@ img.checkbox_photo1 {
 
 /*small pop-ups*/
 #pop-up-corner {
-	display: none;
+
 	position: absolute;
 	top: 347px; 
 	left: 975px; 
@@ -2158,7 +2159,7 @@ img.checkbox_photo1 {
 	z-index: 12;
 }
 #pop-up-corner1 {
-	display: none;
+
 	position: absolute;
 	top: 28px; 
 	left: 32px; 
@@ -2168,7 +2169,7 @@ img.checkbox_photo1 {
 	z-index: 12;
 }
 #pop-up-corner2 {
-	display: none;
+
 	position: absolute;
 	top: 12px; 
 	left: 36px; 
@@ -2178,7 +2179,7 @@ img.checkbox_photo1 {
 	z-index: 12;
 }
 #pop-up-select   {
-	display: none;
+	
 	list-style: none;
 	background: #f6f3ec;
 	position: absolute;
@@ -2193,7 +2194,7 @@ img.checkbox_photo1 {
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */
 }
 #pop-up-select1   {
-	display: none;
+
 	list-style: none;
 	background: #f6f3ec;
 	position: absolute;
@@ -2208,7 +2209,7 @@ img.checkbox_photo1 {
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */	
 }
 #pop-up-project   {
-	display: none;
+
 	font-size: 12px;
 	list-style: none;
 	background: #f6f3ec;
@@ -2223,6 +2224,14 @@ img.checkbox_photo1 {
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */	
 }
+.pop-up-activator {
+	display:none;
+}
+.pop-up-activator1 {
+	display:none;
+}.pop-up-activator2 {
+	display:none;
+}
 .pop-up-container {
 	position: absolute;
 	display: inline-block;
@@ -2234,9 +2243,10 @@ img.checkbox_photo1 {
 	position: absolute;
 	display: inline-block;
 	width: 240px;
-	height: 400px;
+	height: 160px;
 	top: 0px;
 	left: 400px;
+	z-index: 1;
 
 }
 
@@ -2443,10 +2453,9 @@ div.file a.pdf {
 div.preview  a{
 	position: relative;
 	float: left;
-	background: none;
 	width: 44px;
 	line-height: 15px;
-	margin-left: 40px;
+	margin-left: 50px;
 	margin-top: 13px;
 	z-index: 5;
 }
@@ -2461,11 +2470,10 @@ div.preview  a{
 	
 }
 div.delete  a{
-	background: none;
 	line-height: 15px;
 	position: relative;
 	float: left;
-	margin-left: 40px;
+	margin-left: 53px;
 	margin-top: -55px;
 	z-index: 5;
 	text-align: center;
@@ -2949,3 +2957,32 @@ span.facebook_vertical_breakline {
 	position: relative;
 	float: left;
 }
+.preview a.pirobox_gall {
+	position: relative;
+	display: block;
+	background: url("img/preview-sprite.png") 0 -47px no-repeat;
+	width: 48px;
+	height: 47px;
+}
+.preview a.not-img {
+	position: relative;
+	display: block;
+	background: url("img/preview-sprite.png") 0 -47px no-repeat;
+	width: 48px;
+	height: 47px;
+}
+.delete a.active-delete {
+	position: relative;
+	display: block;
+	background: url("img/delete-sprite.png") 0 -44px no-repeat;
+	width: 39px;
+	height: 44px;
+}
+.preview a:hover  {
+	background: url("img/preview-sprite.png") 0 0px no-repeat;
+}
+
+.delete a:hover  {
+	background: url("img/delete-sprite.png") 0 0px no-repeat;
+}
+
