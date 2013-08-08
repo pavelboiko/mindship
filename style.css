@@ -295,9 +295,7 @@ ul.breadcrumbs1 li a#page-settings1 {
     -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Для Safari и Chrome */
     box-shadow: 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */
 }
-div#tab1, div#tab2, div#tab3, div#tab4, div#tab5 {
-    display: none;
-}
+
 div.content {
     width: 733px;
 }
@@ -2670,7 +2668,7 @@ div.users-buttons {
 	height: auto !important;
 	height: 100%;
     overflow: hidden;
-	background: url("img/landing_page/bg.png") repeat;
+	background: url("img/landing_page/bg-pattern.jpg") repeat;
 }
 #header_landing_page {
 	height: 105px;
