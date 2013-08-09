@@ -155,7 +155,7 @@ a.profile_arrow {
 	margin: 0 auto;
 	font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
-	width: 182px;
+	width: 200px;
 }
 .projects-counter a {
 	text-decoration: none;
@@ -243,7 +243,7 @@ ul.breadcrumbs1 {
     line-height: 71px;
     color: #51504c;
     font-size: 14px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 	 text-shadow: 0px 1px 0px white;
 }
@@ -280,7 +280,7 @@ ul.breadcrumbs1 li a#page-settings1 {
 .showroom-button a {
 	position: relative;
 	float: right;
-	background: url("img/button-bg.png") repeat-x;
+	background: #0db2ea;
 	line-height: 28px;
 	padding: 10px 30px 10px 30px;
 	font-family: 'Noto Sans', sans-serif;
@@ -936,7 +936,7 @@ ul.back-to-future {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 	margin-top: 120px;
-	margin-left: -547px;
+	margin-left: -534px;
 	
 }
 ul.back-to-future  li {
@@ -1116,7 +1116,7 @@ div.users-checkboxes-container {
     position: relative;
     overflow: hidden;
     margin-bottom: 35px;
-	padding-bottom: 50px;
+	padding-bottom: 100px;
 }
 div.calendar {
     width: 5000px;
@@ -1673,7 +1673,7 @@ table.todo_list td:last-child {
 	left: 360px;
 	height: 540px;
 	width: 880px;
-	background: url(img/discussion-bg.png) repeat; 
+	background: #f8f8f8; 
 	z-index: 12;
 }
 .send-msg-container {
@@ -1683,7 +1683,7 @@ table.todo_list td:last-child {
 	left: 465px;
 	height: 380px;
 	width: 675px;
-	background: url(img/discussion-bg.png) repeat; 
+	background: #f8f8f8; 
 	z-index: 12;
 }
 #shut-down{
@@ -2070,7 +2070,7 @@ a.profile-photo  {
     float: left;
     position: relative;
     padding: 0 10px;
-    margin-right: 14px;
+    margin-right: 12px;
     line-height: 50px;
 	background: #fff;
 	padding: 10px 10px 10px 10px;
@@ -2082,7 +2082,7 @@ a.profile-photo  {
     float: left;
     position: relative;
     padding: 0 10px;
-    margin-right: 14px;
+    margin-right: 12px;
     height: 50px;
     line-height: 50px;
 	background: #fff;
@@ -2326,7 +2326,7 @@ ul.dropbox-list   li:last-child {
 	left: 578px;
 	height: 205px;
 	width: 445px;
-	background: url(img/discussion-bg.png) repeat; 
+	background: #f8f8f8; 
 	z-index: 12;
 	display: none;
 }
@@ -2409,7 +2409,7 @@ div.file a.pdf {
 }
 .yes-button a {
 	position: absolute;
-	background: url("img/button-bg.png") repeat-x;
+	background: #0db2ea;
 	line-height: 23px;
 	padding: 10px 30px 10px 30px;
 	font-family: 'Noto Sans', sans-serif;
@@ -2426,7 +2426,7 @@ div.file a.pdf {
 }
 .no-button a {
 	position: absolute;
-	background: url("img/button-bg.png") repeat-x;
+	background: #0db2ea;
 	line-height: 23px;
 	padding: 10px 30px 10px 30px;
 	font-family: 'Noto Sans', sans-serif;
@@ -2686,7 +2686,7 @@ div.users-buttons {
 	width: 50%;
 
     overflow: hidden;
-	background: url("img/landing_page/bg-shadow-left.png") no-repeat;
+	background: url("img/landing_page/bg-shadow-left.png") repeat-y;
 
 }
 #bg-shadow-right {
@@ -2696,7 +2696,7 @@ div.users-buttons {
 	height: 1200px;
 	width: 50%;
     overflow: hidden;
-	background: url("img/landing_page/bg-shadow-right.png") top right no-repeat;
+	background: url("img/landing_page/bg-shadow-right.png") top right repeat-y;
 
 }
 #header_landing_page {
@@ -2707,7 +2707,7 @@ div.users-buttons {
 	margin: 0 auto;
 	width: 750px;
 	overflow: hidden;
-	padding-bottom: 30px;
+	margin-top: -60px;
 	
 }
 
@@ -2722,7 +2722,7 @@ div.users-buttons {
 .landing_log_in_button_container {
 	position: absolute;
 
-	top: 15px;
+	top: 35px;
 	right: 25px;
 }
 .landing_log_in_button {
@@ -2740,7 +2740,7 @@ div.users-buttons {
 	position: relative;
 	width: 745px;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: -23px;
 	text-align: center;
 
 }
@@ -2758,8 +2758,8 @@ div.users-buttons {
 	height: 415px;
 	width: 750px;
 	margin: 0 auto;
-	margin-top: 60px;
-	margin-bottom: 350px;
+	margin-top: 55px;
+	margin-bottom: 490px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
 .get_access_text {
@@ -2985,4 +2985,6 @@ span.facebook_vertical_breakline {
 .delete a:hover  {
 	background: url("img/delete-sprite.png") 0 0px no-repeat;
 }
-
+.pop-list a{
+	font-weight: 300;
+	}
