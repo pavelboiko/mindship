@@ -199,7 +199,3 @@
 		el;
 })(jQuery);
 
-
-$(document).ready(function () {
-	$('#CalendarLine').calendarLine();
-});

@@ -12,13 +12,13 @@
 	<link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
 	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="js/prevent-selection.js"></script>
-	<script type="text/javascript">
-		window.onload = function () {
-
-		};
-
-	</script>
 	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript" src="js/calendar-tasks.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#CalendarLine').calendarLine(objTasks);
+		});
+	</script>
 </head>
 <body>
 
@@ -150,7 +150,7 @@
 								                                  value="Type a new To-do and hit 'Enter'"/></div>
 							</div>
 						</div>
-						<table class="todo_list">
+						<table id="TaskList" class="todo_list">
 							<tr>
 								<td class="active_task"><input type="checkbox" id="todo2_task1"/><label
 										for="todo2_task1" class="dsblsl">Header menu <a href="">3</a></label></td>
