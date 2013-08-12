@@ -53,36 +53,35 @@ $(document).ready(function() {
                 $(".trash").show(); },
             function(){ 	$(".trash").hide(); }
         );
-
         $(".shroud-activator").hover( function(){
                 $(".file-shroud-container").show(); },
-            function(){ 	$(" .file-shroud-container").hide(); }
+            function(){ 	$(".file-shroud-container").hide(); }
         );
         $(".shroud-activator1").hover( function(){
                 $(".file-shroud-container1").show(); },
             function(){ 	$(" .file-shroud-container1").hide(); }
         );
-        $(" .shroud-activator2").hover( function(){
+        $(".shroud-activator2").hover( function(){
                 $(".file-shroud-container2").show(); },
             function(){ 	$(" .file-shroud-container2").hide(); }
         );
-        $(" .shroud-activator3").hover( function(){
+        $(".shroud-activator3").hover( function(){
                 $(".file-shroud-container3").show(); },
             function(){ 	$(" .file-shroud-container3").hide(); }
         );
-        $(" .shroud-activator4").hover( function(){
+        $(".shroud-activator4").hover( function(){
                 $(".file-shroud-container4").show(); },
             function(){ 	$(" .file-shroud-container4").hide(); }
         );
-        $(" .shroud-activator5").hover( function(){
+        $(".shroud-activator5").hover( function(){
                 $(".file-shroud-container5").show(); },
             function(){ 	$(" .file-shroud-container5").hide(); }
         );
-        $(" .shroud-activator6").hover( function(){
+        $(".shroud-activator6").hover( function(){
                 $(".file-shroud-container6").show(); },
             function(){ 	$(" .file-shroud-container6").hide(); }
         );
-        $(" .shroud-activator7").hover( function(){
+        $(".shroud-activator7").hover( function(){
                 $(".file-shroud-container7").show(); },
             function(){ 	$(" .file-shroud-container7").hide(); }
         );
@@ -167,7 +166,7 @@ $(document).ready(function() {
             $(".input-dropbox-list").hide();
         });
 
-    $("#msg_post").click(function () {
+    $("#msg_post, #post_msg").click(function () {
         $("#grey-shroud").fadeIn();
         $(" #discussion ").show().animate({top: '+=202px'}, 200);;
     });

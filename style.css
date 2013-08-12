@@ -189,15 +189,14 @@ ul.tabs {
     font-size: 14px;
 	position: relative;
 	float: left;
-	margin-left: -471px;
-	margin-top: 70px;
 	margin-bottom: 30px;
+	  margin-left: -30px;
 }
 ul.tabs li {
     float: left;
 }
 ul.tabs li a {
-    display: block;
+    display: inline-block;
     height: 52px;
     line-height: 52px;
     border-left: 1px solid #f3f1ec;
@@ -220,7 +219,7 @@ ul.tabs li:first-child a {
     border-left: none;
 }
 ul.tabs li a span.updates {
-    display: block;
+    display: inline-block;
     float: right;
     background: #0db2ea;
     height: 21px;
@@ -236,7 +235,6 @@ ul.tabs li a span.updates {
     font-size: 12px;
 }
 ul.breadcrumbs1 {
-    float: left;
     position: relative;
     list-style: none;
     height: 71px;
@@ -477,6 +475,12 @@ ul.messages li {
     height: 71px;
     padding: 11px 20px 11px 15px;
     margin-bottom: 6px;
+}
+ul.messages li div.usr_photo {
+    display: block;
+    float: left;
+    width: 24px;
+    margin-right: 12px;
 }
 ul.messages li img.usr_photo {
     display: block;
@@ -935,7 +939,7 @@ ul.back-to-future {
     font-size: 17px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-	margin-top: 120px;
+	margin-top: 50px;
 	margin-left: -534px;
 	
 }
@@ -1642,6 +1646,8 @@ table.todo_list td:last-child {
 	height: 1800px;
 	opacity: 0.3;
 	z-index: 10;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
 #grey-shroud1 {
 	position: absolute; 
@@ -1653,6 +1659,8 @@ table.todo_list td:last-child {
 	opacity: 0.3;
 	z-index: 10;
 	display: none;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
 #grey-shroud2 {
 	position: absolute; 
@@ -1664,6 +1672,8 @@ table.todo_list td:last-child {
 	opacity: 0.3;
 	z-index: 10;
 	display: none;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
 }
 
 .discussion-container {
@@ -2337,7 +2347,7 @@ ul.dropbox-list   li:last-child {
 }
 textarea {
 	resize: none;
-
+	overflow: auto;
 }
 #hidden {
 	display: none;
@@ -2546,54 +2556,54 @@ div.delete-inactive  a{
 }
 .shroud-activator {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 .shroud-activator1 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 
 .shroud-activator2 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 
 .shroud-activator3 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 .shroud-activator4 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 
 .shroud-activator5 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 
 .shroud-activator6 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
 
 .shroud-activator7 {
 position: relative;
-	margin-top: -201px;
+
 	width: 145px;
 	height: 145px;
 }
