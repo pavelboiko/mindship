@@ -71,6 +71,6 @@ var objFiles = {
 			}
 		}
 
-		return '<div class="f' + class_id + '">' + model.count + 'x <a href="#">' + model.type + '</a></div>';
+		return '<div class="f' + class_id + '">' + model.count + 'x<a href="#">' + model.type + '</a></div>';
 	}
 };
