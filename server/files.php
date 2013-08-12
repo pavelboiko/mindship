@@ -24,7 +24,7 @@ for ($i = 0; $i < count($times); $i++) {
 		$arr[] = array(
 			'type' => $types[rand(0, 7)],
 			'count' => rand(1, 99),
-			'day' => rand(0, $d)
+			'day' => rand(1, $d)
 		);
 	}
 
