@@ -1,12 +1,8 @@
 (function ($) {
-	$.fn.calendarLine = function (date) {
+	$.fn.calendarLine = function (model) {
 		el = this.find('.calendar');
-		if (typeof date == 'undefined') {
-			date = new Date();
-		}
 
-		view.init(date);
-
+		view.init(model);
 	};
 
 	var monthsLong = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -24,14 +20,18 @@
 			dragging: null,
 
 
-			init: function (date) {
+			init: function (model) {
 				if (typeof preventSelection == 'function') {
 					preventSelection(document.getElementById('CalendarLine'));
 				} else {
 					console.log('Sory but don`t have function `preventSelection`!');
 				}
 
-				this.curDate = date; // Current day
+				this.curDate = new Date(); // Current day
+
+
+				this.model = model.init();
+				this.model.el = el;
 
 				this.clear()
 					.renderLine()
@@ -44,7 +44,8 @@
 					countAllDays = 0,
 					leftMonthCount = ~~((this.countMonthBox) / 2),
 					nextMonth = new Date(this.curDate.getFullYear(), this.curDate.getMonth() - leftMonthCount),
-					startPosition = 0;
+					startPosition = 0,
+					times = [];
 
 				for (var i = 0; i < this.countMonthBox; i++) {
 					contMonthDays = new Date(nextMonth.getFullYear(), nextMonth.getMonth() + 1, 0).getDate();
@@ -59,6 +60,8 @@
 					model[nextMonth.getTime()] = {};
 
 					nextMonth.setMonth(nextMonth.getMonth() + 1);
+
+					times.push(nextMonth.getTime());
 				}
 				startPosition += this.curDate.getDate() - this.configLine.viewPosCurrentDay;
 
@@ -67,6 +70,8 @@
 					width: countAllDays * this.configLine.widthDay,
 					left: -startPosition * this.configLine.widthDay
 				}).html(html);
+
+				this.model.pushAllData(times);
 
 				return this;
 			},
@@ -110,7 +115,7 @@
 						var size = self.dragging - e.pageX;
 						self.dragging = e.pageX;
 
-						self.drag(Math.abs(size), ((size < 0) ? false : true), 0);
+						self.drag(Math.abs(size), !(size < 0), 0);
 
 
 					}
@@ -161,12 +166,18 @@
 
 				var contMonthDays = new Date(nextMonth.getFullYear(), nextMonth.getMonth() + 1, 0).getDate();
 
-				el.css({
+				var month = $(this.renderMonth(nextMonth, contMonthDays));
+
+				var a = el.css({
 					width: '+=' + ((contMonthDays * this.configLine.widthDay) - ul_last.width()),
 					left: '-=' + (contMonthDays * this.configLine.widthDay)
-				}).prepend(this.renderMonth(nextMonth, contMonthDays));
+				}).prepend(month);
+
+				console.log(a);
 
 				ul_last.remove();
+
+				this.model.pushData(month);
 			},
 
 			appendMonth: function () {
@@ -180,17 +191,16 @@
 				var contMonthDays = new Date(nextMonth.getFullYear(), nextMonth.getMonth() + 1, 0).getDate(),
 					s = (contMonthDays * this.configLine.widthDay) - ul_first.width();
 
+				var month = $(this.renderMonth(nextMonth, contMonthDays));
+
 				el.css({
 					width: '+=' + s,
 					left: '+=' + ul_first.width()
-				}).append(this.renderMonth(nextMonth, contMonthDays));
+				}).append(month);
 
 				ul_first.remove();
-			},
 
-
-			loading: function (type) {
-
+				this.model.pushData(month);
 			}
 
 
