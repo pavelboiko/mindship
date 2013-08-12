@@ -1,0 +1,20 @@
+#CalendarLine{}
+#CalendarLine .calendar{ position: absolute; top: 0; left: 0; }
+#CalendarLine .calendar ul{ float: left; list-style: none; }
+#CalendarLine .calendar ul li { float: left; height: 227px; position: relative; width: 52px; border-left: 1px dotted #D8D6D6; }
+#CalendarLine .calendar ul li { color: #D2CFCF; font: bold 14px 'Roboto',sans-serif; padding-top: 10px; text-align: center; }
+#CalendarLine .calendar ul li.month_line{ cursor: pointer; text-align: left; float: none; width: 100%; color: #D2CFCF; font: normal 14px 'Roboto',sans-serif; padding-bottom: 10px; padding-left: 7px; text-transform: uppercase; height: 20px; }
+#CalendarLine .calendar ul li.today{ background: #F7F5F5; }
+#CalendarLine .calendar ul li.today span{ bottom: 8px; color: #D2CFCF; display: block; position: absolute; text-align: center; text-transform: uppercase; width: 52px; }
+
+#CalendarLine .calendar ul li div{ position: absolute; top: 0; right: 0; padding: 10px 9px 0 0; text-align: left; height: 18px; line-height: 18px; font-weight: normal; font-size: 10px; color: #5B5B59;}
+#CalendarLine .calendar ul li div a{ display: inline-block; width: 18px; height: 18px; line-height: 18px; float: right; margin-left: 4px; background: url("../img/file-format-bg.png") no-repeat; text-decoration: none; color: #fff; text-align: center; font-size: 8px;  }
+#CalendarLine .calendar ul li div.f0{ top: 25px; }
+#CalendarLine .calendar ul li div.f1{ top: 50px; }
+#CalendarLine .calendar ul li div.f2{ top: 75px; }
+#CalendarLine .calendar ul li div.f3{ top: 100px; }
+#CalendarLine .calendar ul li div.f4{ top: 125px; }
+#CalendarLine .calendar ul li div.f5{ top: 150px;  }
+#CalendarLine .calendar ul li div.f6{ top: 175px;  }
+#CalendarLine .calendar ul li div.f7{ top: 200px;  }
+#CalendarLine .calendar ul li div.f8{ top: 225px;  }

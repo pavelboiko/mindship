@@ -5,16 +5,37 @@
 	<title></title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
+
+	<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>
-<script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>
+	<link rel="stylesheet" href="css/calendar.css" type="text/css" media="screen, projection"/>
 
-<script type="text/javascript" src="js/mindship.js"></script>
+	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+	<link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css" />
+
+
+	<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+
+	<!--<script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>-->
+	<!--<script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>-->
+
+	<!--<script type="text/javascript" src="js/mindship.js"></script>-->
+
+	<!-- Calendar JS -->
+	<script type="text/javascript" src="js/prevent-selection.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript" src="js/calendar-files.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#CalendarDateStart, #CalendarDateEnd').datepicker();
+			$('#CalendarLine').calendarLine(objFiles);
+		});
+	</script>
+
 </head>
 
 <body>
@@ -162,136 +183,28 @@
 				</ul><!-- .tabs -->
 				<div class="clear"></div>
 				<div class="files-counter">256 files</div>
-				<div class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>	         
+                <div id="CalendarSwitcher" class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>
 				<div class="search-date-container">
                     <div class="date-container">
 						<div class="choose_period">
-                            <div class="start_date">
-                                <span class="calendar_icon"></span>
-                                December 6, 2013
-                                <input type="text" value="" style="display: none;" />
+                            <div style="display: block" class="start_date">
+	                            <span class="calendar_icon"></span><label for="CalendarDateStart">December 6, 2013</label><input id="CalendarDateStart" type="hidden" value="" />
                             </div>
                             <p>&ndash;</p>
-                            <div class="finish_date">
-                                June 6, 2013
-                                <input type="text" value="" style="display: none;" />
-                            </div>
+                            <div class="finish_date"><label for="CalendarDateEnd">June 6, 2013</label><input id="CalendarDateEnd" type="hidden" value="" /></div>
                         </div>
-					               <div class="search"><input type="text"  value="Search for files" /></div>
+					    <div class="search"><input type="text"  value="Search for files" /></div>
 								 
                     </div>
                 </div>
 									
               
 						<div class="clear"></div>
-                    <div class="calendar_container">
-					
-                        <div class="calendar">
-                            <div class="month_container">
-                                <p class="month">April, 2013</p>
-                                <ul class="days">
-                                    <li class="day_container"><span class="date">12</span>
-                                        <ul>
-                                            <li>2x<a href="#">Ps</a></li>
-                                            <li>2x<a href="#">Ai</a></li>
-                                            <li>2x<a href="#">Jpg</a></li>
-                                            <li>2x<a href="#">Xls</a></li>
-                                            <li>2x<a href="#">Doc</a></li>
-                                            <li>2x<a href="#">Txt</a></li>
-                                            <li>2x<a href="#">Pdf</a></li>
-                                            <li>99x<a href="#">&hellip;</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="day_container"><span class="date">13</span>
-                                        <ul>
-                                            <li>&nbsp;</li>
-                                            <li>2x<a href="#">Ai</a></li>
-                                            <li>&nbsp;</li>
-                                            <li>2x<a href="#">Xls</a></li>
-                                            <li>2x<a href="#">Doc</a></li>
-                                            <li>&nbsp;</li>
-                                            <li>2x<a href="#">Pdf</a></li>
-                                            <li>&nbsp;</li>
-                                        </ul>
-                                    </li>
-                                    <li class="day_container"><span class="date">14</span></li>
-                                    <li class="day_container"><span class="date">15</span></li>
-                                    <li class="day_container"><span class="date">16</span></li>
-                                    <li class="day_container"><span class="date">17</span></li>
-                                    <li class="day_container"><span class="date">18</span></li>
-                                    <li class="day_container"><span class="date">19</span></li>
-                                    <li class="day_container"><span class="date">20</span></li>
-                                    <li class="day_container today"><span class="date">21</span><span class="today_txt">today</span>
-                                        <ul>
-                                            <li>2x<a href="#">Ps</a></li>
-                                            <li>2x<a href="#">Ai</a></li>
-                                            <li>2x<a href="#">Jpg</a></li>
-                                            <li>2x<a href="#">Xls</a></li>
-                                            <li>2x<a href="#">Doc</a></li>
-                                            <li>2x<a href="#">Txt</a></li>
-                                            <li>99x<a href="#">&hellip;</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="day_container"><span class="date">22</span></li>
-                                    <li class="day_container"><span class="date">23</span></li>
-                                    <li class="day_container"><span class="date">24</span></li>
-                                    <li class="day_container"><span class="date">25</span></li>
-                                    <li class="day_container"><span class="date">26</span></li>
-                                    <li class="day_container"><span class="date">27</span></li>
-                                    <li class="day_container"><span class="date">28</span></li>
-                                    <li class="day_container"><span class="date">29</span></li>
-                                    <li class="day_container"><span class="date">30</span></li>
-                                </ul>
-                            </div><!-- month_container -->
-                            <div class="month_container">
-                                <p class="month">May, 2013</p>
-                                <ul class="days">
-                                    <li class="day_container"><span class="date">1</span></li>
-                                    <li class="day_container"><span class="date">2</span></li>
-                                    <li class="day_container"><span class="date">3</span></li>
-                                    <li class="day_container"><span class="date">4</span></li>
-                                    <li class="day_container"><span class="date">5</span></li>
-                                    <li class="day_container"><span class="date">6</span></li>
-                                    <li class="day_container"><span class="date">7</span></li>
-                                    <li class="day_container"><span class="date">8</span>
-                                        <ul>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>2x<a href="#">Xls</a></li>
-                                            <li>&nbsp;</li>
-                                            <li>&nbsp;</li>
-                                            <li>2x<a href="#">Pdf</a></li>
-                                            <li>&nbsp;</li>
-                                        </ul>
-                                    </li>
-                                    <li class="day_container"><span class="date">9</span></li>
-                                    <li class="day_container"><span class="date">10</span></li>
-                                    <li class="day_container"><span class="date">11</span></li>
-                                    <li class="day_container"><span class="date">12</span></li>
-                                    <li class="day_container"><span class="date">13</span></li>
-                                    <li class="day_container"><span class="date">14</span></li>
-                                    <li class="day_container"><span class="date">15</span></li>
-                                    <li class="day_container"><span class="date">16</span></li>
-                                    <li class="day_container"><span class="date">17</span></li>
-                                    <li class="day_container"><span class="date">18</span></li>
-                                    <li class="day_container"><span class="date">19</span></li>
-                                    <li class="day_container"><span class="date">20</span></li>
-                                    <li class="day_container"><span class="date">21</span></li>
-                                    <li class="day_container"><span class="date">22</span></li>
-                                    <li class="day_container"><span class="date">23</span></li>
-                                    <li class="day_container"><span class="date">24</span></li>
-                                    <li class="day_container"><span class="date">25</span></li>
-                                    <li class="day_container"><span class="date">26</span></li>
-                                    <li class="day_container"><span class="date">27</span></li>
-                                    <li class="day_container"><span class="date">28</span></li>
-                                    <li class="day_container"><span class="date">29</span></li>
-                                    <li class="day_container"><span class="date">30</span></li>
-                                </ul>
-                            </div><!-- month_container -->
-                        </div><!-- calendar -->
-                    </div><!-- calendar_container -->
-       
+
+			            <div id="CalendarLine" class="calendar_container">
+				            <div class="calendar"></div>
+			            </div>
+
                         <div class="choose_files">
                             <a href="#" class="active">All files</a>
                             <a href="#">My files</a>
