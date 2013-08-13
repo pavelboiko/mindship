@@ -203,13 +203,13 @@ $(document).ready(function() {
             $(this).parent().css('background','');
         }
     });
-        $.piroBox_ext({
-            piro_speed :700,
-            bg_alpha : 0.5,
-            piro_scroll : true,
-            piro_drag :false,
-            piro_nav_pos: 'bottom'
-        });
+//        $.piroBox_ext({
+//            piro_speed :700,
+//            bg_alpha : 0.5,
+//            piro_scroll : true,
+//            piro_drag :false,
+//            piro_nav_pos: 'bottom'
+//        });
     $('input', ".search").Watermark('Search for files');
     $('input', ".get_access_input").Watermark('Enter your email here and we’re done!');
     $('input', ".add_todo_list").Watermark("Type a new Todo and hit 'Enter'");
