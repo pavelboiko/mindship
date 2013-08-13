@@ -44,8 +44,6 @@ var objFiles = {
 	push: function (res, el) {
 		var time = el.data('time');
 
-		console.log(res, el,time, typeof res[time]);
-
 		if (typeof res[time] == 'undefined') {
 			return;
 		}
@@ -84,11 +82,12 @@ var objFiles = {
 				changeMonth: true,
 				changeYear: true,
 				onSelect: function (text, obj) {
-					var datepicker = $(this).parents('.datepicker');
+					var datepicker = $(this).parents('.datepicker'),
+						time = new Date(obj.selectedYear, obj.selectedMonth, obj.selectedDay).getTime();
 					datepicker.find('.date_view').html(text);
-					datepicker.find('input').val(new Date(obj.selectedYear, obj.selectedMonth, obj.selectedDay).getTime());
+					datepicker.find('input').val(time);
 
-					self.changeDate();
+					self.changeDate(time);
 				}
 			})
 				.hide()
@@ -105,6 +104,9 @@ var objFiles = {
 						date_box.show();
 				});
 
+			$('#CalendarSearch').keyup(function () { self.changeFilter($(this).val()) });
+
+
 		}).on('click', function(el) {
 				var e = $(el.target).parents('.datepicker');
 				if (!e.length && !$(el.target).hasClass('datepicker')) {
@@ -113,11 +115,29 @@ var objFiles = {
 			});
 	},
 
-	changeDate: function () {
+	changeDate: function (time) {
+		time = parseInt($('#CalendarDateStart').val());
+
+		this.parent
+			.setLineDate(new Date(time))
+			.clear()
+			.renderLine();
 
 	},
 
-	searchFilter: function () {
+	changeFilter: function (filter) {
+		if (filter.length < 3 && filter.length != 0) {
+			return;
+		}
+
+		this.s = filter;
+
+		var times = [];
+		this.el.find('ul').each(function () {
+			times.push($(this).data('time'));
+		});
+
+		this.pushAllData(times);
 
 	}
 
