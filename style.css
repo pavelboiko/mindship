@@ -2692,7 +2692,7 @@ div.users-buttons {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 1200px;
+	height: 1090px;
 	width: 50%;
 
     overflow: hidden;
@@ -2703,7 +2703,7 @@ div.users-buttons {
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 1200px;
+	height: 1090px;
 	width: 50%;
     overflow: hidden;
 	background: url("img/landing_page/bg-shadow-right.png") top right repeat-y;
@@ -2769,7 +2769,7 @@ div.users-buttons {
 	width: 750px;
 	margin: 0 auto;
 	margin-top: 55px;
-	margin-bottom: 490px;
+	margin-bottom: 380px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
 .get_access_text {
