@@ -21,5 +21,32 @@
 #CalendarLine .calendar ul li div.f7{ top: 200px; }
 #CalendarLine .calendar ul li div.f8{ top: 225px; }
 
-/* Task Calendar */
+#CalendarFilesCount{ float: left; color: #51504c; font: 400 24px 'Noto Sans', sans-serif; margin-top: 15px;}
 
+#CalendarFilterBox{ width: 600px; margin: 0 auto; }
+#CalendarFilterBox .choose_period { float: right; margin-left: 30px; }
+#CalendarFilterBox .datepicker{ float: left; height: 28px; line-height: 28px; padding: 0 4px; cursor: pointer; background: #3d3d3b; position: relative; }
+#CalendarFilterBox .datepicker div.date_box{ position: absolute; z-index: 2; top: 28px; left: 0; }
+#CalendarFilterBox .datepicker span.date_view{ font: 400 12px 'Noto Sans', sans-serif; color: #fff; text-align: right;}
+#CalendarFilterBox .datepicker span.calendar_icon { float: left; width: 17px; height: 19px; margin: 4px 4px 0 2px; background: url("../img/calendar-icon.png") no-repeat; }
+#CalendarFilterBox .choose_period p { float: left; margin: 0 5px; line-height: 28px; }
+#CalendarFilterBox .search {
+	float: left;
+	width: 277px;
+	height: 31px;
+	line-height: 31px;
+	padding: 0 15px;
+
+	background: url("../img/search-input-bg.png") left top repeat-x;
+
+	border-radius: 20px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 20px;
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+
+	/*z-index: 2;*/
+}
+#CalendarFilterBox .search input { background: none; border: none; width: 100%; height: 31px; line-height: 31px; font: 500 12px 'Roboto', sans-serif; color: #a8a8a1; }
+
+/* Task Calendar */

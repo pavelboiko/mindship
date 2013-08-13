@@ -1041,24 +1041,15 @@ div.switcher a.left {
 div.switcher a.right {
     background-position: -34px 0px;
 }
-.files-counter {
-	float: left;
-    position: relative;
-    color: #51504c;
-    font-size: 24px;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
-	margin-top: 15px;
-}
-.search-date-container {
-	width: auto;
-	
-}
-.date-container {
-	 width: 600px;
-    margin: 0 auto;
-	
-}
+
+/*.search-date-container {*/
+	/*width: auto;*/
+/*}*/
+/*.date-container {*/
+	/*width: 600px;*/
+    /*margin: 0 auto;*/
+	/**/
+/*}*/
 div.slider_container {
     position: relative;
     top: 3px;
@@ -1210,60 +1201,7 @@ div.search_container {
     
 }
 
-div.search {
-    background: url("img/search-input-bg.png") left top repeat-x;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    float: left;
-    height: 31px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 277px;
-	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
-   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
-	z-index: 2;
-}
-div.search input {
-    background: none;
-    border: none;
-    height: 31px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    color: #a8a8a1;
-    line-height: 31px;
-    width: 257px;
-}
-div.choose_period {
-    float: right;
-	margin-left: 30px;
-}
-div.choose_period div.start_date, div.choose_period div.finish_date {
-    background: #3d3d3b;
-    height: 28px;
-    float: left;
-    line-height: 28px;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
-    color: #fff;
-    font-size: 12px;
-    text-align: right;
-    padding: 0 4px;
-    cursor: pointer;
-}
-div.choose_period div.start_date span, div.choose_period div.finish_date span {
-    float: left;
-    margin: 4px 4px 0 2px;
-    background: url("img/calendar-icon.png") no-repeat;
-    width: 17px;
-    height: 19px;
-}
-div.choose_period p {
-    float: left;
-    margin: 0 5px;
-    line-height: 28px;
-}
+
 div.choose_files {
     float: left;
 }

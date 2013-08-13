@@ -27,15 +27,21 @@
 					console.log('Sory but don`t have function `preventSelection`!');
 				}
 
-				this.curDate = new Date(); // Current day
+				this.setLineDate(new Date());
 
 
 				this.model = model.init();
 				this.model.el = el;
+				this.model.parent = this;
 
 				this.clear()
 					.renderLine()
 					.bind();
+			},
+
+			setLineDate: function (obj) {
+				this.curDate = obj;
+				return this;
 			},
 
 			renderLine: function () {
@@ -48,6 +54,8 @@
 					times = [];
 
 				for (var i = 0; i < this.countMonthBox; i++) {
+					times.push(nextMonth.getTime());
+
 					contMonthDays = new Date(nextMonth.getFullYear(), nextMonth.getMonth() + 1, 0).getDate();
 					if (i <= leftMonthCount) {
 						startPosition += countAllDays;
@@ -61,7 +69,7 @@
 
 					nextMonth.setMonth(nextMonth.getMonth() + 1);
 
-					times.push(nextMonth.getTime());
+
 				}
 				startPosition += this.curDate.getDate() - this.configLine.viewPosCurrentDay;
 
@@ -86,8 +94,9 @@
 				var html = '<ul data-time="' + objDate.getTime() + '" style="width: ' + (countDays * this.configLine.widthDay) + ';">' +
 						'<li class="month_line">' + monthsLong[objDate.getMonth()] + ' ' + objDate.getFullYear() + '</li>',
 					classToday = '',
-					isToday = objDate.getMonth() == this.curDate.getMonth() && objDate.getFullYear() == this.curDate.getFullYear(),
-					today = this.curDate.getDate();
+					defDate = new Date(),
+					isToday = objDate.getMonth() == defDate.getMonth() && objDate.getFullYear() == defDate.getFullYear(),
+					today = defDate.getDate();
 
 				for (var i = 1; i <= countDays; i++) {
 					if (today == i && isToday) {
@@ -157,7 +166,6 @@
 			},
 
 			prependMonth: function () {
-				console.log('prependMonth');
 				var time = el.find('ul').first().data('time'),
 					ul_last = el.find('ul').last(),
 					nextMonth = new Date(time);
@@ -181,7 +189,6 @@
 			},
 
 			appendMonth: function () {
-				console.log('appendMonth');
 				var time = el.find('ul').last().data('time'),
 					ul_first = el.find('ul').first(),
 					nextMonth = new Date(time);
