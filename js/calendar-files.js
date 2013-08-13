@@ -5,6 +5,7 @@ var objFiles = {
 	format: ['Ps', 'Ai', 'Jpg', 'Xls', 'Doc', 'Txt', 'Pdf', '...'],
 
 	init: function () {
+		this.bind();
 		return this;
 	},
 
@@ -16,7 +17,6 @@ var objFiles = {
 			data: { t: times.join(','), s: this.s },
 			dataType: "json",
 			success: function (res) {
-//				console.log(res);
 				self.el.find('ul').each(function () {
 					var ul = $(this);
 					self.push(res, ul);
@@ -72,5 +72,17 @@ var objFiles = {
 		}
 
 		return '<div class="f' + class_id + '">' + model.count + 'x<a href="#">' + model.type + '</a></div>';
+	},
+
+
+	/* FILES Functions */
+	bind:  function () {
+		$('')
+	},
+
+	searchFilter: function () {
+
 	}
+
+
 };
