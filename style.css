@@ -259,7 +259,7 @@ ul.breadcrumbs1 li a {
     color: #51504c;
     text-decoration: none;
 }
-ul.breadcrumbs1 li a#page-settings1 {
+ul.breadcrumbs1 li div#page-settings1 {
     display: inline-block;
     height: 14px;
     width: 33px;
@@ -330,7 +330,7 @@ div.tab_content div.title {
     padding-right: 120px;
 	line-height: 40px;
 }
-div.tab_content div.title a#page_settings2 {
+div.tab_content div.title div#page_settings2 {
     display: inline-block;
     margin-left: 12px;
     background: url("img/settings-icon1.png") no-repeat;
@@ -800,7 +800,7 @@ div.msg_view h2.msg_view_title {
     font-weight: 900;
     padding: 25px 20px 20px;
 }
-div.msg_view div.gear a#page_settings {
+div.msg_view  div#page_settings {
     display: inline-block;
     float: right;
     margin-right: -3px;
@@ -2137,7 +2137,7 @@ img.checkbox_photo1 {
 
 	position: absolute;
 	top: 28px; 
-	left: 32px; 
+	left: 22px; 
 	width: 9px; 
 	height: 17px; 
 	background: url(img/corner-pop-up2.png) no-repeat; 
@@ -2174,7 +2174,7 @@ img.checkbox_photo1 {
 	background: #f6f3ec;
 	position: absolute;
 	top: 10px;
-	left: 40px;
+	left: 30px;
 	z-index: 11;
 	padding: 10px 10px 10px 20px;
 	line-height: 30px;
@@ -2201,20 +2201,9 @@ img.checkbox_photo1 {
 }
 .pop-up-activator {
 	display:none;
-}
-.pop-up-activator1 {
-	display:none;
-}.pop-up-activator2 {
-	display:none;
-}
-.pop-up-container {
-	position: absolute;
-	display: inline-block;
-	width: 200px;
-	height: 100px;
 
 }
-.pop-up-container1 {
+.pop-up-activator1 {
 	position: absolute;
 	display: inline-block;
 	width: 240px;
@@ -2222,8 +2211,18 @@ img.checkbox_photo1 {
 	top: 0px;
 	left: 400px;
 	z-index: 1;
-
+	display:none;
 }
+.pop-up-activator2 {
+	display:none;
+		position: absolute;
+	width: 200px;
+	height: 100px;
+	top: 40px;
+	left: 140px;
+	
+}
+
 
 .input-dropbox-list  {
 	display: none;
@@ -2962,4 +2961,14 @@ span.facebook_vertical_breakline {
 }
 .pop-list a{
 	font-weight: 300;
+	}
+
+div#page-settings1:hover .pop-up-activator1 {
+	display: block;
+	}
+	div#page_settings2:hover .pop-up-activator2 {
+	display: block;
+	}
+div#page_settings:hover .pop-up-activator {
+	display: block;
 	}
