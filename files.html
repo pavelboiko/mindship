@@ -1,20 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<title></title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+	<meta name="keywords" content=""/>
+	<meta name="description" content=""/>
 
 	<link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection"/>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
 
 	<link rel="stylesheet" href="css/calendar.css" type="text/css" media="screen, projection"/>
 
-	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection"/><![endif]-->
 
-	<link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css" />
+	<link href="css_pirobox/style_5/style.css" rel="stylesheet" type="text/css"/>
 
 
 	<script src="js/jquery-1.10.2.js" type="text/javascript"></script>
@@ -23,7 +23,7 @@
 	<!--<script type="text/javascript" src="js/jquery_1.5-jquery_ui.min.js"></script>-->
 	<!--<script type="text/javascript" src="js/pirobox_extended_feb_2011.js"></script>-->
 
-	<!--<script type="text/javascript" src="js/mindship.js"></script>-->
+	<script type="text/javascript" src="js/mindship.js"></script>
 
 	<!-- Calendar JS -->
 	<script type="text/javascript" src="js/prevent-selection.js"></script>
@@ -32,10 +32,12 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$('#CalendarDateStart, #CalendarDateEnd').datepicker();
+
+//			$('#CalendarDateStart, #CalendarDateEnd').parent('div').click(function () { console.log($(this).find('input')); $(this).find('input').datepicker("show"); });
+
 			$('#CalendarLine').calendarLine(objFiles);
 		});
 	</script>
-
 </head>
 
 <body>
@@ -44,38 +46,33 @@
 
 	<div id="header">
 		<div class="logo">Mindship</div>
-        <ul class="breadcrumbs">
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">My Team</a></li>
-            <li><a href="#">Clients</a></li>
-      
-        </ul>
-		
-        <div class="profile">
-             <div class="profile_img_container"><a href="#" class="profile-photo"></a></div>
-            <a href="#" class="profile_arrow"></a>
-        </div>
+		<ul class="breadcrumbs">
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">My Team</a></li>
+			<li><a href="#">Clients</a></li>
+		</ul>
+
+		<div class="profile">
+			<div class="profile_img_container"><a href="#" class="profile-photo"></a></div>
+			<a href="#" class="profile_arrow"></a>
+		</div>
 		<div class="projects-counter">2 projects remaining <a href="#" class="up-status">[upgrate]</a></div>
 	</div><!-- #header-->
 
 	<div id="middle">
-
-	
-		
 		<!-- pop-ups-->
-		
 		<div id="grey-shroud"></div>
-				<div id="grey-shroud1"></div>
+		<div id="grey-shroud1"></div>
 		<div id="grey-shroud2"></div>
-        
+
 		<div id="discussion" class="discussion-container">
 			<h1 class="discussion-title">Great! You're about to start a new discussion.</h1>
-			<div class="shut_down"> 
+
+			<div class="shut_down">
 				<div id="shut-down"></div>
 			</div>
-			<textarea class="diss"  onfocus="if (this.value == 'Fancy topic goes here'){this.value = '';}" 
-					onblur="if (this.value == ''){ this.value='Fancy topic goes here'; }">Fancy topic goes here</textarea>
-					
+			<textarea class="diss" onfocus="if (this.value == 'Fancy topic goes here'){this.value = '';}" onblur="if (this.value == ''){ this.value='Fancy topic goes here'; }">Fancy topic goes here</textarea>
+
 			<ul class="edit-text-panel-pop">
 				<li><a href="#" class="bold-pop">&nbsp;</a></li>
 				<li><a href="#" class="italic-pop">&nbsp;</a></li>
@@ -84,51 +81,52 @@
 				<li><a href="#" class="list-num-pop">&nbsp;</a></li>
 				<li><a href="#" class="list-sign-pop">&nbsp;</a></li>
 			</ul>
-            <div class="bottom-disc">
-				<textarea class="diss1"  onfocus="if (this.value == 'Once upon a time...'){this.value = '';}" 
-					onblur="if (this.value == ''){ this.value='Once upon a time...'; }">Once upon a time...</textarea>
-					
+			<div class="bottom-disc">
+				<textarea class="diss1" onfocus="if (this.value == 'Once upon a time...'){this.value = '';}" onblur="if (this.value == ''){ this.value='Once upon a time...'; }">Once upon a time...</textarea>
 			</div>
-            <div class="add_msg-pop">
-				<div class="a-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here</div><div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
+			<div class="add_msg-pop">
+				<div class="a-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop
+					them here
+				</div>
+				<div class="create-new"><a href="#">CREATE DISCUSSION</a></div>
 			</div>
 			<div class="discussion-line"></div>
 			<div class="send-choosing-msg">Your message will be sent to the following people:</div>
 			<div class="clear"></div>
+
 			<div class="check-boxes-discussion">
-    			<div class="conv-on">
-				
-                    <input type="checkbox"  id="conv_on1"/>
-                    <label class="custom_input" for="conv_on1">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo" src="img/stefan_g.png" alt="" />
-                    <label for="conv_on1" class="check-label">Stefan G</label>
-                </div>
-    			<div class="conv-on1">
-                    <input type="checkbox" id="conv_on4" />
-                    <label class="custom_input" for="conv_on4">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo" src="img/eduard_v.png" alt="" />
-                    <label for="conv_on4" class="check-label">Eduard V</label>
-                </div>
-    			<div class="conv-on2">
-                    <input type="checkbox" id="conv_on2" />
-                    <label class="custom_input" for="conv_on2">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo" src="img/alexandr_v.png" alt="" />
-                    <label for="conv_on2" class="dsblsl">Alexandr V</label>
-                </div>
-                <div class="conv-on3">
-                    <input type="checkbox" id="conv_on3" />
-                    <label class="custom_input" for="conv_on3">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo" src="img/deelopers.png" alt="" />
-                    <label for="conv_on3" class="check-label">Deelopers</label>
-                </div>
+				<div class="conv-on">
+					<input type="checkbox" id="conv_on1"/>
+					<label class="custom_input" for="conv_on1">
+						<span></span>
+					</label>
+					<img class="checkbox_photo" src="img/stefan_g.png" alt=""/>
+					<label for="conv_on1" class="check-label">Stefan G</label>
+				</div>
+				<div class="conv-on1">
+					<input type="checkbox" id="conv_on4"/>
+					<label class="custom_input" for="conv_on4">
+						<span></span>
+					</label>
+					<img class="checkbox_photo" src="img/eduard_v.png" alt=""/>
+					<label for="conv_on4" class="check-label">Eduard V</label>
+				</div>
+				<div class="conv-on2">
+					<input type="checkbox" id="conv_on2"/>
+					<label class="custom_input" for="conv_on2">
+						<span></span>
+					</label>
+					<img class="checkbox_photo" src="img/alexandr_v.png" alt=""/>
+					<label for="conv_on2" class="dsblsl">Alexandr V</label>
+				</div>
+				<div class="conv-on3">
+					<input type="checkbox" id="conv_on3"/>
+					<label class="custom_input" for="conv_on3">
+						<span></span>
+					</label>
+					<img class="checkbox_photo" src="img/deelopers.png" alt=""/>
+					<label for="conv_on3" class="check-label">Deelopers</label>
+				</div>
 			</div>
 		</div>
 		<div class="are-you-sure">
@@ -136,269 +134,319 @@
 			<div class="yes-button"><a href="#">Yes</a></div>
 			<div class="no-button"><a href="#">No</a></div>
 		</div>
-		
-<!-- pop-ups-end-->
-<div id="container">
-		 <div class="tab_container">
-			<div class="showroom-button"><a href="#">Project Showroom</a></div>
-            <div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
-				<div class="page_title_container"><div class="title">Website development for Microsoft, <br/> from scratch
-				<div class="pop-up-container"><a href="#" id="page_settings2"></a> 		
-					<div class="pop-up-activator2">
-					<div id="pop-up-project">            
-						<ul class="pop-list">
-							<li><a href="#" class="">Invite more people</a></li>
-							<li><a href="#" class="">Archive project</a></li>
-							<li><a href="#" class="">Close project</a></li>					  
-						</ul>
-					</div>
-		<div id="pop-up-corner2"></div></div></div></div></div>
-				
-				<div class="break-bounder"></div>
-				<ul class="breadcrumbs1">
-					<li><a href="#">Project home</a></li>
-					<li><a href="#">Backend development</a></li>
-					<li><a href="#"></a></li>
-					<li>Landing page
-						<div class="pop-up-container1"><a href="#" id="page-settings1"></a>
-						<div class="pop-up-activator1">
-							<div id="pop-up-select1">            
-								<ul class="pop-list">
-									<li><a href="#" class="">Mark as complete</a></li>
-									<li><a href="#" class="">Transfer for the Showroom</a></li>
-									<li><a href="#" class="">Save as .PDF</a></li>
-									<li><a href="#" class="">Delete conversation</a></li>			  
-								</ul>
+		<!-- pop-ups-end-->
+
+		<div id="container">
+			<div class="tab_container">
+				<div class="showroom-button"><a href="#">Project Showroom</a></div>
+				<div id="tab3" class="tab_content" style="display: block;"><!-- #tab3 -->
+					<div class="page_title_container">
+						<div class="title">Website development for Microsoft, <br/> from scratch
+							<div class="pop-up-container"><a href="#" id="page_settings2"></a>
+
+								<div class="pop-up-activator2">
+									<div id="pop-up-project">
+										<ul class="pop-list">
+											<li><a href="#" class="">Invite more people</a></li>
+											<li><a href="#" class="">Archive project</a></li>
+											<li><a href="#" class="">Close project</a></li>
+										</ul>
+									</div>
+									<div id="pop-up-corner2"></div>
+								</div>
 							</div>
-							<div id="pop-up-corner1"></div>
 						</div>
-					</li>
-				</ul>
-				<ul class="tabs">
-					<li><a href="#">Overview</a></li>
-					<li><a href="#">Tasks<span class="updates">4</span></a></li>
-					<li><a href="#" class="active">Discussions<span class="updates">12</span></a></li>
-					<li><a href="#">Files</a></li>
-					<li><a href="#">Team</a></li>
-				</ul><!-- .tabs -->
-				<div class="clear"></div>
-				<div class="files-counter">256 files</div>
-                <div id="CalendarSwitcher" class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>
-				<div class="search-date-container">
-                    <div class="date-container">
-						<div class="choose_period">
-                            <div style="display: block" class="start_date">
-	                            <span class="calendar_icon"></span><label for="CalendarDateStart">December 6, 2013</label><input id="CalendarDateStart" type="hidden" value="" />
-                            </div>
-                            <p>&ndash;</p>
-                            <div class="finish_date"><label for="CalendarDateEnd">June 6, 2013</label><input id="CalendarDateEnd" type="hidden" value="" /></div>
-                        </div>
-					    <div class="search"><input type="text"  value="Search for files" /></div>
-								 
-                    </div>
-                </div>
-									
-              
+					</div>
+
+					<div class="break-bounder"></div>
+					<ul class="breadcrumbs1">
+						<li><a href="#">Project home</a></li>
+						<li><a href="#">Backend development</a></li>
+						<li><a href="#"></a></li>
+						<li>Landing page
+							<div class="pop-up-container1"><a href="#" id="page-settings1"></a>
+
+								<div class="pop-up-activator1">
+									<div id="pop-up-select1">
+										<ul class="pop-list">
+											<li><a href="#" class="">Mark as complete</a></li>
+											<li><a href="#" class="">Transfer for the Showroom</a></li>
+											<li><a href="#" class="">Save as .PDF</a></li>
+											<li><a href="#" class="">Delete conversation</a></li>
+										</ul>
+									</div>
+									<div id="pop-up-corner1"></div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="tabs">
+						<li><a href="#">Overview</a></li>
+						<li><a href="#">Tasks<span class="updates">4</span></a></li>
+						<li><a href="#" class="active">Discussions<span class="updates">12</span></a></li>
+						<li><a href="#">Files</a></li>
+						<li><a href="#">Team</a></li>
+					</ul>
+					<!-- .tabs -->
+					<div class="clear"></div>
+
+					<div class="files-counter">256 files</div>
+					<div id="CalendarSwitcher" class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>
+					<div class="search-date-container">
+						<div class="date-container">
+							<div class="choose_period">
+								<div class="start_date">
+									<span class="calendar_icon"></span>
+									<span class="date_view">December 6, 2013</span>
+									<input id="CalendarDateStart" type="hidden" value=""/>
+								</div>
+								<p>&ndash;</p>
+
+								<div class="finish_date">
+									June 6, 2013<input id="CalendarDateEnd" type="hidden" value=""/>
+								</div>
+							</div>
+							<div class="search"><input type="text" value="Search for files"/></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+
+					<div id="CalendarLine" class="calendar_container"><div class="calendar"></div></div><!-- calendar box -->
+
+					<div class="choose_files">
+						<a href="#" class="active">All files</a>
+						<a href="#">My files</a>
+					</div>
+					<div class="clear"></div>
+
+					<div class="content">
+						<ul class="tasks_title">
+							<li><a href="#">Tasks</a></li>
+							<li>Landing page functionality</li>
+						</ul>
 						<div class="clear"></div>
 
-			            <div id="CalendarLine" class="calendar_container">
-				            <div class="calendar"></div>
-			            </div>
+						<div class="files">
+							<div class="file noMarginLeft">
+								<div class="file_holder">
+									<div class="shroud-activator"><img src="img/file-img.png" alt=""/>
+										<div class="file-shroud-container">
+											<div class="preview"><a href="img/01.jpg" class="pirobox_gall" rel="gallery" title="Project 1"></a></div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete-inactive"><a href="#"><img src="img/delete-inactive.png" alt=""/></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
+								<div class="clear"></div>
 
-                        <div class="choose_files">
-                            <a href="#" class="active">All files</a>
-                            <a href="#">My files</a>
-                        </div>
-                        <div class="clear"></div>
-                    <div class="content">
-                        <ul class="tasks_title">
-                            <li><a href="#">Tasks</a></li>
-                            <li>Landing page functionality</li>
-                        </ul>
-                        <div class="clear"></div>
-                        <div class="files">
-                            <div class="file noMarginLeft">
-                                <div class="file_holder">
-                                   <div class="shroud-activator"><img src="img/file-img.png" alt="" />
-								    <div class="file-shroud-container">
-									<div class="preview"><a href="img/01.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete-inactive"><a href="#"><img src="img/delete-inactive.png" alt=""/></a></div>
-								   </div></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="file">
+								<div class="file_holder">
+									<div class="shroud-activator1"><img src="img/file-img.png" alt=""/>
+										<div class="file-shroud-container1">
+											<div class="preview"><a href="img/02.jpg" class="pirobox_gall" rel="gallery" title="Project 1"></a></div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete-inactive"><a href="#"><img src="img/delete-inactive.png" alt=""/></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
 
-								   
-								   
-								   
-                                </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="file">
-                                <div class="file_holder">
-                                   
-									  <div class="shroud-activator1">  <img src="img/file-img.png" alt="" /> <div class="file-shroud-container1">
-									<div class="preview"><a href="img/02.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete-inactive"><a href="#"><img src="img/delete-inactive.png" alt=""/></a></div>
-								   </div></div>
-																 
-                                </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="file">
-                                <div class="file_holder">
-                                     
-                                 <div class="shroud-activator2"><img src="img/file-img.png" alt="" /><div class="file-shroud-container2">
-									<div class="preview"><a href="img/03.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete"><a  class="active-delete" href="#"></a></div>
-								   </div></div>
-							   </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="file">
-                                <div class="file_holder">
-                                   
-									 <div class="shroud-activator3">  <img src="img/file-img.png" alt="" /><div class="file-shroud-container3">
-									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete"><a class="active-delete" href="#"></a></div>
-								   </div></div>
-                                </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <ul class="tasks_title">
-                            <li><a href="#">Tasks</a></li>
-                            <li>Something else</li>
-                        </ul>
-                        <div class="clear"></div>
-                        <div class="files">
-                            <div class="file noMarginLeft">
-                                <div class="file_holder">
-                                    
-									 <div class="shroud-activator4"><img src="img/psd.png" alt="" /> <div class="file-shroud-container4">
-									<div class="preview"><a class="not-img" target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete"><a class="active-delete" href="#"></a></div>
-								   </div></div>
-                                </div>
-                                <a target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div> 
-                            <div class="file">
-                                <div class="file_holder">
-                                   
-									 <div class="shroud-activator5"> <img src="img/al.png" alt="" /> <div class="file-shroud-container5">
-									<div class="preview"><a class="not-img" target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2F01.pdf"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete"><a class="active-delete" href="#"></a></div>
-								   </div></div>
-                                </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="file">
-                                <div class="file_holder">
-                                   
-									 <div class="shroud-activator6">  <img src="img/file-img.png" alt="" /><div class="file-shroud-container6">
-									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete"><a class="active-delete" href="#"></a></div>
-								   </div></div>
-                                </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="file">
-                                <div class="file_holder">
-                                    
-									 <div class="shroud-activator7"> <img src="img/file-img.png" alt="" /><div class="file-shroud-container7">
-									<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"   title="Project 1"></a></div>
-								   <div class="file-shroud"></div>
-								   <div class="file-break-line"></div>
-								   <div class="delete"><a class="active-delete" href="#"></a></div>
-								   </div></div>
-                                </div>
-                                <a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
-                                <div class="clear"></div>
-                                <p class="added">2 days ago</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        
-                    </div><!-- content -->
-                </div><!-- #tab4 -->
-                
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="file">
+								<div class="file_holder">
+									<div class="shroud-activator2"><img src="img/file-img.png" alt=""/>
+										<div class="file-shroud-container2">
+											<div class="preview"><a href="img/03.jpg" class="pirobox_gall" rel="gallery" title="Project 1"></a></div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete"><a class="active-delete" href="#"></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
+
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="file">
+								<div class="file_holder">
+
+									<div class="shroud-activator3"><img src="img/file-img.png" alt=""/>
+
+										<div class="file-shroud-container3">
+											<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"
+											                        title="Project 1"></a></div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete"><a class="active-delete" href="#"></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
+
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<ul class="tasks_title">
+							<li><a href="#">Tasks</a></li>
+							<li>Something else</li>
+						</ul>
+						<div class="clear"></div>
+
+						<div class="files">
+							<div class="file noMarginLeft">
+								<div class="file_holder">
+
+									<div class="shroud-activator4"><img src="img/psd.png" alt=""/>
+
+										<div class="file-shroud-container4">
+											<div class="preview"><a class="not-img" target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd"></a>
+											</div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete"><a class="active-delete" href="#"></a></div>
+										</div>
+									</div>
+								</div>
+								<a target="blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2Ftest.psd"
+								   class="download_file">...ag-landing_page-v1.jpg</a>
+
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="file">
+								<div class="file_holder">
+
+									<div class="shroud-activator5"><img src="img/al.png" alt=""/>
+
+										<div class="file-shroud-container5">
+											<div class="preview"><a class="not-img" target="_blank" href="http://docs.google.com/viewer?url=www.pbk-proekt.cv.ua%2Frandom%2F01.pdf"></a>
+											</div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete"><a class="active-delete" href="#"></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
+
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="file">
+								<div class="file_holder">
+
+									<div class="shroud-activator6"><img src="img/file-img.png" alt=""/>
+
+										<div class="file-shroud-container6">
+											<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"
+											                        title="Project 1"></a></div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete"><a class="active-delete" href="#"></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
+
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="file">
+								<div class="file_holder">
+
+									<div class="shroud-activator7"><img src="img/file-img.png" alt=""/>
+
+										<div class="file-shroud-container7">
+											<div class="preview"><a href="img/04.jpg" class="pirobox_gall" rel="gallery"
+											                        title="Project 1"></a></div>
+											<div class="file-shroud"></div>
+											<div class="file-break-line"></div>
+											<div class="delete"><a class="active-delete" href="#"></a></div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="download_file">...ag-landing_page-v1.jpg</a>
+
+								<div class="clear"></div>
+								<p class="added">2 days ago</p>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div><!-- content -->
+				</div><!-- #tab4 -->
 			</div><!-- .tab_container-->
 		</div><!-- #container-->
 
-<!-- .sidebar -->
+		<!-- .sidebar -->
 		<div class="sidebar" id="sideLeft">
-            <p class="project_menu_title">Your tasks</p>
-            <ul class="project_menu">
-				<li><div class="dark-shroud"></div></li>
-				
-				<li class="submenu1"><div class="pointer-active-bg"></div><span class="menu_arrow1"></span><div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div>
-			
-                    <ul id="hidden">
-                        <li onclick=""><a href="#">Landing page<span class="num">7</span></a></li>
-                        <li><a href="#">Cart and checkout<span class="num">14</span></a></li>
-                        <li><a href="#">Payments<span class="num">36</span></a></li>
-                        <li><a href="#">Contact page<span class="num">52</span></a></li>
-                    </ul>
-                 </li>
-                
-				<li><div class="dark-shroud1"></div></li>
-                <li class="submenu"><div class="pointer-active-bg1"></div><span class="menu_arrow"></span><div class="start-toggle"><a href="#" class="pointer">Backend development</a></div>
-                   
-				   <ul id="hidden1">
-                        <li><a href="#">Landing page<span class="num">7</span></a></li>
-                        <li><a href="#">Cart and checkout<span class="num">14</span></a></li>
-                        <li><a href="#">Payments<span class="num">36</span></a></li>
-                        <li><a href="#">Contact page<span class="num">52</span></a></li>
-                    </ul>
-                
-				 </li>
-				 <li><p class="project_menu_title">You can also add</p></li>
-                 <li class="addons"><a href="#">Design<span class="cross"></span></a></li>
-                 <li class="addons"><a href="#">Marketing<span class="cross"></span></a></li>
-				 <li class="addons"><div class="trash-show"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></div></li>
-                 <li class="addons"><a href="#">Create your own<span class="cross"></span></a></li>
+			<p class="project_menu_title">Your tasks</p>
+			<ul class="project_menu">
+				<li>
+					<div class="dark-shroud"></div>
+				</li>
+
+				<li class="submenu1">
+					<div class="pointer-active-bg"></div>
+					<span class="menu_arrow1"></span>
+
+					<div class="start-toggle1"><a class="pointer1" href="#">Frontend development</a></div>
+
+					<ul id="hidden">
+						<li onclick=""><a href="#">Landing page<span class="num">7</span></a></li>
+						<li><a href="#">Cart and checkout<span class="num">14</span></a></li>
+						<li><a href="#">Payments<span class="num">36</span></a></li>
+						<li><a href="#">Contact page<span class="num">52</span></a></li>
+					</ul>
+				</li>
+
+				<li>
+					<div class="dark-shroud1"></div>
+				</li>
+				<li class="submenu">
+					<div class="pointer-active-bg1"></div>
+					<span class="menu_arrow"></span>
+
+					<div class="start-toggle"><a href="#" class="pointer">Backend development</a></div>
+
+					<ul id="hidden1">
+						<li><a href="#">Landing page<span class="num">7</span></a></li>
+						<li><a href="#">Cart and checkout<span class="num">14</span></a></li>
+						<li><a href="#">Payments<span class="num">36</span></a></li>
+						<li><a href="#">Contact page<span class="num">52</span></a></li>
+					</ul>
+
+				</li>
+				<li><p class="project_menu_title">You can also add</p></li>
+				<li class="addons"><a href="#">Design<span class="cross"></span></a></li>
+				<li class="addons"><a href="#">Marketing<span class="cross"></span></a></li>
+				<li class="addons">
+					<div class="trash-show"><a href="#">Billing<span class="cross"></span><span class="trash"></span></a></div>
+				</li>
+				<li class="addons"><a href="#">Create your own<span class="cross"></span></a></li>
 			</ul>
 		</div><!-- .sidebar#sideLeft -->
 
-
-        <div id="footer">
-            <div class="footer">
-                <ul class="footer_links">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">User Agreement</a></li>
-                </ul>
-            </div>
-        </div><!-- #footer -->
-
+		<div id="footer">
+			<div class="footer">
+				<ul class="footer_links">
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">User Agreement</a></li>
+				</ul>
+			</div>
+		</div><!-- #footer -->
 	</div><!-- #middle-->
-
 </div><!-- #wrapper -->
 
 </body>
