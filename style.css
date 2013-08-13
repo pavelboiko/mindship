@@ -693,9 +693,12 @@ ul.project_menu li a.pointer1{
 	background: #3d3d3b;
 	
 }
-
-
-
+ul.project_menu li a.pointer:hover {
+	color: #0db2ea;
+}
+ul.project_menu li a.pointer1:hover {
+	color: #0db2ea;
+}
 ul.project_menu li.submenu ul {
 	background: #353533;
     list-style: none;
@@ -2443,110 +2446,17 @@ div.delete-inactive  a{
 	height: 145px;
 	display: none;
 }
-.file-shroud-container1 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
-.file-shroud-container2 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
-.file-shroud-container3 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
-.file-shroud-container4 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
-.file-shroud-container5 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
-.file-shroud-container6 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
-.file-shroud-container7 {
-	position: relative;
-	margin-top: -201px;
-	width: 145px;
-	height: 145px;
-	display: none;
-}
+
 .shroud-activator {
 position: relative;
 
 	width: 145px;
 	height: 145px;
 }
-.shroud-activator1 {
-position: relative;
 
-	width: 145px;
-	height: 145px;
+div.shroud-activator:hover div.file-shroud-container {
+	display: block;
 }
-
-.shroud-activator2 {
-position: relative;
-
-	width: 145px;
-	height: 145px;
-}
-
-.shroud-activator3 {
-position: relative;
-
-	width: 145px;
-	height: 145px;
-}
-.shroud-activator4 {
-position: relative;
-
-	width: 145px;
-	height: 145px;
-}
-
-.shroud-activator5 {
-position: relative;
-
-	width: 145px;
-	height: 145px;
-}
-
-.shroud-activator6 {
-position: relative;
-
-	width: 145px;
-	height: 145px;
-}
-
-.shroud-activator7 {
-position: relative;
-
-	width: 145px;
-	height: 145px;
-}
-
-
 div.users-buttons { 
 	float: left;
 	display: inline-block;
@@ -2630,7 +2540,7 @@ div.users-buttons {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 1090px;
+	height: 1065px;
 	width: 50%;
 
     overflow: hidden;
@@ -2641,7 +2551,7 @@ div.users-buttons {
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 1090px;
+	height: 1065px;
 	width: 50%;
     overflow: hidden;
 	background: url("img/landing_page/bg-shadow-right.png") top right repeat-y;
@@ -2707,7 +2617,7 @@ div.users-buttons {
 	width: 750px;
 	margin: 0 auto;
 	margin-top: 55px;
-	margin-bottom: 380px;
+	margin-bottom: 340px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
 .get_access_text {
@@ -2905,7 +2815,7 @@ span.facebook_vertical_breakline {
 	position: relative;
 	float: left;
 }
-.preview a.pirobox_gall {
+.preview a.group1 {
 	position: relative;
 	display: block;
 	background: url("img/preview-sprite.png") 0 -47px no-repeat;
@@ -2946,3 +2856,15 @@ div#page-settings1:hover .pop-up-activator1 {
 div#page_settings:hover .pop-up-activator {
 	display: block;
 	}
+ul.project_menu li a:hover span.trash{
+	display: block;
+	}
+	.files-counter {
+	float: left;
+    position: relative;
+    color: #51504c;
+    font-size: 24px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+	margin-top: 15px;
+}
