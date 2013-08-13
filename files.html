@@ -31,10 +31,6 @@
 	<script type="text/javascript" src="js/calendar-files.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('#CalendarDateStart, #CalendarDateEnd').datepicker();
-
-//			$('#CalendarDateStart, #CalendarDateEnd').parent('div').click(function () { console.log($(this).find('input')); $(this).find('input').datepicker("show"); });
-
 			$('#CalendarLine').calendarLine(objFiles);
 		});
 	</script>
@@ -193,20 +189,22 @@
 					<div id="CalendarFilesCount">256 files</div>
 					<div id="CalendarSwitcher" class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div>
 					<div id="CalendarFilterBox">
-						<div class="search"><input id="CalendarSearch" type="text" value="Search for files"/></div>
+						<div class="search"><input id="CalendarSearch" type="text" value=""/></div>
 						<div class="choose_period">
-							<div class="start_date">
+							<div class="datepicker">
+								<div class="date_box"></div>
 								<span class="calendar_icon"></span>
 								<span class="date_view">December 6, 2013</span>
 								<input id="CalendarDateStart" type="hidden" value=""/>
 							</div>
 							<p>&ndash;</p>
 
-							<div class="finish_date">
-								June 6, 2013<input id="CalendarDateEnd" type="hidden" value=""/>
+							<div class="datepicker">
+								<div class="date_box"></div>
+								<span class="date_view">June 6, 2013</span>
+								<input id="CalendarDateEnd" type="hidden" value=""/>
 							</div>
 						</div>
-
 					</div>
 					<div class="clear"></div>
 

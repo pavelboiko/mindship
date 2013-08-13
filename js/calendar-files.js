@@ -77,7 +77,44 @@ var objFiles = {
 
 	/* FILES Functions */
 	bind:  function () {
-		$('')
+		var self = this;
+		$(document).ready(function () {
+			$('.datepicker div.date_box').datepicker({
+				dateFormat: 'd MM, yy',
+				changeMonth: true,
+				changeYear: true,
+				onSelect: function (text, obj) {
+					var datepicker = $(this).parents('.datepicker');
+					datepicker.find('.date_view').html(text);
+					datepicker.find('input').val(new Date(obj.selectedYear, obj.selectedMonth, obj.selectedDay).getTime());
+
+					self.changeDate();
+				}
+			})
+				.hide()
+				.parents('.datepicker').click(function (el) {
+					var e = $(el.target).parents('.date_box');
+					if (e.length || $(el.target).hasClass('date_box')) {
+						return;
+					}
+
+					var date_box =  $(this).find('.date_box');
+					if (date_box.is(':visible'))
+						date_box.hide();
+					else
+						date_box.show();
+				});
+
+		}).on('click', function(el) {
+				var e = $(el.target).parents('.datepicker');
+				if (!e.length && !$(el.target).hasClass('datepicker')) {
+					$('.datepicker div.date_box').hide();
+				}
+			});
+	},
+
+	changeDate: function () {
+
 	},
 
 	searchFilter: function () {

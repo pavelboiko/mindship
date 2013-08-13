@@ -157,7 +157,6 @@
 			},
 
 			prependMonth: function () {
-				console.log('prependMonth');
 				var time = el.find('ul').first().data('time'),
 					ul_last = el.find('ul').last(),
 					nextMonth = new Date(time);
@@ -181,7 +180,6 @@
 			},
 
 			appendMonth: function () {
-				console.log('appendMonth');
 				var time = el.find('ul').last().data('time'),
 					ul_first = el.find('ul').first(),
 					nextMonth = new Date(time);

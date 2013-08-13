@@ -25,6 +25,11 @@
 
 #CalendarFilterBox{ width: 600px; margin: 0 auto; }
 #CalendarFilterBox .choose_period { float: right; margin-left: 30px; }
+#CalendarFilterBox .datepicker{ float: left; height: 28px; line-height: 28px; padding: 0 4px; cursor: pointer; background: #3d3d3b; position: relative; }
+#CalendarFilterBox .datepicker div.date_box{ position: absolute; z-index: 2; top: 28px; left: 0; }
+#CalendarFilterBox .datepicker span.date_view{ font: 400 12px 'Noto Sans', sans-serif; color: #fff; text-align: right;}
+#CalendarFilterBox .datepicker span.calendar_icon { float: left; width: 17px; height: 19px; margin: 4px 4px 0 2px; background: url("../img/calendar-icon.png") no-repeat; }
+#CalendarFilterBox .choose_period p { float: left; margin: 0 5px; line-height: 28px; }
 #CalendarFilterBox .search {
 	float: left;
 	width: 277px;
