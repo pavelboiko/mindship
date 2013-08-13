@@ -185,88 +185,21 @@ $(document).ready(function() {
             piro_drag :false,
             piro_nav_pos: 'bottom'
         });
-
-    $(".search input").attr("value", "Search for files");
-
-         var text = "Search for files";
-
-   	$(".search input").focus(function() {
-
-             if($(this).attr("value") == text) $(this).attr("value", "");
-        	    });
-
-    $(".search input").blur(function() {
-
-       	        if($(this).attr("value") == "") $(this).attr("value", text);
-        	    });
-
-    $(".get_access_input input").attr("value", "Enter your email here and we’re done!");
-
-    var landing_input = "Enter your email here and we’re done!";
-
-    $(".get_access_input input").focus(function() {
-
-        if($(this).attr("value") == landing_input) $(this).attr("value", "");
-    });
-
-    $(".get_access_input input").blur(function() {
-
-        if($(this).attr("value") == "") $(this).attr("value", landing_input);
-    });
+    $('input', ".search").Watermark('Search for files');
+    $('input', ".get_access_input").Watermark('Enter your email here and we’re done!');
+    $('input', ".add_todo_list").Watermark("Type a new Todo and hit 'Enter'");
+    $('input', ".create_task").Watermark("Type a new Task and hit 'Enter' to create a new list");
+    $('input', ".diss").Watermark("Fancy topic goes here");
+    $('input', ".diss1").Watermark("Once upon a time...");
 
 
 
-    $(".add_todo_list input").attr("value", "Type a new Todo and hit 'Enter'");
-
-    var add_to_do_input = "Type a new Todo and hit 'Enter'";
-
-    $(".add_todo_list input").focus(function() {
-
-        if($(this).attr("value") == add_to_do_input) $(this).attr("value", "");
-    });
-
-    $(".add_todo_list input").blur(function() {
-
-        if($(this).attr("value") == "") $(this).attr("value", add_to_do_input);
-    });
-    $(".create_task input").attr("value", "Type a new Task and hit 'Enter' to create a new list");
-
-    var create_task_input = "Type a new Task and hit 'Enter' to create a new list";
-
-    $(".create_task input").focus(function() {
-
-        if($(this).attr("value") == create_task_input) $(this).attr("value", "");
-    });
-
-    $(".create_task input").blur(function() {
-
-        if($(this).attr("value") == "") $(this).attr("value", create_task_input);
-    });
 
 
-    var discussion_popup_textarea = "Fancy topic goes here";
 
-    $(".diss").focus(function() {
 
-        if($(this).attr("value") == discussion_popup_textarea) $(this).attr("value", "");
-    });
 
-    $(".diss").blur(function() {
 
-        if($(this).attr("value") == "") $(this).attr("value", discussion_popup_textarea);
-    });
-
-    var discussion_popup_textarea1 = "Once upon a time...";
-
-    $(".diss1").focus(function() {
-
-        if($(this).attr("value") == discussion_popup_textarea1) $(this).attr("value", "");
-    });
-
-    $(".diss1").blur(function() {
-
-        if($(this).attr("value") == "") $(this).attr("value", discussion_popup_textarea1);
-    });
     });
 
 
