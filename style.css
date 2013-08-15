@@ -2687,6 +2687,12 @@ div.users-buttons {
 	top: 35px;
 	right: 25px;
 }
+.landing_register_button_container {
+	position: absolute;
+	display:none;
+	top: 35px;
+	right: 25px;
+}
 .landing_log_in_button {
 	background: url("img/landing_page/login-bg.png") repeat;
 	position: relative;
@@ -2697,6 +2703,17 @@ div.users-buttons {
 	text-decoration: none;
 	padding: 10px 35px 10px 35px;
 	
+}
+.landing_register_button {
+	background: url("img/landing_page/login-bg.png") repeat;
+	position: relative;
+	color: #e5e4e4;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	padding: 10px 35px 10px 35px;
+
 }
 .landing_slogan {
 	position: relative;
@@ -2724,11 +2741,29 @@ div.users-buttons {
 	margin-bottom: 100px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
+.get_access_login_container{
+	position: relative;
+	height: 415px;
+	width: 750px;
+	margin: 0 auto;
+	margin-top: -242px;
+	margin-bottom: 100px;
+	background: url("img/landing_page/login-bg.png") repeat;
+	display:none;
+}
 .get_access_text {
+	 position: relative;
+	 width: 419px;
+	 margin-left: 165px;
+	 margin-top: 40px;
+	 text-align: center;
+
+ }
+.get_access_text_log-in {
 	position: relative;
 	width: 419px;
 	margin-left: 165px;
-	margin-top: 40px;
+	margin-top: 20px;
 	text-align: center;
 
 }
@@ -2739,6 +2774,14 @@ div.users-buttons {
     font-weight: 900;
 	line-height: 24px;
 	 text-shadow: 0px 1px 2px black
+}
+.get_access_text_log-in span {
+	color: #f9f9f9;
+	font-size: 22px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	line-height: 24px;
+	text-shadow: 0px 1px 2px black
 }
 .get_access_input {
 	position: relative;
@@ -2756,6 +2799,38 @@ div.users-buttons {
     padding-right: 25px;
 
 }
+.get_access_type_your_e-mail {
+	position: relative;
+	height: 50px;
+	width: 365px;
+	margin-top: 15px;
+	margin-left: 165px;
+	background: #fff;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
+	padding-left: 25px;
+	padding-right: 25px;
+
+}
+.get_access_password {
+	position: relative;
+	height: 50px;
+	width: 365px;
+	margin-top: 10px;
+	margin-left: 165px;
+	background: #fff;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Firefox */
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Для Safari и Chrome */
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
+	padding-left: 25px;
+	padding-right: 25px;
+
+}
 
 div.get_access_input input {
     background: none;
@@ -2767,6 +2842,28 @@ div.get_access_input input {
     color: #a8a8a1;
     line-height: 31px;
     width: 365px;
+}
+div.get_access_password input {
+	background: none;
+	border: none;
+	height: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #a8a8a1;
+	line-height: 31px;
+	width: 365px;
+}
+div.get_access_type_your_e-mail input {
+	background: none;
+	border: none;
+	height: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #a8a8a1;
+	line-height: 31px;
+	width: 365px;
 }
 .get_access_free_button_container {
 	margin-left: 190px;

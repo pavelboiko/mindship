@@ -128,6 +128,18 @@ $(document).ready(function () {
 		$("#grey-shroud").fadeIn();
 		$(" #discussion ").show().animate({top: '+=202px'}, 200);
 	});
+	$("#log-in").click(function () {
+		$(".get_access_login_container").show().animate({top: '+=297px'}, 200);
+		$(".get_access_container").hide().animate({top: '-=297px'}, 200);
+		$("#log-in").hide();
+		$("#register").show();
+	});
+	$("#register").click(function () {
+		$(".get_access_container").show().animate({top: '+=297px'}, 200);
+		$(".get_access_login_container").hide().animate({top: '-=297px'}, 200);
+		$("#register").hide();
+		$("#log-in").show();
+	});
 
 	$('.check-boxes-discussion input[type=checkbox]').click(function () {
 		if (this.checked) {
@@ -140,14 +152,6 @@ $(document).ready(function () {
 		  $('.save_task').replaceWith('<div class="edit_task"><a href="#">Edit</a></div>');
 	  });
 
-	/*$('.tasks_checkbox input[type=checkbox]').click(function () {
-		if (this.checked) {
-			$(".tasks_checkbox_container:has('input:checked') > .tasks_title").css('color','#d1d1d1');
-		} else {
-			$(".tasks_checkbox_container:has('input:checked') > .tasks_title").css('color', '#51504c');
-		}
-
-	}); */
 	$('.tasks_checkbox').click( function(){
 		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
 			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().parent().find('.tasks_title').css('color','');
@@ -165,5 +169,7 @@ $(document).ready(function () {
 	$('input', ".create_task1").Watermark("Type Task name and hit 'Enter'");
 	$('input', ".diss").Watermark("Fancy topic goes here");
 	$('input', ".diss1").Watermark("Once upon a time...");
+	$('input', ".get_access_type_your_e-mail").Watermark("Your e-mail");
+	$('input', ".get_access_password").Watermark("Password");
 	$(".group1").colorbox({rel:'group1'});
 });
