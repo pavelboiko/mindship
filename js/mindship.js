@@ -51,26 +51,26 @@ $(document).ready(function () {
 		$(".dark-shroud1").slideUp();
 	});
 	$('.checkbox-user').click( function(){
-		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
+		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
+			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().css('border','');
 		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
 	$('.checkbox-user1').click( function(){
-		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
+		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
+			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().css('border','');
 		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
 	$('.checkbox-user2').click( function(){
-		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
+		if ( $(this).find('input[type="checkbox"]').prop("checked") == true ){
+			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().css('border','');
 		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
@@ -140,14 +140,23 @@ $(document).ready(function () {
 		  $('.save_task').replaceWith('<div class="edit_task"><a href="#">Edit</a></div>');
 	  });
 
-	$('.tasks_checkbox input[type=checkbox]').click(function () {
+	/*$('.tasks_checkbox input[type=checkbox]').click(function () {
 		if (this.checked) {
-			$(".tasks_title").css('color', '#d1d1d1');
+			$(".tasks_checkbox_container:has('input:checked') > .tasks_title").css('color','#d1d1d1');
 		} else {
-			$(".tasks_title").css('color', '');
+			$(".tasks_checkbox_container:has('input:checked') > .tasks_title").css('color', '#51504c');
 		}
-	});
 
+	}); */
+	$('.tasks_checkbox').click( function(){
+		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
+			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().parent().find('.tasks_title').css('color','');
+
+		} else {
+			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().parent().find('.tasks_title').css('color','#d1d1d1');
+		}  	$(this).find('input[type="checkbox"]').parent().parent().find('.task_completed').toggle();
+		return false;
+	});
 
 	$('#CalendarSearch').Watermark('Search for files');
 	$('input', '.get_access_input').Watermark('Enter your email here and we’re done!');
