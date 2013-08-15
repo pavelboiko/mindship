@@ -69,6 +69,21 @@ input[type="checkbox"] + label.custom_input1 span{
 input[type="checkbox"]:checked + label.custom_input1 span{
     background:url("img/checkbox-users-checked.png");
 }
+input[type="checkbox"] + label.custom_input2 span{
+	background:url("img/task-not-checked.png")no-repeat;
+	display:inline-block;
+	width:22px;
+	height:20px;
+	margin-top: 16px;
+	margin-left: 16px;
+	vertical-align:middle;
+
+	cursor:pointer;
+
+}
+input[type="checkbox"]:checked + label.custom_input2 span{
+	background:url("img/task-checked.png");
+}
 
 /* Header
 -----------------------------------------------------------------------------*/
@@ -1201,13 +1216,14 @@ div.month_container ul li.day_container ul li a {
     line-height: 18px;
 }
 div.search_container {
-    
+	position: relative;
+
 }
 
 
 
 div.choose_files {
-    float: left;
+   position: relative;
 }
 div.choose_files a {
     display: block;
@@ -1229,6 +1245,92 @@ div.choose_files a.active {
     font-weight: 700;
     color: #fff;
 }
+
+div.choose_tasks {
+	position: relative;
+
+
+}
+div.choose_tasks a {
+	display: block;
+	float: left;
+	width: 92px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	color: #3d3d3b;
+	font-size: 13px;
+	text-decoration: none;
+	margin-top: 3px;
+}
+div.choose_tasks a.active {
+	background: #0db2ea;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	border-radius: 15px;
+}
+
+div.choose_certain_tasks {
+	position: absolute;
+	margin-top: 60px;
+	margin-left: 505px;
+
+}
+div.choose_certain_tasks a {
+	display: block;
+	float: left;
+	width: 122px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	color: #3d3d3b;
+	font-size: 13px;
+	text-decoration: none;
+	margin-top: 3px;
+}
+div.choose_certain_tasks a.active {
+	background: #0db2ea;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	color: #fff;
+	width: 92px;
+	margin-right: 14px;
+	border-radius: 15px;
+
+}
+
+.create_task1 {
+	position: relative;
+	background: #dfdbd1;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+
+
+}
+.create_task1 input {
+	padding: 8px 0px 8px 15px;
+	width: 370px;
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	color: #A8A8A1;
+	font-family: 'Roboto',sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 16px;
+}
+.create_task_container {
+	position: absolute;
+	height: 40px;
+	width: 385px;
+	margin-top: 55px;
+
+}
+
+
 ul.tasks_title {
     float: left;
     list-style: none;
@@ -1367,7 +1469,7 @@ div.page_title_container.content_title div.create_task_left {
 }
 
 div.page_title_container.content_title div.create_task {
-    background: url("img/create-task-input-bg.png") repeat-x;
+    background: #e7e3d9;
     position: relative;
 	padding-right: 4px;
 	padding-left: 4px;
@@ -1398,6 +1500,7 @@ div.page_title_container.content_title div.create_task span.plus {
     right: 4px;
     top: 7px;
 }
+
 div.todo_list_container {
     background: #fff;
     padding: 20px 25px 30px 18px;
@@ -2535,12 +2638,13 @@ div.users-buttons {
 	height: 100%;
     overflow: hidden;
 	background: url("img/landing_page/bg-pattern.jpg") repeat;
+	margin-bottom: -60px;
 }
 #bg-shadow-left {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 1065px;
+	height: 100%;
 	width: 50%;
 
     overflow: hidden;
@@ -2551,7 +2655,7 @@ div.users-buttons {
 	position: absolute;
 	top: 0;
 	right: 0;
-	height: 1065px;
+	height: 100%;
 	width: 50%;
     overflow: hidden;
 	background: url("img/landing_page/bg-shadow-right.png") top right repeat-y;
@@ -2565,7 +2669,7 @@ div.users-buttons {
 	margin: 0 auto;
 	width: 750px;
 	overflow: hidden;
-	margin-top: -60px;
+	height: 60px;
 	
 }
 
@@ -2617,7 +2721,7 @@ div.users-buttons {
 	width: 750px;
 	margin: 0 auto;
 	margin-top: 55px;
-	margin-bottom: 340px;
+	margin-bottom: 100px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
 .get_access_text {
@@ -2859,7 +2963,7 @@ div#page_settings:hover .pop-up-activator {
 ul.project_menu li a:hover span.trash{
 	display: block;
 	}
-	.files-counter {
+.files-counter {
 	float: left;
     position: relative;
     color: #51504c;
@@ -2867,4 +2971,191 @@ ul.project_menu li a:hover span.trash{
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 	margin-top: 15px;
+}
+
+.tasks_checkboxes_container {
+	position: relative;
+	float: left;
+	margin-top: 83px;
+	width: 740px;
+	padding-bottom: 300px;
+
+}
+.tasks_checkbox_container {
+	margin-top: 1px;
+	position: relative;
+	width: 740px;
+	height: 50px;
+	background: #fff;
+	border-left: 3px solid #0db2ea;
+
+}
+.new_tasks_checkbox_container {
+	margin-top: 1px;
+	position: relative;
+	width: 740px;
+	height: 50px;
+	background: #fff;
+	border-left: 3px solid #0db2ea;
+
+}
+.task_border {
+	position: relative;
+	float: left;
+	height: 50px;
+	width: 1px;
+	background: #f6f3ec;
+	margin-left: 3px;
+}
+.tasks_checkbox {
+	position: relative;
+	float: left;
+	width: 50px;
+	height: 50px;
+
+}
+.tasks_title {
+	 position: relative;
+	float: left;
+	color: #51504c;
+	font-size: 14px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	margin-top: 19px;
+	margin-left: 22px;
+	width: 280px;
+}
+.edit_task {
+	position: relative;
+	float: left;
+	margin-top: 19px;
+	margin-left: 0px;
+}
+.edit_task a {
+	text-decoration: none;
+	color: #13b6ec;
+	font-size: 11px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+}
+.save_task {
+	position: relative;
+	float: left;
+	margin-top: 19px;
+	margin-left: -3px;
+}
+.save_task a {
+	text-decoration: none;
+	color: #13b6ec;
+	font-size: 11px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+}
+div.task_slider_container {
+	position: relative;
+	float: left;
+	top: 3px;
+	margin-top: 24px;
+	margin-left: 15px;
+	padding-right: 60px;
+}
+div.task_slider_container div.slider {
+	width: 505px;
+	margin: 0 auto;
+	position: relative;
+}
+div.task_slider_container div.deadline_slider {
+	background: #cdcbc5;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	height: 3px;
+	width: 168px;
+	position: relative;
+}
+div.task_slider_container div.remaining_time {
+	width: 100px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+div.task_slider_container p.task_deadline {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 900;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #51504c;
+	position: absolute;
+	right: 0;
+	top: -8px;
+}
+div.task_slider_container div.deadline_slider div.remaining_time_task1 span {
+	display: block;
+	float: right;
+	background: #0db2ea;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 23px;
+	height: 3px;
+}
+.assign_task {
+	position: relative;
+	float: right;
+	margin-right: 17px;
+	margin-top: 19px;
+}
+.assign_task a {
+	text-decoration: none;
+	color: #13b6ec;
+	font-size: 11px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+}
+div.task_slider_container div.deadline_slider div.task_overdue span {
+	display: block;
+	float: right;
+	background: #f24712;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 168px;
+	height: 3px;
+}
+div.task_slider_container div.deadline_slider div.remaining_time_task3 span {
+	display: block;
+	float: right;
+	background: #0db2ea;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 82px;
+	height: 3px;
+}
+div.choose_period {
+	float: left;
+	margin-left: 14px;
+	margin-top: 12px;
+}
+div.choose_period div.start_date, div.choose_period div.finish_date {
+	background: #0db2ea;
+	height: 28px;
+	float: left;
+	line-height: 28px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	color: #fff;
+	font-size: 12px;
+	text-align: right;
+	padding: 0 7px;
+	cursor: pointer;
+}
+div.choose_period div.start_date span, div.choose_period div.finish_date span {
+	float: left;
+	margin: 4px 4px 0 2px;
+	background: url("img/calendar-icon.png") no-repeat;
+	width: 17px;
+	height: 19px;
+}
+div.choose_period p {
+	float: left;
+	margin: 0 5px;
+	line-height: 28px;
 }

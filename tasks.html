@@ -9,7 +9,8 @@
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-
+	<link rel="stylesheet" href="css_colorbox/colorbox.css" />
+	<script type="text/javascript" src="js/colorbox/jquery.colorbox.js"></script>
 	<script type="text/javascript" src="js/mindship.js"></script>
 
 </head>
@@ -227,49 +228,158 @@
                         </div><!-- calendar -->
                     </div><!-- calendar_container -->
                     <div class="content">
-                        <div class="page_title_container content_title"><p>Tasks</p><div class="create_task_left"><div class="create_task_right"><div class="create_task">
-						<input type="text"  value="Type a new Task and hit 'Enter' to create a new list"/><span class="plus"></span></div></div></div></div>
-                        <div class="clear"></div>
-                        <div class="todo_list_container">
-                            <a class="todo_list_title">Landing page functionality</a><div class="todo_list_setting"></div><div class="todo_list_slider"><div class="deadline_slider"><div class="remaining_time"><span></span></div></div><p class="deadline">in 1 day</p></div>
-                            <div class="clear"></div>
-                            <a class="add_todo" id="add_todo">Add a to-do</a>
-                            <div class="add_todo_list_left"><div class="add_todo_list_right"><div class="add_todo_list"><input type="text"   value="Type a new To-do and hit 'Enter'" /></div></div></div>
-                            <table class="todo_list">
-                                <tr>
-                                    <td class="active_task"><input type="checkbox" id="todo1_task1" /><label for="todo1_task1" class="dsblsl">Header menu <a href="">3</a></label></td>
-                                    <td>16 comments</td>
-                                    <td>2 files</td>
-                                    <td>Eduard V.</td>
-                                </tr>
-                                <tr>
-                                    <td class="done_task"><input type="checkbox" id="todo1_task2_done" /><label for="todo1_task2_done" class="dsblsl">Header menu</label></td>
-                                    <td>16 comments</td>
-                                    <td>2 files</td>
-                                    <td>Eduard V.</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="todo_list_container">
-                            <a class="todo_list_title">Landing page functionality</a><div class="todo_list_setting"></div><div class="todo_list_slider"><div class="deadline_slider"><div class="remaining_time"><span></span></div></div><p class="deadline">in 1 day</p></div>
-                            <div class="clear"></div>
-                            <a class="add_todo1">Add a to-do</a>
-                            <div class="add_todo_list_left1"><div class="add_todo_list_right"><div class="add_todo_list"><input type="text"   value="Type a new To-do and hit 'Enter'" /></div></div></div>
-                            <table class="todo_list">
-                                <tr>
-                                    <td class="active_task"><input type="checkbox" id="todo2_task1" /><label for="todo2_task1" class="dsblsl">Header menu <a href="">3</a></label></td>
-                                    <td>16 comments</td>
-                                    <td>2 files</td>
-                                    <td>Eduard V.</td>
-                                </tr>
-                                <tr>
-                                    <td class="done_task"><input type="checkbox" id="todo2_task2_done" /><label for="todo2_task2_done" class="dsblsl">Header menu</label></td>
-                                    <td>16 comments</td>
-                                    <td>2 files</td>
-                                    <td>Eduard V.</td>
-                                </tr>
-                            </table>
-                        </div>
+
+
+								<div class="clear"></div>
+						<div class="tasks_container">
+						<div class="choose_tasks">
+							<a href="#" class="active">All tasks</a>
+							<a href="#">My tasks</a>
+						</div>
+
+						<div class="choose_certain_tasks">
+							<a href="#" class="active">Show all</a>
+							<a href="#">Only uncompleted</a>
+						</div>
+						<div class="create_task_container">
+						<div class="create_task1">
+
+							<input type="text"  value="Type Task name and hit 'Enter'"/>
+						</div>    </div>
+						<div class="tasks_checkboxes_container">
+						<div class="tasks_checkbox_container">
+							<div class="tasks_checkbox">
+
+								<input type="checkbox"  id="task_on"/>
+								<label class="custom_input2" for="task_on">
+									<span></span>
+								</label>
+							</div>
+							<div class="task_border"></div>
+							<div  class="tasks_title">Header menu</div>
+							<div class="edit_task"><a href="#">Edit</a></div>
+							<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+								<p class="task_deadline">in 1 day</p></div>
+							<div class="assign_task"><a href="#">Assign task</a></div>
+							</div>
+							<div class="tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on1"/>
+									<label class="custom_input2" for="task_on1">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">Social icons</div>
+								<div class="edit_task"><a href="#">Edit</a></div>
+								<div class="task_slider_container"><div class="deadline_slider"><div class="task_overdue"><span></span></div></div>
+									<p class="task_deadline">Overdue</p></div>
+								<div class="assign_task"><a href="#">George V.</a></div>
+							</div>
+							<div class="tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on2"/>
+									<label class="custom_input2" for="task_on2">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">Register form</div>
+								<div class="edit_task"><a href="#">Edit</a></div>
+								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task3"><span></span></div></div>
+									<p class="task_deadline">in 3 days</p></div>
+								<div class="assign_task"><a href="#">Eduard V.</a></div>
+							</div>
+							<div class="tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on3"/>
+									<label class="custom_input2" for="task_on3">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">Image slider</div>
+								<div class="edit_task"><a href="#">Edit</a></div>
+								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+									<p class="task_deadline">in 1 day</p></div>
+								<div class="assign_task"><a href="#">Eduard V.</a></div>
+							</div>
+							<div class="tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on5"/>
+									<label class="custom_input2" for="task_on5">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">"Send a query" form</div>
+								<div class="edit_task"><a href="#">Edit</a></div>
+								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+									<p class="task_deadline">in 1 day</p></div>
+								<div class="assign_task"><a href="#">Dmitry D.</a></div>
+							</div>
+							<div class="tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on6"/>
+									<label class="custom_input2" for="task_on6">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">Very long to-do name</div>
+								<div class="edit_task"><a href="#">Edit</a></div>
+								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+									<p class="task_deadline">in 1 day</p></div>
+								<div class="assign_task"><a href="#">Eduard V.</a></div>
+							</div>
+							<div class="new_tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on7"/>
+									<label class="custom_input2" for="task_on7">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">Footer menu</div>
+								<div class="save_task"><a href="#">Save</a></div>
+
+									<div class="choose_period">
+										<div class="start_date">
+											<span class="calendar_icon"></span>
+											June 6, 2013
+											<input type="text" value="" style="display: none;" />
+										</div>
+										<p>&ndash;</p>
+										<div class="finish_date">
+											June 27, 2013
+											<input type="text" value="" style="display: none;" />
+										</div>
+									</div>
+								<div class="assign_task"><a href="#">Dmitry D.</a></div>
+							</div>
+							<div class="tasks_checkbox_container">
+								<div class="tasks_checkbox">
+
+									<input type="checkbox"  id="task_on4"/>
+									<label class="custom_input2" for="task_on4">
+										<span></span>
+									</label>
+								</div>
+								<div class="task_border"></div>
+								<div  class="tasks_title">Hover effects</div>
+								<div class="edit_task"><a href="#">Edit</a></div>
+								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+									<p class="task_deadline">in 1 day</p></div>
+								<div class="assign_task"><a href="#">George V.</a></div>
+							</div>
+						</div>
+						 </div>
                     </div><!-- content -->
                 </div><!-- #tab2 -->
 

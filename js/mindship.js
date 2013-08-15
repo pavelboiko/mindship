@@ -50,27 +50,27 @@ $(document).ready(function () {
 		$(".dark-shroud").slideToggle();
 		$(".dark-shroud1").slideUp();
 	});
-	$('.checkbox-user').click(function () {
-		if ($(this).find('input[type="checkbox"]').attr('checked') == true) {
-			$(this).find('input[type="checkbox"]').removeAttr('checked').parent().css('border', '');
+	$('.checkbox-user').click( function(){
+		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
+			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
 		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border', '1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
-	$('.checkbox-user1').click(function () {
-		if ($(this).find('input[type="checkbox"]').attr('checked') == true) {
-			$(this).find('input[type="checkbox"]').removeAttr('checked').parent().css('border', '');
+	$('.checkbox-user1').click( function(){
+		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
+			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
 		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border', '1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
-	$('.checkbox-user2').click(function () {
-		if ($(this).find('input[type="checkbox"]').attr('checked') == true) {
-			$(this).find('input[type="checkbox"]').removeAttr('checked').parent().css('border', '');
+	$('.checkbox-user2').click( function(){
+		if ( $(this).find('input[type="checkbox"]').attr('checked') == true ){
+			$(this).find('input[type="checkbox"]').removeAttr('checked') .parent().css('border','');
 		} else {
-			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border', '1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').attr('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
@@ -127,7 +127,6 @@ $(document).ready(function () {
 	$("#msg_post, #post_msg").click(function () {
 		$("#grey-shroud").fadeIn();
 		$(" #discussion ").show().animate({top: '+=202px'}, 200);
-		;
 	});
 
 	$('.check-boxes-discussion input[type=checkbox]').click(function () {
@@ -137,11 +136,24 @@ $(document).ready(function () {
 			$(this).parent().css('background', '');
 		}
 	});
+	  $('.save_task').click(function (){
+		  $('.save_task').replaceWith('<div class="edit_task"><a href="#">Edit</a></div>');
+	  });
+
+	$('.tasks_checkbox input[type=checkbox]').click(function () {
+		if (this.checked) {
+			$(".tasks_title").css('color', '#d1d1d1');
+		} else {
+			$(".tasks_title").css('color', '');
+		}
+	});
+
 
 	$('#CalendarSearch').Watermark('Search for files');
 	$('input', '.get_access_input').Watermark('Enter your email here and we’re done!');
 	$('input', ".add_todo_list").Watermark("Type a new Todo and hit 'Enter'");
-	$('input', ".create_task").Watermark("Type a new Task and hit 'Enter' to create a new list");
+	$('input', ".create_task").Watermark("Type Task name and hit 'Enter'");
+	$('input', ".create_task1").Watermark("Type Task name and hit 'Enter'");
 	$('input', ".diss").Watermark("Fancy topic goes here");
 	$('input', ".diss1").Watermark("Once upon a time...");
 	$(".group1").colorbox({rel:'group1'});
