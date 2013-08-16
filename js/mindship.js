@@ -175,6 +175,8 @@ $(document).ready(function () {
 		$(this).parent().find('.edit_task').show();
 		$(this).parent().find('.save_task').hide();
 	});
+
+
 	$('.edit_task').click(function (){
 		$(this).parent().find('.task_slider_container').hide();
 		$(this).parent().find('.choose_period').show();

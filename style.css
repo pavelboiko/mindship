@@ -360,7 +360,7 @@ div.tab_content div.page_buttons_container  a.post_msg {
     width: 89px;
     padding: 0 10px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
@@ -377,7 +377,7 @@ div.tab_content div.page_buttons_container  a.all-discussions {
     width: 89px;
     padding: 0 10px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
@@ -424,7 +424,7 @@ div.tab_content div.page_buttons_container1  a.post_msg {
     width: 89px;
     padding: 0 10px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
@@ -599,12 +599,13 @@ ul.messages li.inactive_msg div.msg_container div.msg_title a.msg_link, div#tab3
     font-weight: 900;
 }
 #sideLeft p.project_menu_title {
-    margin: 25px 10px 5px 17px;
+    margin: 8px 10px 5px 17px;
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
     font-weight: 900;
     text-transform: uppercase;
     color: #878683;
+	text-shadow:  0px 1px 1px black;
 }
 ul.project_menu li  a span.cross {
     float: right;
@@ -622,6 +623,9 @@ ul.project_menu li  a span.trash {
 	height: 11px;
 	margin-top: 8px;
 	display: none;
+}
+li.addons:last-child a{
+	color: #0db2ea;
 }
 ul.project_menu {
     list-style: none;
@@ -717,6 +721,7 @@ ul.project_menu li a.pointer1:hover {
 ul.project_menu li.submenu ul {
 	background: #353533;
     list-style: none;
+	padding-bottom: 10px;
 }
 ul.project_menu li.submenu ul li {
     padding: 0;
@@ -750,6 +755,7 @@ ul.project_menu li.submenu ul li:hover a, ul.project_menu li.submenu ul li.activ
  ul.project_menu li.submenu1 ul {
 	background: #353533;
     list-style: none;
+	 padding-bottom: 10px;
 }
 ul.project_menu li.submenu1 ul li {
     padding: 0;
@@ -937,7 +943,7 @@ p.add_msg a#post_msg {
     width: 74px;
     padding: 0 10px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
@@ -1240,10 +1246,11 @@ div.choose_files a {
     margin-top: 3px;
 }
 div.choose_files a.active {
-    background: url("img/active-files.png") no-repeat;
+    background: #0DB2EA;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
     color: #fff;
+	border-radius: 15px 15px 15px 15px;
 }
 
 div.choose_tasks {
@@ -2574,7 +2581,7 @@ div.users-buttons {
     width: 89px;
     padding: 0 10px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 12px;
     font-family: 'Noto Sans', sans-serif;
@@ -2591,7 +2598,7 @@ div.users-buttons {
     width: 89px;
     padding: 0 5px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 12px;
     font-family: 'Noto Sans', sans-serif;
@@ -2608,7 +2615,7 @@ div.users-buttons {
     width: 89px;
     padding: 0 0px;
     line-height: 25px;
-    background: #2a2a28;
+    background: #0DB2EA;
     color: #fff;
     font-size: 12px;
     font-family: 'Noto Sans', sans-serif;
@@ -3119,7 +3126,7 @@ ul.project_menu li a:hover span.trash{
 	margin-top: 19px;
 	margin-left: 22px;
 	width: 280px;
-	height: 15px;
+	height: 17px;
 	overflow: hidden;
 }
 .edit_task {
@@ -3128,6 +3135,7 @@ ul.project_menu li a:hover span.trash{
 	margin-top: 19px;
 	margin-left: 0px;
 	display: none;
+	z-index: 100;
 
 }
 .edit_task a {
@@ -3295,4 +3303,20 @@ div.choose_period p {
 	float: left;
 
 
+}
+
+.project_home a{
+	background: none repeat scroll 0 0 #3D3D3B;
+	color: #FFFFFF;
+	display: block;
+	font-family: 'Roboto',sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 30px;
+	padding: 0 29px;
+	text-decoration: none;
+}
+.project_home {
+	position: relative;
+	margin-top: 25px;
 }
