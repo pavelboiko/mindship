@@ -170,16 +170,16 @@ $(document).ready(function () {
 		  $('.save_task').replaceWith('<div class="edit_task"><a href="#">Edit</a></div>');
 	  });*/
 	$('.save_task').click(function (){
-		$('.task_slider_container').show();
-		$('.choose_period').hide();
-		$('.edit_task').show();
-		$('.save_task').hide();
+		$(this).parent().find('.task_slider_container').show();
+		$(this).parent().find('.choose_period').hide();
+		$(this).parent().find('.edit_task').show();
+		$(this).parent().find('.save_task').hide();
 	});
 	$('.edit_task').click(function (){
-		$('.task_slider_container').hide();
-		$('.choose_period').show();
-		$('.edit_task').hide();
-		$('.save_task').show();
+		$(this).parent().find('.task_slider_container').hide();
+		$(this).parent().find('.choose_period').show();
+		$(this).parent().find('.edit_task').hide();
+		$(this).parent().find('.save_task').show();
 	});
 
 	$('input[type="checkbox"]').removeAttr('checked');
