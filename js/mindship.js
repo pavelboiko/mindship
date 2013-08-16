@@ -52,7 +52,7 @@ $(document).ready(function () {
 	});
 	$('.checkbox-user').click( function(){
 		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().css('border','');
+			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().css('border','');
 		} else {
 			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
@@ -60,21 +60,28 @@ $(document).ready(function () {
 	});
 	$('.checkbox-user1').click( function(){
 		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().css('border','');
+			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().css('border','');
 		} else {
 			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
 	$('.checkbox-user2').click( function(){
-		if ( $(this).find('input[type="checkbox"]').prop("checked") == true ){
-			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().css('border','');
+		if  ( $( '.checkbox-user2 input' ).prop( "checked" ) ){
+			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().css('border','');
 		} else {
 			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
 		}
 		return false;
 	});
 
+	$('.checkbox-user1 input[type=checkbox]').click(function () {
+		if ($(".checkbox-user1 input[type=checkbox]").prop( "checked" ) ) {
+			$(this).parent().css('border','1px solid #0db2ea');
+		} else {
+			$(this).parent().css('border', '');
+		}
+	});
 
 	$(".send-msg-input").click(function () {
 		$(".input-dropbox-list").slideToggle(10);
@@ -129,14 +136,25 @@ $(document).ready(function () {
 		$(" #discussion ").show().animate({top: '+=202px'}, 200);
 	});
 	$("#log-in").click(function () {
-		$(".get_access_login_container").show().animate({top: '+=297px'}, 200);
-		$(".get_access_container").hide().animate({top: '-=297px'}, 200);
+		$(".get_access_type_your_e-mail").show();
+		$(".get_access_text_log-in").show();
+		$(".get_access_password").animate({top: '+=65px'}, 400);
+		$(".get_access_buttons_container").animate({top: '+=65px'}, 400);
+		$(".get_access_text").hide();
+		$(".get_access_input").hide();
+		$(".get_access_container").animate({paddingBottom: +60}, 400);
+
 		$("#log-in").hide();
 		$("#register").show();
 	});
 	$("#register").click(function () {
-		$(".get_access_container").show().animate({top: '+=297px'}, 200);
-		$(".get_access_login_container").hide().animate({top: '-=297px'}, 200);
+		$(".get_access_type_your_e-mail").hide();
+		$(".get_access_password").animate({top: '-=65px'}, 400);
+		$(".get_access_text").show();
+		$(".get_access_input").show();
+		$(".get_access_text_log-in").hide();
+		$(".get_access_container").animate({paddingBottom: -60}, 400);
+		$(".get_access_buttons_container").animate({top: '-=65px'}, 400);
 		$("#register").hide();
 		$("#log-in").show();
 	});
@@ -148,13 +166,26 @@ $(document).ready(function () {
 			$(this).parent().css('background', '');
 		}
 	});
-	  $('.save_task').click(function (){
+	/*  $('.save_task').click(function (){
 		  $('.save_task').replaceWith('<div class="edit_task"><a href="#">Edit</a></div>');
-	  });
+	  });*/
+	$('.save_task').click(function (){
+		$('.task_slider_container').show();
+		$('.choose_period').hide();
+		$('.edit_task').show();
+		$('.save_task').hide();
+	});
+	$('.edit_task').click(function (){
+		$('.task_slider_container').hide();
+		$('.choose_period').show();
+		$('.edit_task').hide();
+		$('.save_task').show();
+	});
 
+	$('input[type="checkbox"]').removeAttr('checked');
 	$('.tasks_checkbox').click( function(){
 		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
-			$(this).find('input[type="checkbox"]').removeProp('checked') .parent().parent().find('.tasks_title').css('color','');
+			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().parent().find('.tasks_title').css('color','');
 
 		} else {
 			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().parent().find('.tasks_title').css('color','#d1d1d1');

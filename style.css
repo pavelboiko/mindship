@@ -2641,23 +2641,23 @@ div.users-buttons {
 	margin-bottom: -60px;
 }
 #bg-shadow-left {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 50%;
 
-    overflow: hidden;
+    overflow: auto;
 	background: url("img/landing_page/bg-shadow-left.png") repeat-y;
 
 }
 #bg-shadow-right {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	height: 100%;
 	width: 50%;
-    overflow: hidden;
+	overflow: auto;
 	background: url("img/landing_page/bg-shadow-right.png") top right repeat-y;
 
 }
@@ -2741,16 +2741,7 @@ div.users-buttons {
 	margin-bottom: 100px;
 	background: url("img/landing_page/login-bg.png") repeat;
 }
-.get_access_login_container{
-	position: relative;
-	height: 415px;
-	width: 750px;
-	margin: 0 auto;
-	margin-top: -242px;
-	margin-bottom: 100px;
-	background: url("img/landing_page/login-bg.png") repeat;
-	display:none;
-}
+
 .get_access_text {
 	 position: relative;
 	 width: 419px;
@@ -2763,8 +2754,9 @@ div.users-buttons {
 	position: relative;
 	width: 434px;
 	margin-left: 165px;
-	margin-top: 20px;
+	margin-top: 40px;
 	text-align: center;
+	display: none;
 
 }
 .get_access_text span {
@@ -2787,7 +2779,7 @@ div.users-buttons {
 	position: relative;
 	height: 50px;
 	width: 365px;
-	margin-top: 30px;
+	margin-top: 25px;
 	margin-left: 165px;
 	background: #fff;
 	-webkit-border-radius: 20px;
@@ -2797,13 +2789,14 @@ div.users-buttons {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
 	 padding-left: 25px;
     padding-right: 25px;
+	z-index: 2;
 
 }
 .get_access_type_your_e-mail {
 	position: relative;
 	height: 50px;
 	width: 365px;
-	margin-top: 15px;
+	margin-top: 23px;
 	margin-left: 165px;
 	background: #fff;
 	-webkit-border-radius: 20px;
@@ -2813,13 +2806,14 @@ div.users-buttons {
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
 	padding-left: 25px;
 	padding-right: 25px;
+	display: none;
 
 }
 .get_access_password {
 	position: relative;
 	height: 50px;
 	width: 365px;
-	margin-top: 10px;
+	margin-top: -52px;
 	margin-left: 165px;
 	background: #fff;
 	-webkit-border-radius: 20px;
@@ -2829,6 +2823,8 @@ div.users-buttons {
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Параметры тени */
 	padding-left: 25px;
 	padding-right: 25px;
+	z-index: 1;
+
 
 }
 
@@ -2842,6 +2838,8 @@ div.get_access_input input {
     color: #a8a8a1;
     line-height: 31px;
     width: 365px;
+
+
 }
 div.get_access_password input {
 	background: none;
@@ -3127,6 +3125,7 @@ ul.project_menu li a:hover span.trash{
 	float: left;
 	margin-top: 19px;
 	margin-left: 0px;
+
 }
 .edit_task a {
 	text-decoration: none;
@@ -3155,6 +3154,7 @@ div.task_slider_container {
 	margin-top: 24px;
 	margin-left: 15px;
 	padding-right: 60px;
+
 }
 div.task_slider_container div.slider {
 	width: 505px;
@@ -3265,8 +3265,14 @@ div.choose_period p {
 	font-size: 10px;
 	text-transform: uppercase;
 	background:  #fff;
-	padding: 10px 80px 10px 40px;
+	padding: 10px 60px 0;
 	left: 350px;
 	z-index: 10;
 	display: none
+}
+.get_access_buttons_container{
+	position: relative;
+	float: left;
+
+
 }
