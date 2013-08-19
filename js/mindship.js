@@ -193,7 +193,7 @@ $(document).ready(function () {
 	$("#create_task_trigger").keypress(function(e) {
 		if ( e.which == 13 ) {
 			var new_task_name = $('.create_task1 input').val();
-			$('#new_tasks_checkbox_container_trigger > .tasks_title').text(new_task_name);
+			$('#new_tasks_checkbox_container_trigger > a > span.tasks_title').text(new_task_name);
 			$('input:text').val('');
 			$( $('#new_tasks_checkbox_container_trigger')).clone(true, true).removeAttr('id').prependTo($('.tasks_checkboxes_container'));
 		}
