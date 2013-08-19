@@ -3100,6 +3100,7 @@ ul.project_menu li a:hover span.trash{
 	background: #fff;
 	border-left: 3px solid #0db2ea;
 
+
 }
 .task_border {
 	position: relative;
@@ -3125,7 +3126,8 @@ ul.project_menu li a:hover span.trash{
 	font-weight: 700;
 	margin-top: 19px;
 	margin-left: 22px;
-	width: 280px;
+	width: 270px;
+	margin-right: 10px;
 	height: 17px;
 	overflow: hidden;
 }
@@ -3319,4 +3321,7 @@ div.choose_period p {
 .project_home {
 	position: relative;
 	margin-top: 25px;
+}
+#new_tasks_checkbox_container_trigger {
+	display:none;
 }
