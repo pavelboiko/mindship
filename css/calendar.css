@@ -21,7 +21,7 @@
 #CalendarLine .calendar ul li div.f7{ top: 200px; }
 #CalendarLine .calendar ul li div.f8{ top: 225px; }
 
-#CalendarFilesCount{ float: left; color: #51504c; font: 400 24px 'Noto Sans', sans-serif; margin-top: 15px;}
+#CalendarFilesCount{ float: left; color: #51504c; font: 400 24px 'Noto Sans', sans-serif; margin-top: 4px;}
 
 #CalendarFilterBox{ width: 600px; margin: 0 auto; }
 #CalendarFilterBox .choose_period { float: right; margin-left: 30px; }
