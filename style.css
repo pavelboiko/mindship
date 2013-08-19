@@ -1826,12 +1826,13 @@ div.send-msg-container div.send-msg-top-input {
 	font-size: 12px;
 	line-height: 10px;
 }
-.input-names {
+ul.input-names {
 		font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;
 	font-size: 12px;
+	list-style: none;
 }
-.first-input-name {
+li.input-name {
 	position: relative;
 	float: left;
 	background: #e8e5dd;
@@ -1841,15 +1842,10 @@ div.send-msg-container div.send-msg-top-input {
 	margin-right: 5px;
 	color: #666665;
 }
-.second-input-name {
-	position: relative;
-	float: left;
-	background: #e8e5dd;
-	border-radius: 5px;
-	padding: 10px 13px 10px 13px;
-	line-height: 10px;
-	color: #666665;
+li.input-name: last-child {
+	maring-right: 0;
 }
+
 .send-msg-input {
 	background: none repeat scroll 0 0 #FFFFFF;
     border: none;
@@ -1863,14 +1859,15 @@ div.send-msg-container div.send-msg-top-input {
 	color: #666665;
 }
 
-span.close { 
+/*span.close {
 	background: url("img/close.png") no-repeat scroll 0 center transparent;
 	position: relative;
     float: right;
     height: 9px;
     margin-left: 14px;
     margin-top: 1px;
-    width: 9px;}
+    width: 9px;
+}*/
 	
 div.bottom-disc textarea.diss1 {
     float: left;
