@@ -37,6 +37,36 @@
 	<div id="middle">
 	
 		<!-- pop-ups-->
+		<div id="new_tasks_checkbox_container_trigger" class="tasks_checkbox_container">
+			<div class="tasks_checkbox">
+
+				<input type="checkbox"  id="task_on_9"/>
+				<label class="custom_input2" for="task_on_9">
+					<span></span>
+				</label>
+			</div>
+			<div class="task_border"></div>
+			<div  class="tasks_title">Header menu </div>
+			<div class="task_completed">task completed 2 days ago</div>
+			<div class="edit_task"><span>Edit</span></div>
+			<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+				<p class="task_deadline">in 1 day</p></div>
+			<div class="save_task"><span>Save</span></div>
+
+			<div class="choose_period">
+				<div class="start_date">
+					<span class="calendar_icon"></span>
+					June 6, 2013
+					<input type="text" value="" style="display: none;" />
+				</div>
+				<p>&ndash;</p>
+				<div class="finish_date">
+					June 27, 2013
+					<input type="text" value="" style="display: none;" />
+				</div>
+			</div>
+			<div class="assign_task"><a href="#">Assign task</a></div>
+		</div>
 		
 		<div id="grey-shroud"></div>
 				<div id="grey-shroud1"></div>
@@ -274,7 +304,7 @@
 						<div class="create_task_container">
 							<div class="create_task1">
 
-								<input type="text"  value="Type Task name and hit 'Enter'"/>
+								<input id="create_task_trigger" type="text"  value="Type Task name and hit 'Enter'"/>
 							</div>    </div>
 						<div class="tasks_checkboxes_container">
 						<div class="tasks_checkbox_container">
