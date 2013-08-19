@@ -47,6 +47,12 @@
 		<div id="grey-shroud2"></div>
         
 		<div id="discussion" class="send-msg-container">
+			<div class="input-dropbox-list">
+				<ul class="dropbox-list">
+					<li><a href="#" class=""><img src="img/db-img.png" alt=""/>Andrey Grigorjev</a></li>
+					<li><a href="#" class=""><img src="img/db-img1.png"  alt=""/>Andy Warhole</a></li>
+					<li><a href="#" class=""><img src="img/db-img2.png"  alt=""/>Andrew Catcher</a></li>
+				</ul></div>
 			<h1 class="discussion-title">Send a message to your team mates</h1>
 			<div class="shut_down1"> 
 				<div id="shut-down1"></div>
@@ -82,12 +88,7 @@
 			<div class="yes-button"><a href="#">Yes</a></div>
 			<div class="no-button"><a href="#">No</a></div>
 		</div>
-		<div class="input-dropbox-list">			
-			<ul class="dropbox-list">
-				<li><a href="#" class=""><img src="img/db-img.png" alt=""/>Andrey Grigorjev</a></li>
-				<li><a href="#" class=""><img src="img/db-img1.png"  alt=""/>Andy Warhole</a></li>
-				<li><a href="#" class=""><img src="img/db-img2.png"  alt=""/>Andrew Catcher</a></li>					  
-			</ul></div>
+
 		
 <!-- pop-ups-end-->
 
@@ -148,11 +149,11 @@
 			<div class="users-checkboxes-container">
 					
 			<div class="checkboxes-first-block">
-			<div class="check-boxes-users">
-    			<div class="checkbox-user">
+			<ul class="check-boxes-users">
+    			<li class="checkbox-user">
 				
-                    <input type="checkbox"  class="conv_on1"/>
-                    <label class="custom_input1" for="conv_on1">
+                    <input type="checkbox"  id="users_conv_on1"/>
+                    <label class="custom_input1" for="users_conv_on1">
                         <span></span>
                     </label>
                     <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
@@ -162,11 +163,11 @@
 					<div class="checkbox-description">Project manager, Lord of the Universe, Commander of the 50 legions, Warlock, Project manager, Lord of the Universe, Commander of the 50 legions, Warlock </div>
 					
 					
-                </div>
-    			<div class="checkbox-user1">
+                </li>
+    			<li class="checkbox-user">
 				
-                    <input type="checkbox"  class="conv_on1"/>
-                    <label class="custom_input1" for="conv_on1">
+                    <input type="checkbox"  id="users_conv_on2"/>
+                    <label class="custom_input1" for="users_conv_on2">
                         <span></span>
                     </label>
                     <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
@@ -176,11 +177,11 @@
 					<div class="checkbox-description">Project manager</div>
 					</div>
 					
-                </div>
-    			<div class="checkbox-user2">
+                </li>
+    			<li class="checkbox-user">
 				
-                    <input type="checkbox"  class="conv_on1"/>
-                    <label class="custom_input1" for="conv_on1">
+                    <input type="checkbox"  id="users_conv_on3"/>
+                    <label class="custom_input1" for="users_conv_on3">
                         <span></span>
                     </label>
                     <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
@@ -190,57 +191,60 @@
 					<div class="checkbox-description">Project manager</div>
 					</div>
 					
-                </div>
+                </li>
 
-			</div>
+			</ul>
 			</div>
 			<div class="checkboxes-development-team-block">
 			<div class="dev-team-title">Development team</div>
-			<div class="check-boxes-users">
-    			<div class="checkbox-user">
-				
-                    <input type="checkbox"  class="conv_on1"/>
-                    <label class="custom_input1" for="conv_on1">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
-					<div class="description-label-container">
-					
-                    <div class="check-label">Eduard V. </div>
-					<div class="checkbox-description">Project manager</div>
-					</div>
-					
-                </div>
-    			<div class="checkbox-user1">
 
-                    <input type="checkbox"  class="conv_on1"/>
-                    <label class="custom_input1" for="conv_on2">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
-					<div class="description-label-container">
-					
-                    <div class="check-label">Eduard V. </div>
-					<div class="checkbox-description">Project manager</div>
-					</div>
-					
-                </div>
-    			<div class="checkbox-user2">
-				
-                    <input type="checkbox"  id="user_on2"/>
-                    <label class="custom_input1" for="user_on2">
-                        <span></span>
-                    </label>
-                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
-					<div class="description-label-container">
-					
-                    <div class="check-label">Eduard V. </div>
-					<div class="checkbox-description">Project manager</div>
-					</div>
-					
-                </div>
+    		<ul class="check-boxes-users">
+				<li class="checkbox-user">
 
-			</div>
+
+				
+                    <input type="checkbox"  id="dev_team_conv_on1"/>
+                    <label class="custom_input1" for="dev_team_conv_on1">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
+					<div class="description-label-container">
+					
+                    <div class="check-label">Eduard V. </div>
+					<div class="checkbox-description">Project manager</div>
+					</div>
+					
+                </li>
+				<li class="checkbox-user">
+
+                    <input type="checkbox"  id="dev_team_conv_on2"/>
+                    <label class="custom_input1" for="dev_team_conv_on2">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
+					<div class="description-label-container">
+					
+                    <div class="check-label">Eduard V. </div>
+					<div class="checkbox-description">Project manager</div>
+					</div>
+					
+               	</li>
+				<li class="checkbox-user">
+				
+                    <input type="checkbox"  id="dev_team_conv_on3"/>
+                    <label class="custom_input1" for="dev_team_conv_on3">
+                        <span></span>
+                    </label>
+                    <img class="checkbox_photo1" src="img/users-checkbox-img.png" alt="" />
+					<div class="description-label-container">
+					
+                    <div class="check-label">Eduard V. </div>
+					<div class="checkbox-description">Project manager</div>
+					</div>
+					
+                </li>
+
+			</ul>
 			</div>
 		</div>
        </div>

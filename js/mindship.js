@@ -58,37 +58,13 @@ $(document).ready(function () {
 		}
 		return false;
 	});
-	$('.checkbox-user1').click( function(){
-		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
-			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().css('border','');
-		} else {
-			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
-		}
-		return false;
-	});
-	$('.checkbox-user2').click( function(){
-		if  ( $( '.checkbox-user2 input' ).prop( "checked" ) ){
-			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().css('border','');
-		} else {
-			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
-		}
-		return false;
-	});
-
-	$('.checkbox-user1 input[type=checkbox]').click(function () {
-		if ($(".checkbox-user1 input[type=checkbox]").prop( "checked" ) ) {
-			$(this).parent().css('border','1px solid #0db2ea');
-		} else {
-			$(this).parent().css('border', '');
-		}
-	});
 
 	$(".send-msg-input").click(function () {
 		$(".input-dropbox-list").slideToggle(10);
 	});
 
 	$("#grey-shroud").click(function () {
-		$("#grey-shroud, #pop-up-corner, #pop-up-corner1, #pop-up-select, #pop-up-select1, #pop-up-project, #pop-up-corner2, #discussion, .are-you-sure ").hide();
+		$("#grey-shroud, #discussion, .are-you-sure ").hide();
 	});
 	$("#grey-shroud ").click(function () {
 		$("#discussion ").hide().animate({top: '-=202px'}, 200);
@@ -166,9 +142,7 @@ $(document).ready(function () {
 			$(this).parent().css('background', '');
 		}
 	});
-	/*  $('.save_task').click(function (){
-		  $('.save_task').replaceWith('<div class="edit_task"><a href="#">Edit</a></div>');
-	  });*/
+
 	$('.save_task').click(function (){
 		$(this).parent().find('.task_slider_container').show();
 		$(this).parent().find('.choose_period').hide();
@@ -207,9 +181,6 @@ $(document).ready(function () {
 	$(".group1").colorbox({rel:'group1'});
 
 
-
-
-
 	$("#create_task_trigger").keypress(function(e) {
 		if ( e.which == 13 ) {
 			var new_task_name = $('.create_task1 input').val();
@@ -218,10 +189,5 @@ $(document).ready(function () {
 
 		}
 	});
-
-
-
-
-
 
 });
