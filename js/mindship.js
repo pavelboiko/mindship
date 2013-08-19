@@ -148,14 +148,23 @@ $(document).ready(function () {
 		$(this).parent().find('.choose_period').hide();
 		$(this).parent().find('.edit_task').show();
 		$(this).parent().find('.save_task').hide();
+		$('#invisible_shroud').hide();
 	});
 
+	$('#invisible_shroud').click(function () {
+		$('#invisible_shroud').hide();
+		$(this).parent().find('.task_slider_container').show();
+		$(this).parent().find('.choose_period').hide();
+		$(this).parent().find('.edit_task').show();
+		$(this).parent().find('.save_task').hide();
 
+	});
 	$('.edit_task').click(function (){
 		$(this).parent().find('.task_slider_container').hide();
 		$(this).parent().find('.choose_period').show();
 		$(this).parent().find('.edit_task').hide();
 		$(this).parent().find('.save_task').show();
+		$('#invisible_shroud').show();
 	});
 
 	$('input[type="checkbox"]').removeAttr('checked');
@@ -180,14 +189,28 @@ $(document).ready(function () {
 	$('input', ".get_access_password").Watermark("Password");
 	$(".group1").colorbox({rel:'group1'});
 
-
+	var current_number = 0;
 	$("#create_task_trigger").keypress(function(e) {
 		if ( e.which == 13 ) {
+
+
+
 			var new_task_name = $('.create_task1 input').val();
 			$('#new_tasks_checkbox_container_trigger > .tasks_title').text(new_task_name);
+			$('input:text').val('');
+
+			/*var current_number=parseInt($('input').val()) + 1 ;
+			$("#new_tasks_checkbox_container_trigger", "input").each(function(){
+				if(this.id){
+					this.id = this.id+current_number;
+				}
+			}); */
+
+
 			$( $('#new_tasks_checkbox_container_trigger')).clone(true, true).removeAttr('id').prependTo($('.tasks_checkboxes_container'));
 
 		}
 	});
+
 
 });
