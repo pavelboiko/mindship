@@ -91,7 +91,7 @@
 			},
 
 			renderMonth: function (objDate, countDays) {
-				var html = '<ul data-time="' + objDate.getTime() + '" style="width: ' + (countDays * this.configLine.widthDay) + ';">' +
+				var html = '<ul data-time="' + objDate.getTime() + '" style="width: ' + (countDays * this.configLine.widthDay) + 'px;">' +
 						'<li class="month_line">' + monthsLong[objDate.getMonth()] + ' ' + objDate.getFullYear() + '</li>',
 					classToday = '',
 					defDate = new Date(),
@@ -177,8 +177,8 @@
 				var month = $(this.renderMonth(nextMonth, contMonthDays));
 
 				var a = el.css({
-					width: '+=' + ((contMonthDays * this.configLine.widthDay) - ul_last.width()),
-					left: '-=' + (contMonthDays * this.configLine.widthDay)
+					width: '+=' + ((contMonthDays * this.configLine.widthDay) - ul_last.width()) + 'px',
+					left: '-=' + (contMonthDays * this.configLine.widthDay) + 'px'
 				}).prepend(month);
 
 				console.log(a);
@@ -201,8 +201,8 @@
 				var month = $(this.renderMonth(nextMonth, contMonthDays));
 
 				el.css({
-					width: '+=' + s,
-					left: '+=' + ul_first.width()
+					width: '+=' + s + 'px',
+					left: '+=' + ul_first.width() + 'px'
 				}).append(month);
 
 				ul_first.remove();
