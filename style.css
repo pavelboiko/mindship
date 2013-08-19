@@ -3107,6 +3107,7 @@ ul.project_menu li a:hover span.trash{
 	float: left;
 	margin-top: 19px;
 	margin-left: 0px;
+	z-index: 100;
 
 
 
