@@ -93,7 +93,7 @@
 			},
 
 			renderMonth: function (objDate, countDays) {
-				var html = '<ul data-time="' + objDate.getTime() + '" style="width: ' + (countDays * this.configLine.widthDay) + 'px;">' +
+				var html = '<div class="new_task"><div class="new_task_bar"></div><ul data-time="' + objDate.getTime() + '" style="width: ' + (countDays * this.configLine.widthDay) + 'px;">' +
 						'<li class="month_line">' + monthsLong[objDate.getMonth()] + ' ' + objDate.getFullYear() + '</li>',
 					classToday = '',
 					defDate = new Date(),
@@ -107,7 +107,7 @@
 					}
 					html += '<li' + classToday + '>' + i + '</li>';
 				}
-				html += '</ul>';
+				html += '</ul></div>';
 
 				return html;
 			},

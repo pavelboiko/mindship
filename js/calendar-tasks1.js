@@ -12,10 +12,14 @@ var objTasks = {
 			data: { t: times.join(','), s: this.s },
 			dataType: "jsonp",
 			success: function (res) {
-				self.el.find('ul').each(function () {
-					var ul = $(this);
-					self.push(res, ul);
-				});
+				for (time in res){
+					console.log(res[time]);
+				}
+				console.log(new Date(times[0]));
+//				self.el.find('ul').each(function () {
+//					var ul = $(this);
+//					self.push(res, ul);
+				//});
 			}
 		});
 

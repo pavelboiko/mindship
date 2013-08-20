@@ -3299,3 +3299,20 @@ div.choose_period p {
 #new_tasks_checkbox_container_trigger {
 	display:none;
 }
+
+
+
+
+
+.new_task {
+	position: relative;
+	float: left;
+}
+.new_task_bar {
+	position: absolute;
+	width: 425px;
+	height: 20px;
+	top: 70px;
+	left: 0px;
+	background: #aad263;
+}
