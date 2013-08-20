@@ -3315,4 +3315,12 @@ div.choose_period p {
 	top: 70px;
 	left: 0px;
 	background: #aad263;
+	z-index: 1000;
+}
+.over_today{
+	position: relative;
+	float: right;
+	background: #58bf1f;
+	min-width: 53px;
+	height: 20px;
 }

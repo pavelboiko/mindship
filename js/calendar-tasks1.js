@@ -6,25 +6,49 @@ var objTasks = {
 
 	pushAllData: function (times) {
 		var self = this;
+
 		$.ajax({
 			type: "GET",
 			url: "http://asd-team.com/public/mindship/server/tasks.php",
 			data: { t: times.join(','), s: this.s },
 			dataType: "jsonp",
-			success: function (res) {
-				for (time in res){
-					console.log(res[time]);
+			success: function(data) {
+				 var items = [];
+
+				for (var x in data){
+					var tasks = data[x];
+					for (var i=0; i<tasks.length; i++)
+				var task = tasks[i];
+
+					var taskBarWidth = (task.length - 25 )* 53;
+					var taskBarMarginLeft = (task.dateStart - 1) * 53;
+
+					$('.new_task_bar').css({"width": taskBarWidth,"left": taskBarMarginLeft} );
+					var currentTask = new Date(parseInt(x));
+					var currentTaskMonth = currentTask.getMonth();
+					console.log(currentTaskMonth);
+				var currentDate = new Date();
+				var currentMonth = currentDate.getMonth();
+					var currentDay = currentDate.getDate();
+					console.log(currentMonth);
+					console.log(currentDay);
+					if  (currentMonth == currentTaskMonth) {
+					if (currentDay>=task.dateEnd)  {
+						$('.new_task_bar').append("<div class='over_today'></div>");
+					}
+						else {
+						return false;
+					}
+					}
+					else {
+					return false;
+					}
+
+
+
 				}
-				console.log(new Date(times[0]));
-//				self.el.find('ul').each(function () {
-//					var ul = $(this);
-//					self.push(res, ul);
-				//});
 			}
 		});
-
-
-
 
 
 		return this;
@@ -81,13 +105,13 @@ var objTasks = {
 
 
 
-	/*	if ($('#task_' + model[0]).length) {
+		if ($('#task_' + model[0]).length) {
 			css['top'] = $('#task_' + model[0]).css('top');
 			css['left'] = $('#task_' + model[0]).css('left');
 			css['width'] = $('#task_' + model[0]).css('width');
 		}
 
-		$('#task_' + model[0]).remove();  */
+		$('#task_' + model[0]).remove();
 
 		this.step++;
 
