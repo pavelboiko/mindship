@@ -8,7 +8,7 @@ var objTasks = {
 		var self = this;
 		$.ajax({
 			type: "GET",
-			url: "server/tags.php",
+			url: "http://asd-team.com/public/mindship/server/tasks.php",
 			data: { t: times.join(','), s: this.s },
 			dataType: "jsonp",
 			success: function (res) {
