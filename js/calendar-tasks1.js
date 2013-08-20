@@ -6,25 +6,20 @@ var objTasks = {
 
 	pushAllData: function (times) {
 		var self = this;
-//		$.ajax({
-//			type: "GET",
-//			url: "server/tags.php",
-//			data: { t: times.join(','), s: this.s },
-//			dataType: "json",
-//			success: function (res) {
-//				self.el.find('ul').each(function () {
-//					var ul = $(this);
-//					self.push(res, ul);
-//				});
-//			}
-//		});
-
-		$.load('server/tasks.php', function(res) {
+		$.ajax({
+			type: "GET",
+			url: "server/tags.php",
+			data: { t: times.join(','), s: this.s },
+			dataType: "jsonp",
+			success: function (res) {
 				self.el.find('ul').each(function () {
 					var ul = $(this);
 					self.push(res, ul);
 				});
+			}
 		});
+
+
 
 
 
