@@ -4,6 +4,7 @@ var objTasks = {
 	currentTaskMove : null,
 
 	init: function () {
+
 		this.bind();
 		return this;
 	},
@@ -26,31 +27,39 @@ var objTasks = {
 					var tasks = data[x];
 					for (var i=0; i<tasks.length; i++)  {
 					  var task = tasks[i];
-					  var taskBarWidth = (task.length - 21 )* 53;
-					  var taskBarMarginLeft = (task.dateStart - 1) * 53;
+					  var taskBarWidth = (task.length -2 )* 53;
+					  var taskBarMarginLeft = (task.dateStart ) * 53;
 
 						var currentTask = new Date(parseInt(x));
 						var currentTaskMonth = currentTask.getMonth();
 
 						var currentDate = new Date();
 						var currentMonth = currentDate.getMonth();
-						var approximateDateEnd =    +task.dateEnd + 4;
+
 						var currentDay = currentDate.getDate();
 
 
 						var task_div = $("<div class='current_task'></div>").css({"width": taskBarWidth,"left": taskBarMarginLeft});
 						$('div#' + x + ' .new_task_bar').append(task_div);
+						var currentOverToday = (task.dateEnd  - currentDay +1 ) * 53;
+						console.log(currentOverToday);
 
-						var currentOverToday = (approximateDateEnd  - currentDay + 1) * 53;
 						if  (currentMonth == currentTaskMonth) {
-							if (currentDay<=approximateDateEnd)  {
-								task_div.append("<div class='over_today'></div>");
-								$('.over_today').css("width",currentOverToday);
+							if ((currentDay<=task.dateEnd) && (task.dateStart <= currentDay) )   {
+								task_div.append("<div id='before_today' class='over_today'></div>");
+
+								$('#before_today').css("width",currentOverToday);
 							}
 
-						   console.log(currentOverToday);
+						}
+						if ( task.dateStart >= currentDay){
+							task_div.append("<div id= 'after_today' class='over_today'></div>");
+							$('#after_today').css("width","100%");
+						}
 
-					$(task_div).mousedown(function(e){
+
+
+						$(task_div).mousedown( function(e){
 
 						e.preventDefault();
 
@@ -58,11 +67,11 @@ var objTasks = {
 
 
 							var task_left = task_div.position().left + task_div.parent().parent().position().left + task_div.parent().parent().parent().offset().left;
-							console.log(task_left);
+
 							var task_width = task_div.width();
 
 							var drag_width =  e.pageX - task_left;
-//							console.log(drag_width);
+
 							var findTaskLenght =  drag_width / 53;
 							var findTaskLenght =  parseInt(findTaskLenght, 10); // новая длительность проекта
 
@@ -81,11 +90,7 @@ var objTasks = {
 							   $('.over_today').css("width", overTodayWidth -53 );
 						   }
 
-
-
-
 							this.currentTaskPrevX = e.pageX;
-//							console.log(drag_width);
 
 						});
 
@@ -95,9 +100,11 @@ var objTasks = {
 						$(document).unbind('mousemove');
 					});
 
-					}
+
 				}
-			} }
+			}
+
+		}
 		});
 
 
@@ -121,6 +128,9 @@ var objTasks = {
 	},
 
 	bind: function () {
+
+
+
 
 	},
 
