@@ -3308,19 +3308,69 @@ div.choose_period p {
 	position: relative;
 	float: left;
 }
-.new_task_bar {
+.current_task {
 	position: absolute;
-	width: 425px;
+	min-width: 53px;
+	width: 400px;
 	height: 20px;
 	top: 70px;
 	left: 0px;
 	background: #aad263;
-	z-index: 1000;
+	z-index: 100;
+	float: left;
+	overflow: hidden;
+
 }
 .over_today{
 	position: relative;
 	float: right;
 	background: #58bf1f;
+	height: 100%;
+	z-index: 100;
+}
+
+.over_today_dragbar{
+	position: relative;
+	float: right;
+	background: #aad263;
+	min-width: 3px;
+	height: 100%;
+	cursor: col-resize;
+	margin-left: -3px;
+	z-index: 99;
+
+}
+.regular_dragbar{
+	position: relative;
+	float: right;
+	background: #aad263;
+	min-width: 3px;
+	height: 100%;
+	cursor: col-resize;
+	margin-left: -3px;
+	z-index: 101;
+}
+
+
+.test_dragbar{
+	position: relative;
+	float: right;
+	background: #aad263;
+	min-width: 3px;
+	height: 100%;
+	cursor: col-resize;
+	margin-left: -3px;
+	z-index: 101;
+}
+.test {
+	position: absolute;
 	min-width: 53px;
+	width: 400px;
 	height: 20px;
+	top: 70px;
+	left: 0px;
+	background: #aad263;
+	z-index: 100;
+	float: left;
+
 }

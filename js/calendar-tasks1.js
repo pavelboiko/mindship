@@ -1,11 +1,18 @@
 var objTasks = {
+
+	currentTaskPrevX : 0,
+	currentTaskMove : null,
+
 	init: function () {
 		this.bind();
 		return this;
 	},
 
+
+
 	pushAllData: function (times) {
 		var self = this;
+		var preset_task = [];
 
 		$.ajax({
 			type: "GET",
@@ -17,38 +24,82 @@ var objTasks = {
 
 				for (var x in data){
 					var tasks = data[x];
-					for (var i=0; i<tasks.length; i++)
-				var task = tasks[i];
+					for (var i=0; i<tasks.length; i++)  {
+					  var task = tasks[i];
+					  var taskBarWidth = (task.length - 21 )* 53;
+					  var taskBarMarginLeft = (task.dateStart - 1) * 53;
 
-					var taskBarWidth = (task.length - 25 )* 53;
-					var taskBarMarginLeft = (task.dateStart - 1) * 53;
+						var currentTask = new Date(parseInt(x));
+						var currentTaskMonth = currentTask.getMonth();
 
-					$('.new_task_bar').css({"width": taskBarWidth,"left": taskBarMarginLeft} );
-					var currentTask = new Date(parseInt(x));
-					var currentTaskMonth = currentTask.getMonth();
-					console.log(currentTaskMonth);
-				var currentDate = new Date();
-				var currentMonth = currentDate.getMonth();
-					var currentDay = currentDate.getDate();
-					console.log(currentMonth);
-					console.log(currentDay);
-					if  (currentMonth == currentTaskMonth) {
-					if (currentDay>=task.dateEnd)  {
-						$('.new_task_bar').append("<div class='over_today'></div>");
+						var currentDate = new Date();
+						var currentMonth = currentDate.getMonth();
+						var approximateDateEnd =    +task.dateEnd + 4;
+						var currentDay = currentDate.getDate();
+
+
+						var task_div = $("<div class='current_task'></div>").css({"width": taskBarWidth,"left": taskBarMarginLeft});
+						$('div#' + x + ' .new_task_bar').append(task_div);
+
+						var currentOverToday = (approximateDateEnd  - currentDay + 1) * 53;
+						if  (currentMonth == currentTaskMonth) {
+							if (currentDay<=approximateDateEnd)  {
+								task_div.append("<div class='over_today'></div>");
+								$('.over_today').css("width",currentOverToday);
+							}
+
+						   console.log(currentOverToday);
+
+					$(task_div).mousedown(function(e){
+
+						e.preventDefault();
+
+						$(document).mousemove(function(e){
+
+
+							var task_left = task_div.position().left + task_div.parent().parent().position().left + task_div.parent().parent().parent().offset().left;
+							console.log(task_left);
+							var task_width = task_div.width();
+
+							var drag_width =  e.pageX - task_left;
+//							console.log(drag_width);
+							var findTaskLenght =  drag_width / 53;
+							var findTaskLenght =  parseInt(findTaskLenght, 10); // новая длительность проекта
+
+							var findTaskDateEnd = +task.dateStart + findTaskLenght;// новая дата окончания проекта
+
+							var overTodayWidth =  findTaskDateEnd - currentDay +1 ;
+							var overTodayWidth = overTodayWidth * 53;
+
+
+						   if ((e.pageX > this.currentTaskPrevX) && (e.pageX > task_left + task_width)){
+							   task_div.css("width", task_width + 53);
+							   $('.over_today').css("width", overTodayWidth );
+						   }
+						   if ((e.pageX < this.currentTaskPrevX) && (e.pageX <task_left + task_width))  {
+							   task_div.css("width", task_width - 53);
+							   $('.over_today').css("width", overTodayWidth -53 );
+						   }
+
+
+
+
+							this.currentTaskPrevX = e.pageX;
+//							console.log(drag_width);
+
+						});
+
+					});
+					$(document).mouseup(function(e){
+
+						$(document).unbind('mousemove');
+					});
+
 					}
-						else {
-						return false;
-					}
-					}
-					else {
-					return false;
-					}
-
-
-
 				}
-			}
+			} }
 		});
+
 
 
 		return this;
@@ -66,6 +117,7 @@ var objTasks = {
 				self.push(res, el);
 			}
 		});
+
 	},
 
 	bind: function () {
@@ -124,6 +176,7 @@ var objTasks = {
 		date.setTime(time);
 		return date.getDay() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
 	}
+
 //	setLine: function () {
 //		var el = $('CalendarLine').find('.calendar'),
 //			models = {};
