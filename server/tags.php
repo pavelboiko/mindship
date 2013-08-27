@@ -5,10 +5,6 @@ $ctimes = count($times);
 $f = @fopen(dirname(__FILE__).'/array.csv', 'a+');
 
 
-var_dump($f);
-var_dump(dirname(__FILE__));
-
-
 $tasks = createArray($times);
 
 while($row = fgetcsv($f, 9000)) {
