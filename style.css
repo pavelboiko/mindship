@@ -3327,6 +3327,7 @@ div.choose_period p {
 	background: #58bf1f;
 	height: 100%;
 	z-index: 100;
+	min-width: 53px;
 }
 
 .over_today_dragbar{

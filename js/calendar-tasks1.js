@@ -52,14 +52,14 @@ var objTasks = {
 							}
 
 						}
-						if ( task.dateStart >= currentDay){
+						if ( (currentMonth >= currentTaskMonth) && (task.dateStart >= currentDay)){
 							task_div.append("<div id= 'after_today' class='over_today'></div>");
 							$('#after_today').css("width","100%");
 						}
 
 
 
-						$(task_div).mousedown( function(e){
+						$(document).mousedown( function(e){
 
 						e.preventDefault();
 
@@ -77,7 +77,7 @@ var objTasks = {
 
 							var findTaskDateEnd = +task.dateStart + findTaskLenght;// новая дата окончания проекта
 
-							var overTodayWidth =  findTaskDateEnd - currentDay +1 ;
+							var overTodayWidth =  findTaskDateEnd - currentDay +2 ;
 							var overTodayWidth = overTodayWidth * 53;
 
 
