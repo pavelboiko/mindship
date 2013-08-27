@@ -117,7 +117,7 @@
 					return false;
 				});
 
-				el.on('mousedown', 'li.month_line', function (e) {
+				el.on('mousedown', 'li', function (e) {
 					self.dragging = e.pageX;
 				}).on('mousemove', 'li', function (e) {
 					if (self.dragging) {
