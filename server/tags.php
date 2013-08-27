@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 $times = explode(',', $_REQUEST['t']);
 $ctimes = count($times);
 
