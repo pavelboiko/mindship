@@ -179,6 +179,15 @@ a.profile_arrow {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 }
+.files-counter {
+	float: left;
+	position: relative;
+	color: #51504c;
+	font-size: 24px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 400;
+	margin-top: 15px;
+}
 /* Middle
 -----------------------------------------------------------------------------*/
 #middle {
@@ -1066,14 +1075,6 @@ div.switcher a.right {
     background-position: -34px 0px;
 }
 
-/*.search-date-container {*/
-	/*width: auto;*/
-/*}*/
-/*.date-container {*/
-	/*width: 600px;*/
-    /*margin: 0 auto;*/
-	/**/
-/*}*/
 div.slider_container {
     position: relative;
     top: 3px;
@@ -1225,8 +1226,6 @@ div.search_container {
 	position: relative;
 
 }
-
-
 
 div.choose_files {
    position: relative;
@@ -2814,7 +2813,6 @@ div.get_access_input input {
     line-height: 31px;
     width: 365px;
 
-
 }
 div.get_access_password input {
 	background: none;
@@ -2985,6 +2983,10 @@ span.facebook_vertical_breakline {
 	position: relative;
 	float: left;
 }
+/*---Landing Page END---*/
+
+/*--- files-sprites---*/
+
 .a-container {
 	position: relative;
 	float: left;
@@ -3017,6 +3019,9 @@ span.facebook_vertical_breakline {
 .delete a:hover  {
 	background: url("img/delete-sprite.png") 0 0px no-repeat;
 }
+	/*--- files-sprites end---*/
+
+/*--- pop-up-activators---*/
 .pop-list a{
 	font-weight: 300;
 	}
@@ -3033,16 +3038,10 @@ div#page_settings:hover .pop-up-activator {
 ul.project_menu li a:hover span.trash{
 	display: block;
 	}
-.files-counter {
-	float: left;
-    position: relative;
-    color: #51504c;
-    font-size: 24px;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
-	margin-top: 15px;
-}
+/*--- pop-up-activators-end---*/
 
+
+/*---tasks-checkboxes ---*/
 .tasks_checkboxes_container {
 	position: relative;
 	float: left;
@@ -3067,8 +3066,6 @@ ul.project_menu li a:hover span.trash{
 	height: 50px;
 	background: #fff;
 	border-left: 3px solid #0db2ea;
-
-
 }
 .task_border {
 	position: relative;
@@ -3106,9 +3103,6 @@ ul.project_menu li a:hover span.trash{
 	margin-top: 19px;
 	margin-left: 0px;
 	z-index: 9;
-
-
-
 }
 .edit_task a {
 	text-decoration: none;
@@ -3229,43 +3223,14 @@ div.task_slider_container div.deadline_slider div.remaining_time_task3 span {
 	width: 82px;
 	height: 3px;
 }
-div.choose_period {
-	float: left;
-	margin-left: 14px;
 
-	display: none;
-}
 div.choose_period_tasks {
 	float: left;
 	margin-left: 14px;
 	margin-top: 12px;
 	display: none;
 }
-div.choose_period div.start_date, div.choose_period div.finish_date {
-	background: #0db2ea;
-	height: 28px;
-	float: left;
-	line-height: 28px;
-	font-family: 'Noto Sans', sans-serif;
-	font-weight: 400;
-	color: #fff;
-	font-size: 12px;
-	text-align: right;
-	padding: 0 7px;
-	cursor: pointer;
-}
-div.choose_period div.start_date span, div.choose_period div.finish_date span {
-	float: left;
-	margin: 4px 4px 0 2px;
-	background: url("img/calendar-icon.png") no-repeat;
-	width: 17px;
-	height: 19px;
-}
-div.choose_period p {
-	float: left;
-	margin: 0 5px;
-	line-height: 28px;
-}
+
 div.choose_period_tasks div.start_date, div.choose_period_tasks div.finish_date {
 	background: #0db2ea;
 	height: 28px;
@@ -3308,8 +3273,6 @@ div.choose_period_tasks p {
 .get_access_buttons_container{
 	position: relative;
 	float: left;
-
-
 }
 
 .project_home a{
@@ -3331,10 +3294,10 @@ div.choose_period_tasks p {
 	display:none;
 }
 
+/*---tasks-checkboxes-end ---*/
 
 
-
-
+/*---Calendar-tasks---*/
 .new_task {
 	position: relative;
 	float: left;
@@ -3360,49 +3323,5 @@ div.choose_period_tasks p {
 	z-index: 100;
 	min-width: 53px;
 }
+/*---Calendar-tasks-end---*/
 
-.over_today_dragbar{
-	position: relative;
-	float: right;
-	background: #aad263;
-	min-width: 3px;
-	height: 100%;
-	cursor: col-resize;
-	margin-left: -3px;
-	z-index: 99;
-
-}
-.regular_dragbar{
-	position: relative;
-	float: right;
-	background: #aad263;
-	min-width: 3px;
-	height: 100%;
-	cursor: col-resize;
-	margin-left: -3px;
-	z-index: 101;
-}
-
-
-.test_dragbar{
-	position: relative;
-	float: right;
-	background: #aad263;
-	min-width: 3px;
-	height: 100%;
-	cursor: col-resize;
-	margin-left: -3px;
-	z-index: 101;
-}
-.test {
-	position: absolute;
-	min-width: 53px;
-	width: 400px;
-	height: 20px;
-	top: 70px;
-	left: 0px;
-	background: #aad263;
-	z-index: 100;
-	float: left;
-
-}
