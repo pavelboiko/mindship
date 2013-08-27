@@ -1,11 +1,11 @@
 <?php
-phpinfo();
 $times = explode(',', $_REQUEST['t']);
 $ctimes = count($times);
 
-$f = fopen('array.csv', 'a+');
+$f = @fopen('array.csv', 'a+');
 
 
+var_dump($f);
 
 $tasks = createArray($times);
 
