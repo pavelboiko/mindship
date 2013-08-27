@@ -2,10 +2,12 @@
 $times = explode(',', $_REQUEST['t']);
 $ctimes = count($times);
 
-$f = @fopen('array.csv', 'a+');
+$f = @fopen(dirname(__FILE__).'/array.csv', 'a+');
 
 
 var_dump($f);
+var_dump(dirname(__FILE__));
+
 
 $tasks = createArray($times);
 
