@@ -3,7 +3,7 @@
 #CalendarLine .calendar{ position: absolute; top: 0; left: 0; }
 #CalendarLine .calendar ul{ float: left; list-style: none; position: relative;}
 #CalendarLine .calendar ul li { float: left; height: 227px; position: relative; width: 53px; background: url("../img/left-border-bg.png" );}
-#CalendarLine .calendar ul li { color: #D2CFCF; font: bold 14px 'Roboto',sans-serif; padding-top: 10px; padding-bottom: 5px; text-align: center; }
+#CalendarLine .calendar ul li { color: #D2CFCF; font: bold 14px 'Roboto',sans-serif; padding-top: 10px; padding-bottom: 5px;  text-align: center; }
 #CalendarLine .calendar ul li.month_line{ cursor: pointer; text-align: left; float: none; width: 100%; color: #D2CFCF; font: normal 14px 'Roboto',sans-serif; padding-bottom: 5px; padding-left: 7px; text-transform: uppercase; height: 20px; background:url("../img/left-border-bg.png" ) repeat-y; padding-top: 0; }
 
 #CalendarLine .calendar ul li.today{ background:url("../img/bg_today.png" ) repeat; }
