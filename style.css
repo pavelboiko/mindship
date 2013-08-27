@@ -3232,7 +3232,7 @@ div.task_slider_container div.deadline_slider div.remaining_time_task3 span {
 div.choose_period {
 	float: left;
 	margin-left: 14px;
-	margin-top: 12px;
+
 	display: none;
 }
 div.choose_period div.start_date, div.choose_period div.finish_date {
