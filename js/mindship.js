@@ -145,7 +145,7 @@ $(document).ready(function () {
 
 	$('.save_task').click(function (){
 		$(this).parent().find('.task_slider_container').show();
-		$(this).parent().find('.choose_period').hide();
+		$(this).parent().find('.choose_period_tasks').hide();
 		$(this).parent().find('.edit_task').show();
 		$(this).parent().find('.save_task').hide();
 		$('#invisible_shroud').hide();
@@ -154,14 +154,14 @@ $(document).ready(function () {
 	$('#invisible_shroud').click(function () {
 		$('#invisible_shroud').hide();
 		$(this).parent().find('.task_slider_container').show();
-		$(this).parent().find('.choose_period').hide();
+		$(this).parent().find('.choose_period_tasks').hide();
 		$(this).parent().find('.edit_task').show();
 		$(this).parent().find('.save_task').hide();
 
 	});
 	$('.edit_task').click(function (){
 		$(this).parent().find('.task_slider_container').hide();
-		$(this).parent().find('.choose_period').show();
+		$(this).parent().find('.choose_period_tasks').show();
 		$(this).parent().find('.edit_task').hide();
 		$(this).parent().find('.save_task').show();
 		$('#invisible_shroud').show();
