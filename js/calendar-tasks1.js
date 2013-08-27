@@ -59,9 +59,7 @@ var objTasks = {
 
 
 
-						$(document).mousedown( function(e){
-
-						e.preventDefault();
+						$(task_div).mousedown( function(e){
 
 						$(document).mousemove(function(e){
 
@@ -95,10 +93,7 @@ var objTasks = {
 						});
 
 					});
-					$(document).mouseup(function(e){
 
-						$(document).unbind('mousemove');
-					});
 
 
 				}
@@ -128,6 +123,10 @@ var objTasks = {
 	},
 
 	bind: function () {
+		$(document).mouseup(function(e){
+
+			$(document).unbind('mousemove');
+		});
 
 
 
