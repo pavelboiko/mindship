@@ -189,7 +189,7 @@
 
 				ul_last.remove();
 
-//				this.model.pushData(month);
+				this.model.pushData(month);
 			},
 
 			appendMonth: function () {
@@ -211,7 +211,7 @@
 
 				ul_first.remove();
 
-//				this.model.pushData(month);
+				this.model.pushData(month);
 			}
 
 
