@@ -185,341 +185,271 @@
 
             <div id="tab2" class="tab_content" style="display: block;">
 				<div class="clear"></div>
-				<div class="title">Landing page<a href="#" class="page_settings"></a></div>
-				<div  id= "CalendarSwitcher" class="switcher"><a href="#" class="left"></a><a href="#" class="right"></a></div><div class="slider_container"><div class="slider"><div class="deadline_slider"><div class="remaining_time"><span></span></div></div><p class="deadline">2 days left</p></div></div>
-                <div class="clear"></div>
-                    <div class="calendar_container">
-                        <div class="calendar">
-                            <div class="month_container">
-                                <p class="month">April, 2013</p>
-                                <ul class="days">
-                                    <li class="day_container"><span class="date">12</span>
-                                        <div class="task_timeline_container">
-                                            <div class="task_timeline timeline1 active"><div class="left_time"></div><p class="task_on_timeline">Landing page functionality</p></div>
-                                            <div class="task_timeline timeline2 done"><div class="left_time"></div><p class="task_on_timeline">Finished to-do</p></div>
-                                        </div>
-                                    </li>
-                                    <li class="day_container"><span class="date">13</span></li>
-                                    <li class="day_container"><span class="date">14</span></li>
-                                    <li class="day_container"><span class="date">15</span></li>
-                                    <li class="day_container"><span class="date">16</span></li>
-                                    <li class="day_container"><span class="date">17</span></li>
-                                    <li class="day_container"><span class="date">18</span></li>
-                                    <li class="day_container"><span class="date">19</span></li>
-                                    <li class="day_container"><span class="date">20</span></li>
-                                    <li class="day_container today"><span class="date">21</span><span class="today_txt">today</span></li>
-                                    <li class="day_container"><span class="date">22</span></li>
-                                    <li class="day_container"><span class="date">23</span></li>
-                                    <li class="day_container"><span class="date">24</span></li>
-                                    <li class="day_container"><span class="date">25</span></li>
-                                    <li class="day_container"><span class="date">26</span></li>
-                                    <li class="day_container"><span class="date">27</span></li>
-                                    <li class="day_container"><span class="date">28</span></li>
-                                    <li class="day_container"><span class="date">29</span></li>
-                                    <li class="day_container"><span class="date">30</span></li>
-                                </ul>
-                            </div><!-- month_container -->
-                            <div class="month_container">
-                                <p class="month">May, 2013</p>
-                                <ul class="days">
-                                    <li class="day_container"><span class="date">1</span></li>
-                                    <li class="day_container"><span class="date">2</span></li>
-                                    <li class="day_container"><span class="date">3</span></li>
-                                    <li class="day_container"><span class="date">4</span></li>
-                                    <li class="day_container"><span class="date">5</span></li>
-                                    <li class="day_container"><span class="date">6</span></li>
-                                    <li class="day_container"><span class="date">7</span></li>
-                                    <li class="day_container"><span class="date">8</span></li>
-                                    <li class="day_container"><span class="date">9</span></li>
-                                    <li class="day_container"><span class="date">10</span></li>
-                                    <li class="day_container"><span class="date">11</span></li>
-                                    <li class="day_container"><span class="date">12</span></li>
-                                    <li class="day_container"><span class="date">13</span></li>
-                                    <li class="day_container"><span class="date">14</span></li>
-                                    <li class="day_container"><span class="date">15</span></li>
-                                    <li class="day_container"><span class="date">16</span></li>
-                                    <li class="day_container"><span class="date">17</span></li>
-                                    <li class="day_container"><span class="date">18</span></li>
-                                    <li class="day_container"><span class="date">19</span></li>
-                                    <li class="day_container"><span class="date">20</span></li>
-                                    <li class="day_container"><span class="date">21</span></li>
-                                    <li class="day_container"><span class="date">22</span></li>
-                                    <li class="day_container"><span class="date">23</span></li>
-                                    <li class="day_container"><span class="date">24</span></li>
-                                    <li class="day_container"><span class="date">25</span></li>
-                                    <li class="day_container"><span class="date">26</span></li>
-                                    <li class="day_container"><span class="date">27</span></li>
-                                    <li class="day_container"><span class="date">28</span></li>
-                                    <li class="day_container"><span class="date">29</span></li>
-                                    <li class="day_container"><span class="date">30</span></li>
-                                </ul>
-                            </div><!-- month_container -->
-                        </div><!-- calendar -->
-                    </div><!-- calendar_container -->
-                    <div class="content">
+
+				<div class="content">
 
 
-								<div class="clear"></div>
-						<div class="tasks_container">
-						<div class="choose_tasks">
-							<a href="#" class="active">All tasks</a>
-							<a href="#">My tasks</a>
+				<div class="clear"></div>
+				<div class="tasks_container">
+				<div class="choose_tasks">
+					<a href="#" class="active">All tasks</a>
+					<a href="#">My tasks</a>
+				</div>
+
+				<div class="choose_certain_tasks">
+					<a href="#" class="active">Show all</a>
+					<a href="#">Only uncompleted</a>
+				</div>
+				<div class="create_task_container">
+					<div class="create_task1">
+
+						<input id="create_task_trigger" type="text"   value="Type Task name and hit 'Enter'"/>
+					</div>    </div>
+				<div class="tasks_checkboxes_container">
+				<div  class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on"/>
+						<label class="custom_input2" for="task_on">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">Header menu</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
 						</div>
-
-						<div class="choose_certain_tasks">
-							<a href="#" class="active">Show all</a>
-							<a href="#">Only uncompleted</a>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
 						</div>
-						<div class="create_task_container">
-						<div class="create_task1">
+					</div>
+					<div class="assign_task"><a href="#">Assign task</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
 
-							<input id="create_task_trigger" type="text"   value="Type Task name and hit 'Enter'"/>
-						</div>    </div>
-						<div class="tasks_checkboxes_container">
-						<div  class="tasks_checkbox_container">
-							<div class="tasks_checkbox">
+						<input type="checkbox"  id="task_on1"/>
+						<label class="custom_input2" for="task_on1">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">Social icons</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
 
-								<input type="checkbox"  id="task_on"/>
-								<label class="custom_input2" for="task_on">
-									<span></span>
-								</label>
-							</div>
-							<div class="task_border"></div>
-							<a href="#"><span  class="tasks_title">Header menu</span></a>
-							<div class="task_completed">task completed 2 days ago</div>
-							<div class="edit_task"><span>Edit</span></div>
-							<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-								<p class="task_deadline">in 1 day</p></div>
-							<div class="save_task"><span>Save</span></div>
-
-							<div class="choose_period">
-								<div class="start_date">
-									<span class="calendar_icon"></span>
-									June 6, 2013
-									<input type="text" value="" style="display: none;" />
-								</div>
-								<p>&ndash;</p>
-								<div class="finish_date">
-									June 27, 2013
-									<input type="text" value="" style="display: none;" />
-								</div>
-							</div>
-							<div class="assign_task"><a href="#">Assign task</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on1"/>
-									<label class="custom_input2" for="task_on1">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<a href="#"><span  class="tasks_title">Social icons</span></a>
-								<div class="task_completed">task completed 2 days ago</div>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-								<div class="choose_period">
-									<div class="start_date">
-										<span class="calendar_icon"></span>
-										June 6, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-									<p>&ndash;</p>
-									<div class="finish_date">
-										June 27, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-								</div>
-								<div class="assign_task"><a href="#">George V.</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on2"/>
-									<label class="custom_input2" for="task_on2">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<a href="#"><span  class="tasks_title">Register form</span></a>
-								<div class="task_completed">task completed 2 days ago</div>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-								<div class="choose_period">
-									<div class="start_date">
-										<span class="calendar_icon"></span>
-										June 6, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-									<p>&ndash;</p>
-									<div class="finish_date">
-										June 27, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-								</div>
-								<div class="assign_task"><a href="#">Eduard V.</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on3"/>
-									<label class="custom_input2" for="task_on3">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<a href="#"><span  class="tasks_title">Image slider</span></a>
-								<div class="task_completed">task completed 2 days ago</div>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-								<div class="choose_period">
-									<div class="start_date">
-										<span class="calendar_icon"></span>
-										June 6, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-									<p>&ndash;</p>
-									<div class="finish_date">
-										June 27, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-								</div>
-								<div class="assign_task"><a href="#">Eduard V.</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on5"/>
-									<label class="custom_input2" for="task_on5">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<a href="#"><span  class="tasks_title">"Send a query" form</span></a>
-								<div class="task_completed">task completed 2 days ago</div>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-								<div class="choose_period">
-									<div class="start_date">
-										<span class="calendar_icon"></span>
-										June 6, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-									<p>&ndash;</p>
-									<div class="finish_date">
-										June 27, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-								</div>
-								<div class="assign_task"><a href="#">Dmitry D.</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on6"/>
-									<label class="custom_input2" for="task_on6">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<a href="#"><span  class="tasks_title">Very long to-do name</span></a>
-								<div class="task_completed">task completed 2 days ago</div>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-								<div class="choose_period">
-									<div class="start_date">
-										<span class="calendar_icon"></span>
-										June 6, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-									<p>&ndash;</p>
-									<div class="finish_date">
-										June 27, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-								</div>
-								<div class="assign_task"><a href="#">Eduard V.</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on7"/>
-									<label class="custom_input2" for="task_on7">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<a href="#"><span  class="tasks_title">Footer menu</span></a>
-								<div class="task_completed">task completed 2 days ago</div>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-									<div class="choose_period">
-										<div class="start_date">
-											<span class="calendar_icon"></span>
-											June 6, 2013
-											<input type="text" value="" style="display: none;" />
-										</div>
-										<p>&ndash;</p>
-										<div class="finish_date">
-											June 27, 2013
-											<input type="text" value="" style="display: none;" />
-										</div>
-									</div>
-								<div class="assign_task"><a href="#">Dmitry D.</a></div>
-							</div>
-							<div class="tasks_checkbox_container">
-								<div class="tasks_checkbox">
-
-									<input type="checkbox"  id="task_on4"/>
-									<label class="custom_input2" for="task_on4">
-										<span></span>
-									</label>
-								</div>
-								<div class="task_border"></div>
-								<div class="task_completed">task completed 2 days ago</div>
-								<a href="#"><span  class="tasks_title">Hover effects</span></a>
-								<div class="edit_task"><span>Edit</span></div>
-								<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
-									<p class="task_deadline">in 1 day</p></div>
-								<div class="save_task"><span>Save</span></div>
-
-								<div class="choose_period">
-									<div class="start_date">
-										<span class="calendar_icon"></span>
-										June 6, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-									<p>&ndash;</p>
-									<div class="finish_date">
-										June 27, 2013
-										<input type="text" value="" style="display: none;" />
-									</div>
-								</div>
-								<div class="assign_task"><a href="#">George V.</a></div>
-							</div>
-
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
 						</div>
-						 </div>
-                    </div><!-- content -->
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">George V.</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on2"/>
+						<label class="custom_input2" for="task_on2">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">Register form</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">Eduard V.</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on3"/>
+						<label class="custom_input2" for="task_on3">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">Image slider</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">Eduard V.</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on5"/>
+						<label class="custom_input2" for="task_on5">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">"Send a query" form</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">Dmitry D.</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on6"/>
+						<label class="custom_input2" for="task_on6">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">Very long to-do name</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">Eduard V.</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on7"/>
+						<label class="custom_input2" for="task_on7">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<a href="#"><span  class="tasks_title">Footer menu</span></a>
+					<div class="task_completed">task completed 2 days ago</div>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">Dmitry D.</a></div>
+				</div>
+				<div class="tasks_checkbox_container">
+					<div class="tasks_checkbox">
+
+						<input type="checkbox"  id="task_on4"/>
+						<label class="custom_input2" for="task_on4">
+							<span></span>
+						</label>
+					</div>
+					<div class="task_border"></div>
+					<div class="task_completed">task completed 2 days ago</div>
+					<a href="#"><span  class="tasks_title">Hover effects</span></a>
+					<div class="edit_task"><span>Edit</span></div>
+					<div class="task_slider_container"><div class="deadline_slider"><div class="remaining_time_task1"><span></span></div></div>
+						<p class="task_deadline">in 1 day</p></div>
+					<div class="save_task"><span>Save</span></div>
+
+					<div class="choose_period_tasks">
+						<div class="start_date">
+							<span class="calendar_icon"></span>
+							June 6, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+						<p>&ndash;</p>
+						<div class="finish_date">
+							June 27, 2013
+							<input type="text" value="" style="display: none;" />
+						</div>
+					</div>
+					<div class="assign_task"><a href="#">George V.</a></div>
+				</div>
+
+				</div>
+				</div>
+				</div><!-- content -->
                 </div><!-- #tab2 -->
 
 			</div><!-- .tab_container-->

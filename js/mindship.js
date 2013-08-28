@@ -200,31 +200,7 @@ $(document).ready(function () {
 		}
 	});
 
-	var init = function() {
-//--- start example code ---
 
-		var users = ['Andrey Grigorjev','Andy Warhole','Andrew Catcher','Andrey Grigorjev','Andy Warhole','Andrew Catcher','Andrey Grigorjev','Andy Warhole','Andrew Catcher'];
-
-		var config = {
-			placeholderHTML: 'Choose Users',
-			lists: {
-				cities: {
-					ajaxOpts: {
-						url: 'api/cities.php?state=TX&q={input}&includeCommon=false'
-					},
-					options: users
-				}
-			}
-		};
-		var widget = new AutoComplete('search_bar', config);
-		$('#shut-down1').on('click', widget.clear);
-		$('#grey-shroud').on('click', widget.clear);
-		$('#send_message').on('click', widget.clear);
-
-
-//--- end example code ---
-	}; // end init()
-	$(document).ready(init);
 	$('.send-msg-top-input').click(function(){
 		$('ul.dropdown').hide();
 	});
