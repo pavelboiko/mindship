@@ -106,16 +106,17 @@ var objTasks = {
 
 };
 
-var ObjTasks = new (function () {
+function Tasks() {
 
 	var root_el = {},
 		s_val = '',
-		tasks = {},
-		position = 0;
+		tasks = [],
+		position = 0,
+		today = new Date();
 
-	$(document).ready(function () {
-
-	});
+	today.setHours(0);
+	today.setSeconds(0);
+	today.setMilliseconds(0);
 
 	function pushJson(data, func) {
 		data = {
@@ -132,46 +133,116 @@ var ObjTasks = new (function () {
 		});
 	}
 
+	function getWidthByTime(time) {
+		return (53 * (time - 1) / (3600 * 24 * 1000)).toFixed(2);
+	}
+
+
 	function pushEvents(res) {
 		var start_time = root_el.find('ul:first').data('time'),
 			start_date = new Date(start_time);
 
-		console.log(start_time, start_date);
-
 		for (var i in res) {
-			tasks[i] = {
+			tasks.push({
+				id: res[i][0],
 				name: res[i][1],
 				start: +res[i][2],
 				finish: +res[i][3],
-				left: 53 * (start_time - res[i][2]) / (3600 * 24 * 1000),
-				width: 53 * (res[i][3] - start_time) / (3600 * 24 * 1000),
+				sd: new Date(+res[i][2]),
+				fd: new Date(+res[i][3]),
+				left: getWidthByTime(start_time - res[i][2]), //53 * (start_time - res[i][2]) / (3600 * 24 * 1000),
+				width: getWidthByTime(res[i][3] - res[i][2] + (25 * 3600)), //53 * (res[i][3] - start_time) / (3600 * 24 * 1000),
 				position: position++,
-				today: null
-			};
+				today: getWidthByTime(+res[i][3] - today.getTime())
+			});
 		}
 
-//		var task_bar = root_el.find('new_task_bar');
-//		console.log(task_bar, root_el);
-		for (var i in tasks) {
-			root_el.find('.new_task_bar').append('<div id="t_' + i + '" class="current_task" style="width:' + tasks[i].width +'px;left:' + tasks[i].left +'px;"><div class="before_today"></div></div>');
+		for (var i = tasks.length - 1; i > 0; i--) {
+			if (tasks[i] === undefined) {
+				console.log(i);
+				continue;
+			}
+
+			var id = 't_' + tasks[i].id;
+
+			if (!$('#' + id).length) {
+
+				var before = '',
+					info = '';
+				console.log(tasks[i].today);
+				if (tasks[i].today > 0) {
+					before = ' style="width: ' + tasks[i].today + 'px"';
+				}
+				info = tasks[i].name + ' s=' + tasks[i].sd + ' f=' + tasks[i].fd;
+
+
+				root_el.find('.new_task_bar').append('<div id="' + id + '" data-array=" ' + i + '" class="current_task" style="width:' + tasks[i].width + 'px;margin-left:' + -tasks[i].left + 'px;"><span>' + info + '</span><div' + before + ' class="over_today"></div></div>');
+			}
 		}
 
-		console.log(tasks);
+		var height = position * 25;
+
+		if (height < 227) {
+			height = 227;
+		}
+		$('#CalendarLine .calendar ul li[class!=month_line]').height(height + 'px');
+		$('#CalendarLine').height(height + 67 + 'px');
+
+
 	}
 
-	function template() {
-
-	}
 
 
 	this.init = function () {
 		console.log('---====_Start_====---');
 
-		$('.calendar', '#CalendarLine').append('<div class="new_task_bar"></div>');
+		root_el = $('.calendar', '#CalendarLine');
+		root_el.append('<div class="new_task_bar"></div>');
 
-		root_el =  $('.calendar', '#CalendarLine');
+		root_el.on('mousedown', '.current_task', function (e) {
+			var drag = {
+				el: $(this),
+				move: e.pageX
+			},
+				array_id = +drag.el.data('array');
+
+			if (tasks[array_id] === undefined) {
+				console.log('Error', 'Don`t have task #' + array_id + ' in tasks array');
+				return;
+			}
+
+			$(document).mousemove(function (e) {
+				var size = parseInt((drag.move - e.pageX)/53);
+
+
+				if (size != 0) {
+					var w = drag.el.width() - size * 53,
+						w_today = tasks[array_id].today - size * 53;
+
+					console.log(tasks[array_id].today);
+
+					drag.el.width(w + 'px');
+					if (w_today > 0 || tasks[array_id].today > 0) {
+						drag.el.find('.over_today').width(w_today + 'px');
+					}
+
+					tasks[array_id].width = w;
+					tasks[array_id].today = w_today;
+
+					drag.move = e.pageX;
+				}
+
+			});
+		});
+
+
+
 
 		return this;
+	};
+
+	this.dragTask = function (size) {
+
 	};
 
 	this.changeSearch = function (s) {
@@ -185,6 +256,6 @@ var ObjTasks = new (function () {
 	this.pushData = function (el) {
 		pushJson(el.data('time'), pushEvents);
 	};
+}
 
-	return this;
-})();
+var ObjTasks = new Tasks;

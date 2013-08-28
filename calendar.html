@@ -25,6 +25,8 @@
 	<style type="text/css">
 		.new_task_bar{
 			position: absolute;
+			top: 0;
+			left: 0;
 		}
 		.current_task {
 			margin-top: 5px;
@@ -37,6 +39,23 @@
 			position: relative;
 			top: 70px;
 			width: 400px;
+			z-index: 100;
+			color: #fff;
+		}
+		.current_task span{
+			color: #fff;
+			position: absolute;
+			top: 0;
+			left: 5px;
+			line-height: 20px;
+		}
+
+		.over_today{
+			min-width: 0;
+			position: static;
+			float: right;
+			background: #58bf1f;
+			height: 100%;
 			z-index: 100;
 		}
 	</style>

@@ -117,19 +117,23 @@
 					return false;
 				});
 
-				el.on('mousedown', 'li', function (e) {
-					self.dragging = e.pageX;
-				}).on('mousemove', 'li', function (e) {
-					if (self.dragging) {
-						var size = self.dragging - e.pageX;
-						self.dragging = e.pageX;
+				el.on('mousedown', function (e) {
+					var dragging = e.pageX;
+					$(document).mousemove(function (e) {
+						if ($(e.target).hasClass('current_task') || $(e.target).parents('.current_task').length) {
+							return;
+						}
+
+						var size = dragging - e.pageX;
+						dragging = e.pageX;
 
 						self.drag(Math.abs(size), !(size < 0), 0);
+					});
 
+				});
 
-					}
-				}).on('mouseup', function () {
-					self.dragging = null;
+				$(document).mouseup(function () {
+					$(this).unbind('mousemove');
 				});
 
 				return this;
@@ -185,7 +189,7 @@
 
 				ul_last.remove();
 
-				this.model.pushData(month);
+//				this.model.pushData(month);
 			},
 
 			appendMonth: function () {
@@ -207,7 +211,7 @@
 
 				ul_first.remove();
 
-				this.model.pushData(month);
+//				this.model.pushData(month);
 			}
 
 
