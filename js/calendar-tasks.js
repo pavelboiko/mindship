@@ -50,17 +50,17 @@ var objTasks = {
 
 		var models = res[el.data('time')];
 
-		for(var i = 0, c = models.length; i < c; i++) {
-			el.append(this.templates(models[i],time));
+		for (var i = 0, c = models.length; i < c; i++) {
+			el.append(this.templates(models[i], time));
 		}
 	},
 
 	step: 1,
-	templates:function (model, time) {
+	templates: function (model, time) {
 
 		var widthDay = this.parent.configLine.widthDay,
-			start = (time - +model[2])/(3600*24*1000),
-			end = (+model[3] - time)/(3600*24*1000),
+			start = (time - +model[2]) / (3600 * 24 * 1000),
+			end = (+model[3] - time) / (3600 * 24 * 1000),
 			css = {};
 
 		console.log(model[0], new Date(+model[2]), new Date(+model[3]), start, end, model[6], model[7]);
@@ -68,9 +68,8 @@ var objTasks = {
 		css = {
 			top: (this.step * 25 + 25) + 'px',
 			left: (start * widthDay) + 'px',
-			width: (end * widthDay)-10 + 'px'
+			width: (end * widthDay) - 10 + 'px'
 		};
-
 
 
 		if ($('#task_' + model[0]).length) {
@@ -90,7 +89,7 @@ var objTasks = {
 		var date = new Date();
 
 		date.setTime(time);
-		return date.getDay() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
+		return date.getDay() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 	}
 //	setLine: function () {
 //		var el = $('CalendarLine').find('.calendar'),
@@ -106,3 +105,86 @@ var objTasks = {
 //	}
 
 };
+
+var ObjTasks = new (function () {
+
+	var root_el = {},
+		s_val = '',
+		tasks = {},
+		position = 0;
+
+	$(document).ready(function () {
+
+	});
+
+	function pushJson(data, func) {
+		data = {
+			s: s_val,
+			t: data
+		};
+
+		$.ajax({
+			type: "GET",
+			url: "server/tags.php",
+			data: data,
+			dataType: "json",
+			success: func
+		});
+	}
+
+	function pushEvents(res) {
+		var start_time = root_el.find('ul:first').data('time'),
+			start_date = new Date(start_time);
+
+		console.log(start_time, start_date);
+
+		for (var i in res) {
+			tasks[i] = {
+				name: res[i][1],
+				start: +res[i][2],
+				finish: +res[i][3],
+				left: 53 * (start_time - res[i][2]) / (3600 * 24 * 1000),
+				width: 53 * (res[i][3] - start_time) / (3600 * 24 * 1000),
+				position: position++,
+				today: null
+			};
+		}
+
+//		var task_bar = root_el.find('new_task_bar');
+//		console.log(task_bar, root_el);
+		for (var i in tasks) {
+			root_el.find('.new_task_bar').append('<div id="t_' + i + '" class="current_task" style="width:' + tasks[i].width +'px;left:' + tasks[i].left +'px;"><div class="before_today"></div></div>');
+		}
+
+		console.log(tasks);
+	}
+
+	function template() {
+
+	}
+
+
+	this.init = function () {
+		console.log('---====_Start_====---');
+
+		$('.calendar', '#CalendarLine').append('<div class="new_task_bar"></div>');
+
+		root_el =  $('.calendar', '#CalendarLine');
+
+		return this;
+	};
+
+	this.changeSearch = function (s) {
+		s_val = s;
+	};
+
+	this.pushAllData = function (times) {
+		pushJson(times.join(','), pushEvents);
+	};
+
+	this.pushData = function (el) {
+		pushJson(el.data('time'), pushEvents);
+	};
+
+	return this;
+})();

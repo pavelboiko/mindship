@@ -19,9 +19,27 @@
 	<script type="text/javascript" src="js/calendar-tasks.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('#CalendarLine').calendarLine(objTasks);
+			$('#CalendarLine').calendarLine(ObjTasks);
 		});
 	</script>
+	<style type="text/css">
+		.new_task_bar{
+			position: absolute;
+		}
+		.current_task {
+			margin-top: 5px;
+			background: none repeat scroll 0 0 #AAD263;
+			float: none;
+			height: 20px;
+			left: 0;
+			min-width: 53px;
+			overflow: hidden;
+			position: relative;
+			top: 70px;
+			width: 400px;
+			z-index: 100;
+		}
+	</style>
 </head>
 <body>
 

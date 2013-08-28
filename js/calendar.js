@@ -77,7 +77,7 @@
 				el.css({
 					width: countAllDays * this.configLine.widthDay,
 					left: -startPosition * this.configLine.widthDay
-				}).html(html);
+				}).append(html);
 
 				this.model.pushAllData(times);
 
@@ -85,7 +85,7 @@
 			},
 
 			clear: function () {
-				el.html('');
+				el.find('ul').remove();
 
 				return this;
 			},

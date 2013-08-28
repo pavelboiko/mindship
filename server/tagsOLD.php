@@ -7,23 +7,11 @@ $f = @fopen(dirname(__FILE__).'/array.csv', 'a+');
 
 $tasks = createArray($times);
 
-$t = array();
-
 while($row = fgetcsv($f, 9000)) {
 	foreach($times as $val) {
 		if (isTaskInTime($val, $row[2], $row[3])) {
 //			$tasks[$val][] = $row;
 			$tasks[$val][] = array(
-				$row[0],
-				$row[1],
-				$row[2],
-				$row[3],
-				@date('d-m-Y', $row[2]/1000),
-				@date('d-m-Y', $row[3]/1000),
-				($row[2] - $val)/(1000 *24*3600),
-				($row[3] - $val)/(1000 *24*3600)
-			);
-			$t[$row[0]] = array(
 				$row[0],
 				$row[1],
 				$row[2],
@@ -52,8 +40,7 @@ for ($i = 0; $i < count($new_tasks); $i++) {
 	foreach($times as $val) {
 		if (isTaskInTime($val, $new_tasks[$i][2], $new_tasks[$i][3])) {
 //			$tasks[$val][] = $new_tasks;
-//			$tasks[$val][]
-			$t[$new_tasks[0]]= array(
+			$tasks[$val][] = array(
 				$new_tasks[0],
 				$new_tasks[1],
 				$new_tasks[2],
@@ -66,7 +53,7 @@ for ($i = 0; $i < count($new_tasks); $i++) {
 	}
 }
 
-echo json_encode($t);
+echo json_encode($tasks);
 exit;
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
