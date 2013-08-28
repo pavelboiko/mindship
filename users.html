@@ -9,11 +9,16 @@
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<!--[if lte IE 6]><link rel="stylesheet" href="style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/autocomplete-0.2.1.js"></script>
 	<link rel="stylesheet" href="css_colorbox/colorbox.css" />
+	<link rel="stylesheet" href="css/autocomplete.css" />
 		<link rel="stylesheet" href="css_colorbox/colorbox.css" />
 	<script type="text/javascript" src="js/colorbox/jquery.colorbox.js"></script>
 <script type="text/javascript" src="js/mindship.js"></script>
+
+
 
 
 </head>
@@ -49,29 +54,39 @@
 		<div id="grey-shroud2"></div>
         
 		<div id="discussion" class="send-msg-container">
+
+
+
+
 			<div class="input-dropbox-list">
 				<ul class="dropbox-list">
 					<li><a href="#" class=""><img src="img/db-img.png" alt=""/>Andrey Grigorjev</a></li>
 					<li><a href="#" class=""><img src="img/db-img1.png"  alt=""/>Andy Warhole</a></li>
 					<li><a href="#" class=""><img src="img/db-img2.png"  alt=""/>Andrew Catcher</a></li>
-				</ul></div>
+				</ul>
+			</div>
 			<h1 class="discussion-title">Send a message to your team mates</h1>
 			<div class="shut_down1"> 
 				<div id="shut-down1"></div>
 			</div>
 			<div class="send-msg-top-input">
-				<ul class="input-names">
-				<li class="input-name">Eduard V.<span class="close"></span></li>
-				<li class="input-name">Andrew C.<span class="close"></span></li>
-				<input type="text" class="send-msg-input"/>
-				</ul>
+				<div id="search_bar">
+					<div class="autocomplete_internal_container">
+						<div class="placeholder"></div>
+						<div class="tokens"></div>
+						<input id="dropbox_trigger" type="text" class="send-msg-input"/>
+						<div class="clear7282"></div>
+						<ul class="dropdown" style="display:none"></ul>
+					</div>
+					<span class="input-width-proxy" style="position:absolute; top:-9999px;"></span>
+				</div>
 			</div>
 
             <div class="bottom-disc1">
 				<textarea class="diss1" ></textarea>
 			</div>
             <div class="add_msg-pop1">
-				<div class="click-here-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here</div><div class="create-new1"><a href="#">SEND MESSAGE</a></div>
+				<div class="click-here-container"><a href="#" class="click_here">Click here</a> to attach files or just drag and drop them here</div><div class="create-new1" id="send_message"><a href="#">SEND MESSAGE</a></div>
 			</div>
 			<div class="add_msg-pop2">
 				Or you can <a href="#" class="click_here">choose files from list</a> 
@@ -129,6 +144,7 @@
 						</div></div>
 					</li>
 				</ul>
+
 				<ul class="tabs">
 					<li><a href="#">Overview</a></li>
 					<li><a href="#">Tasks<span class="updates">4</span></a></li>
@@ -148,6 +164,7 @@
               
 						<div class="clear"></div>
                    				<div class="content">
+
 			<div class="users-checkboxes-container">
 					
 			<div class="checkboxes-first-block">

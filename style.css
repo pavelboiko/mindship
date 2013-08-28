@@ -1754,10 +1754,11 @@ table.todo_list td:last-child {
 	position: absolute;
 	top: -72px;
 	left: 465px;
-	height: 380px;
+	/*height: 380px;*/
 	width: 675px;
 	background: #f8f8f8; 
 	z-index: 12;
+	padding-bottom: 30px;
 }
 #shut-down{
 	position: absolute;
@@ -1767,6 +1768,7 @@ table.todo_list td:last-child {
 	height: 19px;
 	width: 19px;
 	cursor: pointer;
+
 }
 .shut_down{ 
 	position:relative;
@@ -1816,10 +1818,9 @@ div.send-msg-container div.send-msg-top-input {
     background: #ffffff;
 	color: #b5b5b5;
     border: 1px solid #e8e5df;
-    height: 35px;
-    padding-left: 10px;
-	padding-top: 5px;
-    width: 610px;
+    padding-left: 3px;
+	padding-bottom: 5px;
+    width: 617px;
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;
 	font-size: 12px;
@@ -3326,3 +3327,8 @@ div.choose_period_tasks p {
 }
 /*---Calendar-tasks-end---*/
 
+span.remove-token-group {
+	background: url("img/close-user.png") center no-repeat;
+	width: 9px;
+	height: 9px;
+}
