@@ -52,6 +52,7 @@ function Tasks() {
 					console.log($('#' + tasks[i].id));
 					$('#' + tasks[i].id).remove();
 				}
+
 				continue;
 			}
 
@@ -61,9 +62,6 @@ function Tasks() {
 
 			var task_left = tasks[i].left + tasks[i].width;
 
-//			if ((tasks[i].left < active_line_size[1] && task_left > active_line_size[0])) {
-//				console.log(tasks[i].id);
-//			}
 			tasks[i].position = (tasks[i].left < active_line_size[1] && task_left > active_line_size[0]) ? 1 : 0;
 
 			new_tasks.push(tasks[i]);
@@ -73,7 +71,7 @@ function Tasks() {
 		tasks = new_tasks;
 	}
 
-	function intefaceTask (json_arr) {
+	function interfaceTask (json_arr) {
 		return {
 			id: json_arr[0],
 			name: json_arr[1],
@@ -93,11 +91,12 @@ function Tasks() {
 			start_date = new Date(start_time);
 
 		for (var k in res) {
-			tasks.push(intefaceTask(res[k]));
+			tasks.push(interfaceTask(res[k]));
 		}
 
 		siftTasks();
 
+		root_el.find('.new_task_bar').html();
 		for (var i = tasks.length - 1; i > 0; i--) {
 			if (tasks[i] === undefined) {
 				continue;
@@ -123,17 +122,19 @@ function Tasks() {
 
 				root_el.find('.new_task_bar').append('<div id="' + id + '" data-array=" ' + i + '" class="current_task"' + task_style + '><span>' + info + '</span><div' + before_stile + ' class="over_today"></div></div>');
 			} else {
-				if (tasks[i].position) {
-					console.log(tasks[i]);
-				}
+				console.log(tasks[i], (tasks[i].position) ? 'block' : 'hide');
 
 				$('#' + id).css({
 					width: tasks[i].width,
-					'margin-left': tasks[i].left,
-					display: (tasks[i].position) ? 'block' : 'hide'
-				}).find('.over_today').css({
+					'margin-left': tasks[i].left
+				}).attr('data-array', i).find('.over_today').css({
 					width: (tasks[i].today > 0) ? tasks[i].today : 0
 				});
+
+				if (tasks[i].position)
+					$('#' + id).slideDown();
+				else
+					$('#' + id).slideUp();
 			}
 		}
 
@@ -144,8 +145,28 @@ function Tasks() {
 		}
 		$('#CalendarLine .calendar ul li[class!=month_line]').height(height + 'px');
 		$('#CalendarLine').height(height + 67 + 'px');
+	}
 
+	function scrollLine(e) {
+		var active_line_size = getCalendarSize();
+		for (var i = tasks.length - 1; i > 0; i--) {
+			var task_left = tasks[i].left + tasks[i].width;
+			var id = 't_' + tasks[i].id;
 
+			tasks[i].position = (tasks[i].left < active_line_size[1] && task_left > active_line_size[0]) ? 1 : 0;
+
+			$('#' + id).css({
+				width: tasks[i].width,
+				'margin-left': tasks[i].left
+			}).attr('data-array', i).find('.over_today').css({
+					width: (tasks[i].today > 0) ? tasks[i].today : 0
+				});
+
+			if (tasks[i].position)
+				$('#' + id).slideDown();
+			else
+				$('#' + id).slideUp();
+		}
 	}
 
 
@@ -204,8 +225,14 @@ function Tasks() {
 	};
 
 	this.pushData = function (el) {
-		pushJson(el.data('time'), pushEvents);
+		pushEvents({});
+//		pushJson(el.data('time'), pushEvents);
 	};
+
+	this.eventScrollLine = function (e) {
+//		console.log(e);
+		scrollLine(e);
+	}
 }
 
 var ObjTasks = new Tasks;
