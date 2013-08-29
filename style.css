@@ -3337,10 +3337,11 @@ span.remove-token-group {
 /**/
 .info_container {
 	position: relative;
-	width: 1320px;
-
+	min-width: 733px;
 	margin-bottom: 30px;
 	float: left;
+	height: 135px;
+	overflow: hidden;
 
 }
 .info_message_container {
