@@ -347,7 +347,7 @@ div.page_buttons_container1{
 }
 div.tab_content div.title {
     float: left;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
     font-size: 24px;
     color: #51504c;
@@ -3331,4 +3331,98 @@ span.remove-token-group {
 	background: url("img/close-user.png") center no-repeat;
 	width: 9px;
 	height: 9px;
+}
+
+
+/**/
+.info_container {
+	position: relative;
+	width: 1320px;
+
+	margin-bottom: 30px;
+	float: left;
+
+}
+.info_message_container {
+	background: #fff;
+	position: relative;
+	float: left;
+	width: 215px;
+	margin-right: 5px;
+	margin-top: 5px;
+	-moz-box-shadow: 0 1px 1px rgba(219,216,210,1); /* Для Firefox */
+	-webkit-box-shadow: 0 1px 1px rgba(219,216,210,1);/* Для Safari и Chrome */
+	box-shadow: 0 1px 1px rgba(219,216,210,1); /* Параметры тени */
+
+}
+div.info_message_container:last-child {
+	margin-right: 0px;
+}
+.info_title {
+	position: relative;
+	float: left;
+	margin-left: 13px;
+	margin-top: 17px;
+	font-family: 'Noto Sans',sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #414141;
+	width: 160px;
+}
+span.info_author_name a {
+	color: #0db2ea;
+	font-family: 'Noto Sans',sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	text-decoration: none;
+}
+span.info_commentator_name a {
+	color: #e71a93;
+	font-family: 'Noto Sans',sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+
+.info_close {
+	width: 14px;
+	height: 14px;
+	background: url("img/info_close_button.png") no-repeat;
+	position: relative;
+	float: right;
+	margin-right: 13px;
+	margin-top: 17px;
+	cursor: pointer;
+}
+div.go_to_link {
+	position: relative;
+	float: left;
+	margin-left: 13px;
+	margin-top: 13px;
+	width: 150px;
+}
+div.go_to_link a {
+	font-family: 'Noto Sans',sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #0db2ea;
+	text-decoration: none;
+}
+.info_timing {
+	position: relative;
+	margin-left: 13px;
+	font-family: 'Noto Sans',sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #c1bdb4;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 10px;
+
 }
