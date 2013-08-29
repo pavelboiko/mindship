@@ -3337,7 +3337,7 @@ span.remove-token-group {
 /**/
 .info_container {
 	position: relative;
-	min-width: 733px;
+	width: 100%;
 	margin-bottom: 30px;
 	float: left;
 	height: 135px;
@@ -3345,6 +3345,7 @@ span.remove-token-group {
 
 }
 .info_message_container {
+	/*display: none;*/
 	background: #fff;
 	position: relative;
 	float: left;
@@ -3363,7 +3364,7 @@ div.info_message_container:last-child {
 	position: relative;
 	float: left;
 	margin-left: 13px;
-	margin-top: 17px;
+	margin-top: 11px;
 	font-family: 'Noto Sans',sans-serif;
 	font-size: 14px;
 	font-weight: 400;
@@ -3396,7 +3397,7 @@ span.info_commentator_name a {
 	position: relative;
 	float: right;
 	margin-right: 13px;
-	margin-top: 17px;
+	margin-top: 11px;
 	cursor: pointer;
 }
 div.go_to_link {

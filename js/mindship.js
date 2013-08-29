@@ -50,11 +50,11 @@ $(document).ready(function () {
 		$(".dark-shroud").slideToggle();
 		$(".dark-shroud1").slideUp();
 	});
-	$('.checkbox-user').click( function(){
-		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
-			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().css('border','');
+	$('.checkbox-user').click(function () {
+		if ($(this).find('input[type="checkbox"]').prop('checked') == true) {
+			$(this).find('input[type="checkbox"]').prop({"checked": false}).parent().css('border', '');
 		} else {
-			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border','1px solid #0db2ea');
+			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border', '1px solid #0db2ea');
 		}
 		return false;
 	});
@@ -143,7 +143,7 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.save_task').click(function (){
+	$('.save_task').click(function () {
 		$(this).parent().find('.task_slider_container').show();
 		$(this).parent().find('.choose_period_tasks').hide();
 		$(this).parent().find('.edit_task').show();
@@ -159,7 +159,7 @@ $(document).ready(function () {
 		$(this).parent().find('.save_task').hide();
 
 	});
-	$('.edit_task').click(function (){
+	$('.edit_task').click(function () {
 		$(this).parent().find('.task_slider_container').hide();
 		$(this).parent().find('.choose_period_tasks').show();
 		$(this).parent().find('.edit_task').hide();
@@ -168,13 +168,14 @@ $(document).ready(function () {
 	});
 
 	$('input[type="checkbox"]').removeAttr('checked');
-	$('.tasks_checkbox').click( function(){
-		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ){
-			$(this).find('input[type="checkbox"]').prop({"checked":false}) .parent().parent().find('.tasks_title').css('color','');
+	$('.tasks_checkbox').click(function () {
+		if ($(this).find('input[type="checkbox"]').prop('checked') == true) {
+			$(this).find('input[type="checkbox"]').prop({"checked": false}).parent().parent().find('.tasks_title').css('color', '');
 
 		} else {
-			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().parent().find('.tasks_title').css('color','#d1d1d1');
-		}  	$(this).find('input[type="checkbox"]').parent().parent().find('.task_completed').toggle();
+			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().parent().find('.tasks_title').css('color', '#d1d1d1');
+		}
+		$(this).find('input[type="checkbox"]').parent().parent().find('.task_completed').toggle();
 		return false;
 	});
 
@@ -188,23 +189,28 @@ $(document).ready(function () {
 	$('input', ".get_access_type_your_e-mail").Watermark("Your e-mail");
 	$('input', ".get_access_password").Watermark("Password");
 	$('input', ".autocomplete-input").Watermark("");
-	$(".group1").colorbox({rel:'group1'});
+	$(".group1").colorbox({rel: 'group1'});
 
 
-	$("#create_task_trigger").keypress(function(e) {
-		if ( e.which == 13 ) {
+	$("#create_task_trigger").keypress(function (e) {
+		if (e.which == 13) {
 			var new_task_name = $('.create_task1 input').val();
 			$('#new_tasks_checkbox_container_trigger > a > span.tasks_title').text(new_task_name);
 			$('input:text').val('');
-			$( $('#new_tasks_checkbox_container_trigger')).clone(true, true).removeAttr('id').prependTo($('.tasks_checkboxes_container'));
+			$($('#new_tasks_checkbox_container_trigger')).clone(true, true).removeAttr('id').prependTo($('.tasks_checkboxes_container'));
 		}
 	});
 
+	$('.info_close').click(function () {
+		$(this).parent().hide(500,
+			function () {
+				$(this).remove();
+				if(!$('.info_message_container').length){
+					$('.info_container').slideUp();
+				}
+			});
 
-	$('.send-msg-top-input').click(function(){
-		$('ul.dropdown').hide();
 	});
-	$('.send-msg-top-input').click(function(){
-		$('ul.dropdown').hide();
-	});
+
+
 });
