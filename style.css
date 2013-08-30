@@ -1849,7 +1849,7 @@ li.input-name: last-child {
 .send-msg-input {
 	background: none repeat scroll 0 0 #FFFFFF;
     border: none;
-    color: #B5B5B5;
+   	margin-top: 5px;
     float: left;
     font-family: 'Noto Sans',sans-serif;
     font-size: 12px;
@@ -1859,15 +1859,6 @@ li.input-name: last-child {
 	color: #666665;
 }
 
-/*span.close {
-	background: url("img/close.png") no-repeat scroll 0 center transparent;
-	position: relative;
-    float: right;
-    height: 9px;
-    margin-left: 14px;
-    margin-top: 1px;
-    width: 9px;
-}*/
 	
 div.bottom-disc textarea.diss1 {
     float: left;
@@ -3428,3 +3419,37 @@ div.go_to_link a {
 	margin-bottom: 10px;
 
 }
+
+
+
+ .ui-widget select, .ui-widget textarea, .ui-widget button {
+	float: left;
+	font-size: 12px;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: 700;
+	margin: 0px 2px;
+	color: #595959;
+
+}
+ .tokens {
+	 position: relative;
+	 width: 100%;
+ }
+ .test {
+	 background: #e3e3e3;
+	 border: 1px solid #ccc;
+	 max-height: 200px;
+	 min-width: 140px;
+	 overflow-x: visible;
+	 overflow-y: auto;
+ }
+ .test li  {
+	 background: #f4f4f4;
+	 font-family: 'Noto Sans', sans-serif;
+	 color: #595959;
+	 font-weight: 700;
+	 font-size: 12px;
+	 list-style: none;
+	 line-height: 35px;
+
+ }

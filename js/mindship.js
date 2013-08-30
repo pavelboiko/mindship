@@ -51,17 +51,34 @@ $(document).ready(function () {
 		$(".dark-shroud1").slideUp();
 	});
 	$('.checkbox-user').click(function () {
+//		$('.checkbox-user').data( "user-id","234" );
 		if ($(this).find('input[type="checkbox"]').prop('checked') == true) {
 			$(this).find('input[type="checkbox"]').prop({"checked": false}).parent().css('border', '');
 		} else {
 			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().css('border', '1px solid #0db2ea');
+			var userName =  $(this).find('.check-label').text();
+
+			var dataId = $(this).data('user-id');
+			var tokenId= $('.token-group').data("user-id");
+			console.log(dataId);
+			console.log(tokenId);
+			if(dataId!=tokenId){
+			$('<div></div>').data("user-id",dataId).addClass('token-group').append( $('<span></span>').addClass('token').text(userName) ).append( $('<span></span>').addClass('remove-token-group') ).prependTo('.tokens');
+		var tokenId= $('.token-group').data("user-id"); }
+
+
+
+
+
 		}
 		return false;
+
 	});
 
-//	$(".send-msg-input").click(function () {
-//		$(".input-dropbox-list").slideToggle(10);
-//	});
+	$('#send-msg').click(function () {
+		if ($('.checkbox-user').find('input[type="checkbox"]').prop('checked') == true) {
+			$('.checkbox-user').find('input[type="checkbox"]').prop({"checked": false}).parent().css('border', ''); }
+	});
 
 	$("#grey-shroud").click(function () {
 		$("#grey-shroud, #discussion, .are-you-sure ").hide();
@@ -188,7 +205,8 @@ $(document).ready(function () {
 	$('input', ".diss1").Watermark("Once upon a time...");
 	$('input', ".get_access_type_your_e-mail").Watermark("Your e-mail");
 	$('input', ".get_access_password").Watermark("Password");
-	$('input', ".autocomplete-input").Watermark("");
+	$("#city").Watermark("Choose Users");
+
 	$(".group1").colorbox({rel: 'group1'});
 
 
@@ -212,5 +230,11 @@ $(document).ready(function () {
 
 	});
 
+	$(".tokens").on('click', '.remove-token-group', function () {
+		$(this).parent().remove();
+	});
 
+	$('#shut-down1, #grey-shroud, #send_message').click (function(){
+		$('.token-group').remove();
+	});
 });

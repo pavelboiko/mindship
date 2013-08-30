@@ -26,7 +26,7 @@ div.autocomplete_internal_container input.autocomplete-input {
 	width: 140px;
 	color: #595959;
 }
-div.autocomplete_internal_container div.token-group {
+ div.token-group {
 	position: relative;
   background: #e8e5dd;
 	font-size: 12px;
@@ -50,18 +50,20 @@ div.autocomplete_internal_container div.selected {
   background: -ms-linear-gradient(top,#d2e6fd 0%,#b0d1f9 100%);
   background: linear-gradient(top,#d2e6fd 0%,#b0d1f9 100%);
 }
-div.autocomplete_internal_container span.token {
+ span.token {
 	float: left;
 	font-size: 12px;
 	font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;
   margin: 0px 2px;
+	 padding: 3px 0px;
 	color: #595959;
 }
-div.autocomplete_internal_container span.remove-token-group {
+ span.remove-token-group {
 	float: right;
-
-	margin: 5px 5px 0 10px;
+	 margin-left: 5px;
+	 margin-top: 2px;
+	 padding: 3px 0px;
 
 }
 div.autocomplete_internal_container ul.dropdown {
