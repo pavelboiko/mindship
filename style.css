@@ -2099,7 +2099,7 @@ li.checkbox-user {
     line-height: 50px;
 	background: #fff;
 	padding: 10px 10px 10px 10px;
-	border: 1px solid #f6e3ec;
+	/*border: 1px solid #f6e3ec;*/
 	list-style: none;
 
 }
@@ -3438,7 +3438,7 @@ div.go_to_link a {
  .test {
 	 background: #e3e3e3;
 	 border: 1px solid #ccc;
-	 max-height: 200px;
+	 max-height: 177px;
 	 min-width: 140px;
 	 overflow-x: visible;
 	 overflow-y: auto;
@@ -3451,5 +3451,26 @@ div.go_to_link a {
 	 font-size: 12px;
 	 list-style: none;
 	 line-height: 35px;
+	 padding-top: 10px;
 
  }
+.user_photo {
+	position: relative;
+	/*float:left;*/
+	height: 23px;
+	width: 23px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+.li-hover {
+	background: #dadada url(images/ui-bg_flat_75_dadada_40x100.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #212121;
+}
+.checkbox_inactive{
+	border: none;
+}
+.checkbox_active{
+	border: 1px solid #0db2ea;
+}
