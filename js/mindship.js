@@ -50,33 +50,7 @@ $(document).ready(function () {
 		$(".dark-shroud").slideToggle();
 		$(".dark-shroud1").slideUp();
 	});
-	$('.checkbox-user').click(function () {
-		var dataId = $(this).data('user-id');
-		var userName = $(this).find('.check-label').text();
-		if ($(this).find('input[type="checkbox"]').prop('checked') == true) {
-			$(".users-checkboxes-container").find("[data-user-id='" + dataId + "']").find('input[type="checkbox"]').prop({"checked": false}).parent().removeClass('checkbox_active');
-			$(this).find('input[type="checkbox"]').prop({"checked": false}).parent().removeClass('checkbox_active');
-			$('.tokens').find("#" + dataId).remove();
 
-		} else {
-			$(this).find('input[type="checkbox"]').prop('checked', 'checked').parent().addClass('checkbox_active');
-			$(".users-checkboxes-container").find("[data-user-id='" + dataId + "']").find('input[type="checkbox"]').prop('checked', 'checked').parent().addClass('checkbox_active');
-			$('<div/>').attr("id", dataId).addClass('token-group').append($('<span/>').addClass('token').text(userName)).append($('<span/>').addClass('remove-token-group')).prependTo('.tokens');
-
-		}
-
-		return false;
-
-	});
-
-	$('#send-msg').click(function () {
-		$('.checkbox-user.checkbox_active').each(function () {
-			console.log($(this));
-
-			$(this).removeClass('checkbox_active').find('input[type="checkbox"]').prop({"checked": false});
-		});
-
-	});
 
 	$("#grey-shroud").click(function () {
 		$("#grey-shroud, #discussion, .are-you-sure ").hide();
@@ -84,7 +58,6 @@ $(document).ready(function () {
 	$("#grey-shroud ").click(function () {
 		$("#discussion ").hide().animate({top: '-=202px'}, 200);
 		$("#grey-shroud").hide();
-		$(".input-dropbox-list").hide();
 	});
 	$("#grey-shroud1, .yes-button, .no-button").click(function () {
 		$("#delete-persone ").hide().animate({top: '-=275px'}, 200);
@@ -119,39 +92,13 @@ $(document).ready(function () {
 	$("#shut-down1").click(function () {
 		$("#grey-shroud").hide();
 		$(" #discussion ").hide().animate({top: '-=202px'}, 200);
-		$(".input-dropbox-list").hide();
 	});
 
 	$("#msg_post, #post_msg").click(function () {
 		$("#grey-shroud").fadeIn();
 		$(" #discussion ").show().animate({top: '+=202px'}, 200);
 	});
-	$("#log-in").click(function () {
-		$(".get_access_type_your_e-mail").show();
-		$(".get_access_text_log-in").show();
-		$(".get_access_password").animate({top: '+=65px'}, 400);
-		$(".get_access_buttons_container").animate({top: '+=65px'}, 400);
-		$(".get_access_text").hide();
-		$(".get_access_input").hide();
-		$(".get_access_container").animate({paddingBottom: +60}, 400);
-		$(".get_access_free_button").text('LOG IN TO YOUR ACCOUNT').css('padding', '15px 50px');
 
-
-		$("#log-in").hide();
-		$("#register").show();
-	});
-	$("#register").click(function () {
-		$(".get_access_type_your_e-mail").hide();
-		$(".get_access_password").animate({top: '-=65px'}, 400);
-		$(".get_access_text").show();
-		$(".get_access_input").show();
-		$(".get_access_text_log-in").hide();
-		$(".get_access_container").animate({paddingBottom: -60}, 400);
-		$(".get_access_buttons_container").animate({top: '-=65px'}, 400);
-		$("#register").hide();
-		$("#log-in").show();
-		$(".get_access_free_button").text('GET FREE ACCESS').css('padding', '15px 90px');
-	});
 
 	$('.check-boxes-discussion input[type=checkbox]').click(function () {
 		if (this.checked) {
@@ -231,18 +178,5 @@ $(document).ready(function () {
 
 	});
 
-	$(".tokens").on('click', '.remove-token-group', function () {
-		$(this).parent().remove();
-	});
-
-	$('#shut-down1, #grey-shroud, #send_message').click(function () {
-		$('.token-group').remove();
-	});
-	$('.ui-menu-item').hover(function () {
-			$(this).addClass("li-hover");
-		},
-		function () {
-			$(this).removeClass("li-hover");
-		});
 
 });
