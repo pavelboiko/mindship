@@ -3638,20 +3638,20 @@ div.choose_period_tasks p {
 	float: left;
 }
 
-.current_task {
-	position: absolute;
-	min-width: 53px;
-	width: 400px;
-	height: 20px;
-	top: 70px;
-	left: 0px;
-	background: #aad263;
-	z-index: 100;
-	float: left;
-	overflow: hidden;
-	cursor: col-resize;
+/*.current_task {*/
+	/*position: absolute;*/
+	/*min-width: 53px;*/
+	/*width: 400px;*/
+	/*height: 20px;*/
+	/*top: 70px;*/
+	/*left: 0px;*/
+	/*background: #aad263;*/
+	/*z-index: 100;*/
+	/*float: left;*/
+	/*overflow: hidden;*/
+	/*cursor: col-resize;*/
 
-}
+/*}*/
 
 .over_today {
 	position: relative;

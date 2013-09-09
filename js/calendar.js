@@ -188,8 +188,6 @@
 					left: '-=' + (contMonthDays * this.configLine.widthDay) + 'px'
 				}).prepend(month);
 
-				console.log(a);
-
 				ul_last.remove();
 
 				this.model.pushData(month);
