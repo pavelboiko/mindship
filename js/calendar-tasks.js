@@ -49,15 +49,18 @@ function Tasks() {
 				var id = 't_' + this.id;
 				var before_stile = '',
 					info = this.id + ' [ ' + this.sd.getDate() + '/' + (this.sd.getMonth() + 1) + '/' + this.sd.getFullYear() + ' , ' + this.fd.getDate() + '/' + (this.fd.getMonth() + 1) + '/' + this.fd.getFullYear() + ' ]',
-					task_style = 'style="width:' + this.width + 'px;margin-left:' + this.left + 'px;';
+					task_style = 'style="width:' + this.width + 'px;margin-left:' + this.left + 'px;',
+					y = '';
 
 				task_style += this.view ? 'display: block;"' : '"';
 
 				if (this.today > 0) {
 					before_stile = ' style="width: ' + this.today + 'px"';
+				} else {
+					y = ' y';
 				}
 
-				return '<div id="' + id + '" data-array="' + i + '" class="task"' + task_style + '><b>' + info + '</b><span' + before_stile + ' class="over_today"></span></div>';
+				return '<div id="' + id + '" data-array="' + i + '" class="task' + y + '"' + task_style + '><b>' + info + '</b><span' + before_stile + ' class="over_today"></span></div>';
 			},
 
 			emptyTimeLine: function (start_time, finish_time) {

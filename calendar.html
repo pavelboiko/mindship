@@ -66,10 +66,11 @@
 			z-index: 100;
 		}
 
+
 		#CalendarLine .calendar ul li div.task{
 			line-height: 20px;
 			padding: 0;
-			display: block;
+			display: none;
 			margin-top: 5px;
 			background: none repeat scroll 0 0 #AAD263;
 			height: 20px;
@@ -80,8 +81,11 @@
 			z-index: 100;
 			color: #fff;
 		}
-		#CalendarLine .calendar ul li div.task{
-			display: none;
+		#CalendarLine .calendar ul li div.task.y{
+			background: #c3aa5e;
+		}
+		#CalendarLine .calendar ul li div.task.y span{
+			width: 0;
 		}
 
 		#CalendarLine .calendar ul li div.task span{
@@ -92,6 +96,13 @@
 			height: 100%;
 			z-index: 100;
 		}
+
+		#CalendarLine .calendar ul li div.task b{
+			position: absolute;
+			right: 5px;
+			top: 0;
+		}
+
 		#CalendarLine .calendar ul li div.task b{
 			color: #fff;
 			position: absolute;
