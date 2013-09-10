@@ -120,7 +120,7 @@
 				el.on('mousedown', function (e) {
 					var dragging = e.pageX;
 					$(document).mousemove(function (e) {
-						if ($(e.target).hasClass('current_task') || $(e.target).parents('.current_task').length) {
+						if (($(e.target).hasClass('task') || $(e.target).parents('.task').length) && self.model.isDrag()) {
 							return;
 						}
 

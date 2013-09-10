@@ -27,7 +27,7 @@
 			/*position: relative;*/
 		/*}*/
 		#CalendarLine .calendar{ position: relative; }
-		.new_task_bar{
+		#CalendarLine .calendar ul li.new_task_bar{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -64,6 +64,41 @@
 			background: #58bf1f;
 			height: 100%;
 			z-index: 100;
+		}
+
+		#CalendarLine .calendar ul li div.task{
+			line-height: 20px;
+			padding: 0;
+			display: block;
+			margin-top: 5px;
+			background: none repeat scroll 0 0 #AAD263;
+			height: 20px;
+			min-width: 53px;
+			overflow: hidden;
+			position: relative;
+			width: 400px;
+			z-index: 100;
+			color: #fff;
+		}
+		#CalendarLine .calendar ul li div.task{
+			display: none;
+		}
+
+		#CalendarLine .calendar ul li div.task span{
+			min-width: 0;
+			display: block;
+			float: right;
+			background: #58bf1f;
+			height: 100%;
+			z-index: 100;
+		}
+		#CalendarLine .calendar ul li div.task b{
+			color: #fff;
+			position: absolute;
+			top: 0;
+			left: 5px;
+			line-height: 20px;
+			font-weight: normal;
 		}
 	</style>
 </head>
