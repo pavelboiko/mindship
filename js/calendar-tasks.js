@@ -243,7 +243,9 @@ function Tasks() {
 	}
 
 	function scrollLine() {
-		var count_view_tasks = 0,
+		var active_task_count = 0,
+			overdue_task_count = 0,
+			count_view_tasks = 0,
 
 			active_line_size = getCalendarSize(),
 			left_width = +root_el.find('ul:first').width();
@@ -251,15 +253,38 @@ function Tasks() {
 		for (var key = 0, count_tasks = tasks.length; key < count_tasks; key++) {
 			tasks[key].calculateVisible(left_width, active_line_size);
 
+			var Task = $('#t_' + tasks[key].id);
 			if (tasks[key].view) {
-				$('#t_' + tasks[key].id).slideDown();
-				count_view_tasks++
+				Task.slideDown();
+				count_view_tasks++;
+
+				if (Task.hasClass('y')) {
+					overdue_task_count++;
+				} else {
+					active_task_count++;
+				}
 			} else {
-				$('#t_' + tasks[key].id).slideUp();
+				Task.slideUp();
 			}
 		}
 
+		viewCountTasks(active_task_count, overdue_task_count);
 		resizeHeightLine(count_view_tasks);
+	}
+
+	function viewCountTasks (active_task_count, overdue_task_count) {
+		if (active_task_count) {
+			$('#ActiveTaskView').html(active_task_count + ' active task' + (active_task_count > 1 ? 's': '') + (overdue_task_count ? ', ' : ''));
+		} else {
+			$('#ActiveTaskView').html('');
+		}
+
+		if (overdue_task_count) {
+			$('#OverdueTaskView').html(overdue_task_count + ' overdue');
+		} else {
+			$('#OverdueTaskView').html('');
+		}
+
 	}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -268,6 +293,8 @@ function Tasks() {
 		s_val = '',
 		tasks = [],
 		today = new Date();
+
+
 
 	today.setHours(0);
 	today.setSeconds(0);
