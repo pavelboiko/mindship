@@ -1,5 +1,5 @@
 function Tasks() {
-
+	var day_width = 53;
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	function pushJson(data, func) {
 		data = {
@@ -45,40 +45,88 @@ function Tasks() {
 				return this;
 			},
 
+			getLeftDays: function () {
+				var left = this.today / day_width;
+
+				if (left <= 0) {
+					left = 'overdue';
+				} else if (left == 1) {
+					left = 'today';
+				} else if (left == 2) {
+					left = 'tomorrow';
+				} else {
+					left = 'in ' + left + ' days';
+				}
+
+				return left;
+			},
+
 			getTemplate: function (i) {
 				var id = 't_' + this.id;
 				var before_stile = '',
-					info = this.id + ' [ ' + this.sd.getDate() + '/' + (this.sd.getMonth() + 1) + '/' + this.sd.getFullYear() + ' , ' + this.fd.getDate() + '/' + (this.fd.getMonth() + 1) + '/' + this.fd.getFullYear() + ' ]',
+					info = this.id + ' [ ' + this.sd.getDate() + '/' + (this.sd.getMonth() + 1) + '/' + this.sd.getFullYear()
+						+ ' , '
+						+ this.fd.getDate() + '/' + (this.fd.getMonth() + 1) + '/' + this.fd.getFullYear() + ' ]',
 					task_style = 'style="width:' + this.width + 'px;margin-left:' + this.left + 'px;',
-					y = '',
-					left_days = 'overdue';
+					y = '';
 
 				task_style += this.view ? 'display: block;"' : '"';
 
 				if (this.today > 0) {
 					before_stile = ' style="width: ' + this.today + 'px"';
-					console.log(this.today);
-					left_days = this.today / 53;
-					switch (left_days) {
-						case 1: left_days = 'today'; break;
-						case 2: left_days = 'tomorrow'; break;
-						default : left_days = 'in ' + left_days + ' days';
-					}
 				} else {
 					y = ' y';
 				}
 
-				return '<div id="' + id + '" data-array="' + i + '" class="task' + y + '"' + task_style + '><span>' + info + '</span><span class="left_days">' + left_days + '</span><div' + before_stile + ' class="over_today"></div></div>';
+				return '<div id="' + id + '" data-array="' + i + '" class="task' + y + '"' + task_style + '><span>' + info + '</span><span class="left_days">' + this.getLeftDays() + '</span><div' + before_stile + ' class="over_today"></div></div>';
 			},
 
 			emptyTimeLine: function (start_time, finish_time) {
 				return (this.start > finish_time || this.finish < start_time);
+			},
+
+			setNewFinish: function (date) {
+				this.finish = +date;
+				this.fd = new Date(this.start);
+
+				$.ajax({
+					type: "GET",
+					url: "server/edit_task.php",
+					data: {finish: this.finish},
+					dataType: "json",
+					success: function () {
+
+					}
+				});
+
+				var start_visible = +root_el.find('ul:eq(1)').data('time'),
+					active_line_size = getCalendarSize(),
+					left_width = +root_el.find('ul:first').width();
+
+				this.calculatePosition(start_visible)
+					.calculateVisible(left_width, active_line_size);
+
+				return this;
+			},
+
+			updateVisible: function () {
+				var Task = $('#t_' + this.id);
+				Task.css({
+					width: this.width + 'px',
+					'margin-left': this.left + 'px'
+				}).find('.over_today').css({ width: this.today + 'px' })
+					.end().find('.left_days').html(this.getLeftDays());
+				if (this.today > 0) {
+					Task.removeClass('y');
+				} else {
+					Task.addClass('y');
+				}
 			}
 		};
 	}
 
 	function getWidthByTime(time) {
-		return 53 * Math.round((time) / (3600 * 24 * 1000));
+		return day_width * Math.round((time) / (3600 * 24 * 1000));
 	}
 
 	function getCalendarSize() {
@@ -110,8 +158,8 @@ function Tasks() {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	function viewTasks(template) {
-		root_el.find('.new_task_bar').remove();
-		root_el.find('ul:eq(1)').append('<li class="new_task_bar">' + template + '</li>');
+		root_el.find('.task_bar').remove();
+		root_el.find('ul:eq(1)').append('<li class="task_bar">' + template + '</li>');
 	}
 
 	function resizeHeightLine(count_view_tasks) {
@@ -176,15 +224,16 @@ function Tasks() {
 				continue;
 			}
 
+			temp_tasks.push(tasks[key]);
+
 			template += tasks[key]
 				.calculateVisible(left_width, active_line_size)
-				.getTemplate(key);
+				.getTemplate(temp_tasks.length - 1);
 
 			if (tasks[key].view) {
 				count_view_tasks++;
 			}
 
-			temp_tasks.push(tasks[key]);
 		}
 
 		tasks = temp_tasks;
@@ -243,22 +292,15 @@ function Tasks() {
 			}
 
 			$(document).mousemove(function (e) {
-				var size = parseInt((drag.move - e.pageX) / 53);
+				var size = parseInt((drag.move - e.pageX) / day_width);
 
 
 				if (size != 0) {
-					var w = drag.el.width() - size * 53,
-						w_today = tasks[array_id].today - size * 53;
+					var finish = tasks[array_id].finish - (size * 3600 * 24 * 1000);
 
-					console.log(tasks[array_id].today);
-
-					drag.el.width(w + 'px');
-					if (w_today > 0 || tasks[array_id].today > 0) {
-						drag.el.find('.over_today').width(w_today + 'px');
+					if (finish > tasks[array_id].start) {
+						tasks[array_id].setNewFinish(finish).updateVisible();
 					}
-
-					tasks[array_id].width = w;
-					tasks[array_id].today = w_today;
 
 					drag.move = e.pageX;
 				}
