@@ -50,17 +50,25 @@ function Tasks() {
 				var before_stile = '',
 					info = this.id + ' [ ' + this.sd.getDate() + '/' + (this.sd.getMonth() + 1) + '/' + this.sd.getFullYear() + ' , ' + this.fd.getDate() + '/' + (this.fd.getMonth() + 1) + '/' + this.fd.getFullYear() + ' ]',
 					task_style = 'style="width:' + this.width + 'px;margin-left:' + this.left + 'px;',
-					y = '';
+					y = '',
+					left_days = 'overdue';
 
 				task_style += this.view ? 'display: block;"' : '"';
 
 				if (this.today > 0) {
 					before_stile = ' style="width: ' + this.today + 'px"';
+					console.log(this.today);
+					left_days = this.today / 53;
+					switch (left_days) {
+						case 1: left_days = 'today'; break;
+						case 2: left_days = 'tomorrow'; break;
+						default : left_days = 'in ' + left_days + ' days';
+					}
 				} else {
 					y = ' y';
 				}
 
-				return '<div id="' + id + '" data-array="' + i + '" class="task' + y + '"' + task_style + '><b>' + info + '</b><span' + before_stile + ' class="over_today"></span></div>';
+				return '<div id="' + id + '" data-array="' + i + '" class="task' + y + '"' + task_style + '><span>' + info + '</span><span class="left_days">' + left_days + '</span><div' + before_stile + ' class="over_today"></div></div>';
 			},
 
 			emptyTimeLine: function (start_time, finish_time) {

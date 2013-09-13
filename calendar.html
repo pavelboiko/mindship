@@ -30,86 +30,75 @@
 		#CalendarLine .calendar ul li.new_task_bar{
 			position: absolute;
 			top: 0;
-			left: 0;
-			border: 1px solid #f0f;
+			left: 0;    
 			padding: 70px 0 0;
+			border: 1px solid #f0f;
 		}
-		.current_task {
+		#CalendarLine .calendar ul li div.task{
 			display: none;
-			margin-top: 5px;
-			background: none repeat scroll 0 0 #AAD263;
-			float: none;
-			height: 20px;
-			left: 0;
-			min-width: 53px;
-			overflow: hidden;
 			position: relative;
-			/*top: 70px;*/
+			min-width: 53px;
 			width: 400px;
-			z-index: 100;
-			color: #fff;
+			height: 20px;
+			line-height: 20px;
+			margin-top: 5px;
+			padding: 0;
+			background: none repeat scroll 0 0 #AAD263;
+			overflow: hidden;
 		}
-		.current_task span{
-			color: #fff;
+
+		#CalendarLine .calendar ul li div.task span {
 			position: absolute;
 			top: 0;
 			left: 5px;
+			z-index: 3;
 			line-height: 20px;
-		}
-
-		.over_today{
-			min-width: 0;
-			position: static;
-			float: right;
-			background: #58bf1f;
-			height: 100%;
-			z-index: 100;
-		}
-
-
-		#CalendarLine .calendar ul li div.task{
-			line-height: 20px;
-			padding: 0;
-			display: none;
-			margin-top: 5px;
-			background: none repeat scroll 0 0 #AAD263;
-			height: 20px;
-			min-width: 53px;
-			overflow: hidden;
-			position: relative;
-			width: 400px;
-			z-index: 100;
 			color: #fff;
-		}
-		#CalendarLine .calendar ul li div.task.y{
-			background: #c3aa5e;
-		}
-		#CalendarLine .calendar ul li div.task.y span{
-			width: 0;
+			text-shadow: 1px 1px 1px #587e15;
 		}
 
-		#CalendarLine .calendar ul li div.task span{
+		#CalendarLine .calendar ul li div.task span.left_days {
+			position: absolute;
+			top: 0;
+			right: 5px;
+			z-index: 2;
+			line-height: 20px;
+			color: #587e15;
+			font-weight: bold;
+			text-align: right;
+			text-shadow: 1px 1px 1px #fff;
+		}
+		#CalendarLine .calendar ul li div.task div.over_today{
 			min-width: 0;
 			display: block;
 			float: right;
 			background: #58bf1f;
 			height: 100%;
-			z-index: 100;
+			padding: 0;
+			z-index: 1;
 		}
-
 		#CalendarLine .calendar ul li div.task b{
-			position: absolute;
-			right: 5px;
-			top: 0;
-		}
-
-		#CalendarLine .calendar ul li div.task b{
-			color: #fff;
+			color: #587e15;
 			position: absolute;
 			top: 0;
 			left: 5px;
 			line-height: 20px;
 			font-weight: normal;
+		}
+
+		#CalendarLine .calendar ul li div.task.y{
+			background: #f2cb50;
+			text-shadow: 1px 1px 1px #c3aa5e;
+		}
+		#CalendarLine .calendar ul li div.task.y span.left_days {
+			color: #c3aa5e;
+		}
+		#CalendarLine .calendar ul li div.task.y b{
+			color: #c3aa5e;
+		}
+
+		#CalendarLine .calendar ul li div.task.y div.over_today{
+			width: 0 !important;
 		}
 	</style>
 </head>
