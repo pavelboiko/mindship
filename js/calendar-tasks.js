@@ -328,7 +328,7 @@ function Tasks() {
 		pushJson(el.data('time'), pushEvents);
 	};
 
-	this.eventScrollLine = function (e) {
+	this.eventScrollLine = function () {
 		scrollLine();
 	};
 

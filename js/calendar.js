@@ -128,9 +128,6 @@
 						dragging = e.pageX;
 
 						self.drag(Math.abs(size), !(size < 0), 0);
-
-						if (self.model.eventScrollLine)
-							self.model.eventScrollLine(e);
 					});
 
 				});
@@ -169,6 +166,9 @@
 					this.prependMonth();
 				} else if (max < left)  {
 					this.appendMonth();
+				}
+				if (this.model.eventScrollLine) {
+					this.model.eventScrollLine();
 				}
 			},
 
