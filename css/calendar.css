@@ -1,5 +1,12 @@
 /* Calendar */
-#CalendarLine{}
+#CalendarLine{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 #CalendarLine .calendar{ position: absolute; top: 0; left: 0; }
 #CalendarLine .calendar ul{ float: left; list-style: none; position: relative;}
 #CalendarLine .calendar ul li { float: left; height: 227px; position: relative; width: 53px; background: url("../img/left-border-bg.png" ) repeat-y left top;}
@@ -53,4 +60,7 @@
 /* Task Calendar */
 #CalendarLine .calendar ul li.task{ position: absolute; top: 0; left: 0; height: 20px; z-index: 5; width: 0; background: #AAD263; color: #FFFFFF; font: 300 11px/20px 'Roboto', sans-serif; padding: 0; margin-top: 25px; }
 
-
+#ActiveTaskView,
+#OverdueTaskView{
+	font-weight: normal;
+}
